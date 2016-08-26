@@ -2913,7 +2913,6 @@ fieldset[disabled] .navbar .btn-link:focus {
   margin-top: 100%;
 }
 .card .card-content {
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;

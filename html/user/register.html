@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
+  <link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
+
+  <!-- Jquery -->
+  <script src="../../js/jquery-3.1.0.min.js"></script>
+  <script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+  <script src="../../material/js/material.min.js"></script>
+  <script src="../../material/js/ripples.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
+  <script>
+  $.material.init();
+  </script>
+
+</head>
+
+<body>
+
+  <div class="row ">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="card  ">
+        <div class="card-content">
+            <div class="card-body">
+              <form class="form-horizontal" name="registerForm">
+              <fieldset>
+                <legend>User registration</legend>
+                <!-- Full name-->
+                <div class="form-group is-empty">
+                    <label class="col-md-4 control-label">Full name</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputName" placeholder="Full name">
+                  </div>
+                </div>
+                <!-- Type of profile-->
+                <div class="form-group is-empty">
+                  <label class="col-md-4 control-label">Type of Profile</label>
+                  <div class="col-md-8">
+                    <select id="selectType" class="form-control">
+                      <option value="student">Student</option>
+                      <option value="teacher">Teacher</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Login-->
+                <div class="form-group is-empty">
+                  <label class="col-md-4 control-label">Login</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputLogin" placeholder="Login">
+                  </div>
+                </div>
+                <!-- Password -->
+                <div class="form-group is-empty">
+                  <label for="inputPassword" class="col-md-4 control-label">Password</label>
+                  <div class="col-md-8">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                  </div>
+                </div>
+                <!-- Email -->
+                <div class="form-group is-empty">
+                  <label for="inputEmail" class="col-md-4 control-label">Email</label>
+                  <div class="col-md-8">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                  </div>
+                </div>
+                <!-- CPF -->
+                <div class="form-group is-empty">
+                <label for="inputCpf" class="col-md-4 control-label">Cpf</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputEmail" placeholder="Cpf" name ="cpf" onBlur="ValidarCPF(registerForm.cpf);" onKeyPress="MascaraCPF(registerForm.cpf);">
+                  </div>
+                </div>
+                <!-- Phone Number -->
+                <div class="form-group is-empty">
+                <label for="inputPhone" class="col-md-4 control-label">Phone number</label>
+                  <div class="col-md-8">
+                    <input type="tel" class="form-control" id="inputPhone" placeholder="Your Phone Number: (00) 0 0000-0000">
+                  </div>
+                </div>
+                <!-- Sex -->
+                <div class="form-group">
+                  <label class="col-md-4 control-label">Sex</label>
+                  <div class="col-md-8">
+                  <div class="radio radio-primary">
+                    <label>
+                      <input type="radio" name="male" id="male" valeu="male" checked>
+                      <span class="circle"></span>
+                      <span class="check"></span>
+                      Masculine
+                    </label>
+                  </div>
+                  <div class="radio radio-primary">
+                    <label>
+                      <input type="radio" name="male" id="male" valeu="male" checked>
+                      <span class="circle"></span>
+                      <span class="check"></span>
+                      Feminine
+                    </label>
+                  </div>
+                  </div>
+                </div>
+                <!-- Date of birth -->
+                <div class="form-group is-empty">
+                <label for="inputDate" class="col-md-4 control-label">Date of birth</label>
+                  <div class="col-md-8">
+                    <input type="date" class="form-control" id="inputDate" placeholder="Your Date of birth: (dd/mm/yyyy)">
+                  </div>
+                </div>
+                <!-- State -->
+                <div class="form-group is-empty">
+                <label for="inputState" class="col-md-4 control-label">State</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputState" placeholder="State">
+                  </div>
+                </div>
+                <!-- City -->
+                <div class="form-group is-empty">
+                <label for="inputCity" class="col-md-4 control-label">City</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                  </div>
+                </div>
+                <!-- Image -->
+                <div class="form-group is-empty is-fileinput">
+                <label for="inputImage" class="col-md-4 control-label">Image</label>
+                  <div class="col-md-8">
+                    <input type="file" id="inputImage" multiple="">
+                  <div class="input-group">
+                    <input type="text" readonly="" class="form-control" placeholder="Choose your photo...">
+                      <span class="input-group-btn input-group-sm">
+                        <button type="button" class="btn btn-fab btn-fab-mini">
+                          <i class="material-icons">attach_file</i>
+                        </button>
+                      </span>
+                  </div>
+                  </div>
+                </div>
+                <!-- Titration -->
+                <div class="form-group is-empty">
+                  <label class="col-md-4 control-label">Titration</label>
+                  <div class="col-md-8">
+                    <select id="selectTitration" class="form-control">
+                      <option value="default"></option>
+                      <option value="student">Student</option>
+                      <option value="teacher">Teacher</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- Year -->
+                <div class="form-group is-empty">
+                <label for="inputYear" class="col-md-4 control-label">Year</label>
+                  <div class="col-md-8">
+                    <input type="number" class="form-control" id="inputYear" placeholder="Year">
+                  </div>
+                </div>
+                <!-- Institution -->
+                <div class="form-group is-empty">
+                    <label class="col-md-4 control-label">Institution</label>
+                  <div class="col-md-8">
+                    <input type="text" class="form-control" id="inputInstitution" placeholder="Institution">
+                  </div>
+                </div>
+                <!-- Curriculum -->
+                <div class="form-group is-empty">
+                    <label class="col-md-4 control-label">Curriculum</label>
+                  <div class="col-md-8">
+                    <textarea class="form-control" rows="3" id="textarea"></textarea>
+                    <span class="help-block">"input descrption of you resume"</span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-2">
+                    <button type="button" class="btn btn-default">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+              </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
