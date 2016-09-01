@@ -40,6 +40,20 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
 * Javascript
 
 
+##Naming conventions for Files##
+
+ * For any html file, we use the pattern "generic_specific" pattern, basically, generic could be any of [home, edit, profile] and specific would be [user, student, professor].
+
+ * Files can only contain letters, digits and underscores - no spaces, punctuation or funny caracters
+
+ * Files should always start with a letter.
+
+ * We suggest that you use only lowercase letters thus making it more error-prone.
+
+ * About the images, put names that you remember what's inside of it "tree.png" should be exactly what you're thinking of: an image of a tree, not a car or even  a bunch of trees.
+
+
+
 
 
 
