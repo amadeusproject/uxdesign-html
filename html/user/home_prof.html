@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
     <link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
     <link rel="stylesheet" type="text/css" href="../../font-awesome-4.6.3/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" type="text/css" href="../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/amadeus.css">
 
     <!-- Jquery -->
     <script src="../../js/jquery-3.1.0.min.js"></script>
@@ -27,19 +28,15 @@
     </script>
     <script>
       $('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
+        $('#myInput').focus()
+      })
     </script>
 
   </head>
 
   <body>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-
-        <!-- Navbar -->
-        <div class="bs-component">
-          <div class="navbar navbar-default">
+        <div class="navbar navbar-default">
             <div class="container-fluid">
               <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -47,96 +44,100 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><h3>Amadeus</h3></a>
-                
+                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right notifications">
+                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#">username</a></li>
+                  <li> <a href="#">log out</a></li>
+                </ul>
               </div>
             </div>
-          </div>
         </div>
+    </div>
 
-        <!-- Breadcrumb -->
-        <div class="row">
-          <div class="col-md-12">
-            <h4>Gerson Rodriguez</h4>
+    <!-- Breadcrumb -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-primary navigation">
+          <div class="panel-heading">
+            <h5>Navigation</h5>
           </div>
-        </div><!-- endBreadcrumb -->
-        <div class="row">
-          <div class="col-md-12">
-            <ul class="breadcrumb" style="margin-bottom: 5px;">
-              <li><a href="javascript:void(0)">Home</a></li>
-              
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+                <li><a href="javascript:void(0)">Pending task</a></li>
+                <li><a href="javascript:void(0)">Create Course</a></li>
+                <li><a href="javascript:void(0)">Manage Course</a></li>
             </ul>
           </div>
         </div>
+      </div>
+      <div class="col-md-9">
+        <ul class="breadcrumb">
+          <li><a href="javascript:void(0)">Home</a></li>
+        </ul>
         <div class="row">
-          <div class="col-xs-6 col-md-4">
-            <div class="btn-group-vertical">
-              <a href="javascript:void(0)" class="btn btn-raised">Tarefas Pendentes</a>
-              <a href="javascript:void(0)" class="btn btn-raised" type="button" data-container="body" data-toggle="popover" data-placement="right" data-content="Gerson Rodriguez" >Pessoas Online (1)</a>
-
-              <a href="javascript:void(0)" class="btn btn-raised" button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Curso <span class="caret"></span></a>
-              
-              <ul class="dropdown-menu" aria-labelledby="dLabel">
-                <a href="javascript:void(0)" class="btn btn">Criar Curso</a>
-                <a href="javascript:void(0)" class="btn btn">Gerenciar Curso</a>
-              </ul>
+          <div class="col-md-8">
+            <h3>Courses</h3>
+            <div class="panel panel-default courseHome">
+              <div class="panel-body">
+                <p>Computer science</p>
+              </div>
+              <div class="panel-footer">
+                <ul>
+                    <li>Students: 5</li>
+                    <li>Beginning: 06/02/2020</li>
+                    <li>End: 15/09/2022</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default courseHome">
+              <div class="panel-body">
+                <p>Information systems</p>
+              </div>
+              <div class="panel-footer">
+                <ul>
+                    <li>Students: 10</li>
+                    <li>Beginning: 23/10/2020</li>
+                    <li>End: 30/08/2022</li>
+                </ul>
+              </div>
+            </div>
+            <div class="panel panel-default courseHome">
+              <div class="panel-body">
+                <p>Computer engineering</p>
+              </div>
+              <div class="panel-footer">
+                <ul>
+                    <li>Students: 17</li>
+                    <li>Beginning: 16/12/2020</li>
+                    <li>End: 25/12/2022</li>
+                </ul>
+              </div>
             </div>
           </div>
-        <div class="col-xs-6 col-md-4">
-            <h4><strong><center>Cursos</center></strong></h4>
-            
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Ciencia da Computacao</button>
-              <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
-                  <div class="modal-content">
-                    <p> Cienca da Computacao</p>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Engenharia da Computacao</button>
-              <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
-                  <div class="modal-content">
-                    <p> Engenharia da Computacao</p>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Sistema de Informacao</button>
-              <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-                <div class="modal-dialog modal-sm" role="document">
-                  <div class="modal-content">
-                    <p> Sistema de Informacao</p>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            
-            
-        </div>
-        <div class="col-xs-6 col-md-4">
-            <div class="bs-callout bs-callout-info" id="callout-helper-context-color-specificity"> 
-            <h4><strong><center>Metas</center></strong></h4> 
-                <table class="table">
-                  <tr> 
-                      <th scope="row"><input type="checkbox"/></th>
-                      <td>70% de Presenca nas aulas</td>
-                  </tr>
-                  <tr> 
-                      <th scope="row"><input type="checkbox"/></th>
-                      <td>30/11 - Entrega das notas finais</td>
-                  </tr>
-                
-                </table>
-        
-        </div>
-        
+          <div class="col-md-4">
+            <h3 align="center">Goal</h3>
+            <div class="well well-lg">
+              Look, I'm in a large well!
+            </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+    </div>
+
   </body>
 </html>

@@ -1,0 +1,29 @@
+.navigation{
+    margin-left: 5%
+    margin: 0;
+}
+.breadcrumb{
+    margin-bottom: 5px;
+}
+.courseHome{
+    text-align: center;
+}
+.courseHome ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 2%;
+}
+.courseHome ul li{
+    display:inline;
+    text-align: center;
+    padding: 16px;
+}
+h3{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}
+
