@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/amadeus.css">
+
+    <!-- Jquery -->
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../material/js/material.min.js"></script>
+    <script src="../../material/js/ripples.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
+    <script>
+    $.material.init();
+    </script>
+    <script>
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+      $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+      })
+    </script>
+
+  </head>
+
+  <body>
+    <div class="row">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right notifications">
+                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#">username</a></li>
+                  <li> <a href="#">log out</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+
+      </div>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-primary navigation">
+          <div class="panel-heading">
+            <h5>Menu</h5>
+          </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+              <li><a href="javascript:void(0)">Profile</a></li>
+              <li><a href="javascript:void(0)">My Courses</a></li>
+              <li><a href="javascript:void(0)">Google accounts</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Notifications</h3>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                His course has notified a new activity!
+              </div>
+              <div class="panel-footer">
+                Go
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                His teacher has notified a new material!
+              </div>
+              <div class="panel-footer">
+                Go
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-body">
+                You have a new guardian!
+              </div>
+              <div class="panel-footer">
+                Go
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="well well-lg goal">
+              Goals
+            </div>
+            <div class="well well-lg favorites">
+              Favorites
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </body>
+</html>

@@ -1,6 +1,5 @@
 .navigation{
-    margin-left: 5%
-    margin: 0;
+    margin: 10% 10% 5% 5%;
 }
 .breadcrumb{
     margin-bottom: 5px;
@@ -19,6 +18,19 @@
     display:inline;
     text-align: center;
     padding: 16px;
+}
+.goal{
+    margin: 0%;
+    margin-top: 10%;
+    padding-bottom: 200px;
+}
+.favorites{
+    margin: 0%;
+    margin-top: 20%;
+    padding-bottom: 200px;
+}
+.panel-info{
+    padding-bottom: 50px;
 }
 h3{
     text-align: center;
