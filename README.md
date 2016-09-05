@@ -53,7 +53,9 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
  * About the images, put names that you remember what's inside of it "tree.png" should be exactly what you're thinking of: an image of a tree, not a car or even  a bunch of trees.
 
 
+##Commit Patterns##
 
+We set our tasks on the project using the issue system of github, any commit you may add should be addressed to a single ISSUE , example "solving problem #12". Thus making it clear for others what you're trying to solve or add.
 
 
 
