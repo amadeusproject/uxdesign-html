@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/icon.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/image.css">
+    <link rel="stylesheet" type="text/css" href="../../css/amadeus.css">
+
+    <!-- Jquery -->
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../material/js/material.min.js"></script>
+    <script src="../../material/js/ripples.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
+    <script>
+    $.material.init();
+    </script>
+    <script>
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+      $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+      })
+    </script>
+    <script>
+      $('.collapse').collapse()
+    </script>
+
+  </head>
+
+  <body>
+    <div class="row">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right notifications">
+                  <li> <a href="#">Admin <i class="fa fa-star" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#">username</a></li>
+                  <li> <a href="#">log out</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <div class="panel panel-primary navigation">
+          <div class="panel-heading">
+            <img src="http://www.criesuapersona.com.br/img/personas/persona9.jpg" id="centro" class="img-circle">
+              <p></p><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;
+              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;
+              <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>&nbsp;&nbsp;
+              <i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
+              
+          </div>
+          
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
+                
+                <p>
+  <button class="btn btn" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    <li><a href="javascript:void(0)">Manage Courses</a></li>
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-block">
+    <ul>
+      <li>IS</li>
+      <li>CC</li>
+      <li>CE</li>
+    </ul>
+  </div>
+</div>
+                
+                <li><a href="javascript:void(0)">Pending task</a></li>
+                <li><a href="javascript:void(0)">Create Course</a></li>
+                <li><a href="javascript:void(0)">Manage Users</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <ul class="breadcrumb">
+          <li><a href="javascript:void(0)">Home</a></li>
+        </ul>
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Courses</h3>
+            
+            <div class="panel panel-default courseHome">
+              <div class="panel-body">
+                <p>Computer science</p>
+              </div>
+              <div class="panel-footer">
+                <ul>
+                    <li>Students: 5</li>
+                    <li>Beginning: 06/02/2020</li>
+                    <li>End: 15/09/2022</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-outline-info">Edit</button>
+            </div>
+            <div class="panel panel-default courseHome">
+              <div class="panel-body">
+                <p>Information systems</p>
+              </div>
+              <div class="panel-footer">
+                <ul>
+                    <li>Students: 10</li>
+                    <li>Beginning: 23/10/2020</li>
+                    <li>End: 30/08/2022</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-outline-info">Edit</button>
+            </div>
+            <div class="panel panel-default courseHome">
+              <div class="panel-body">
+                <p>Computer engineering</p>
+              </div>
+              <div class="panel-footer">
+                <ul>
+                    <li>Students: 17</li>
+                    <li>Beginning: 16/12/2020</li>
+                    <li>End: 25/12/2022</li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-outline-info">Edit</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="well well-lg goal">
+              <div class="panel-body">
+                <h3>Pending stuffs</h3>
+              </div>
+              <div class="panel-footer">
+              <p>Computer science course was created</p>
+              <p>Information System was created</p>
+              <p>Student Marcos added</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+  </body>
+</html>
