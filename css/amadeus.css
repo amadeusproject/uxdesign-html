@@ -33,14 +33,11 @@
     margin-top: 20%;
     padding-bottom: 200px;
 }
-.panel-info{
+.panel-default{
     padding-bottom: 50px;
 }
 .panel-primary .panel-body{
     padding: 0% 0% 0% 0%;
-}
-h3{
-    text-align: center;
 }
 h5{
     text-align: center;
