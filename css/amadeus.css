@@ -36,6 +36,9 @@
 .panel-info{
     padding-bottom: 50px;
 }
+.panel-primary .panel-body{
+    padding: 0% 0% 0% 0%;
+}
 h3{
     text-align: center;
 }
