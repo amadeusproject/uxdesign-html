@@ -5,14 +5,14 @@ The content here is used to help developers to create and update new html protot
 
 ## Subdirectories
 
-1. boards
+1. boards: 
 	The UX designed boards to be used by developers to reprocude in html files for each case.
 
-2. grphics
+2. graphics: 
 	All graphic files that can be used as asset (like logos, icons etc).
 
 
-3. experiments
+3. experiments: 
 	Experiments in UI and UX that can be used in the future to improve our results/productivity.
 
 ## References
