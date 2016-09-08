@@ -10,7 +10,12 @@
     <link rel="stylesheet" type="text/css" href="../../../material/css/ripples.min.css">
     <link rel="stylesheet" type="text/css" href="../../../font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/base/icon.css">
+   
     <link rel="stylesheet" type="text/css" href="../../../css/amadeus.css">
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
     <!-- Jquery -->
     <script src="../../../js/jquery-3.1.0.min.js"></script>
@@ -31,10 +36,34 @@
         $('#myInput').focus()
       })
     </script>
+    <script>
+      $('.collapse').collapse()
+    </script>
+    <script>
+      $("#news").popover({
+  'title' : 'Notifiche', 
+  'html' : true,
+  'placement' : 'bottom',
+  'content' : $(".alert_list").html()
+});
+
+$('.turn_off_alert').live('click', function(event){
+  var alert = $(this).parent();
+  var alert_id = alert.data("alert_id");
+  alert.hide("fast");
+  
+});
+
+    </script>
+    
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
   </head>
 
-  <body>
+<body>
+    <!--Header-->
     <div class="row">
         <div class="navbar navbar-default">
             <div class="container-fluid">
@@ -48,7 +77,9 @@
               </div>
               <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right notifications">
-                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"><span class="badge">3</span></i></a> 
+                        
+                  </li>
                   <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
                   <li> <a href="#">username</a></li>
                   <li> <a href="#">log out</a></li>
@@ -57,86 +88,158 @@
             </div>
         </div>
     </div>
-
-    <!-- Breadcrumb -->
+    
+    <!--The header will ends here-->
+    
+    <!--Menu Profile-->
     <div class="row">
-      <div class="col-md-10 col-md-offset-1">
+      <div class="container">
+        <div class="col-sm-* col-xs-* col-md-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png" id="img" class="img-rounded">
+              <p></p>
+              <div class="row">
+                <div class="col-xs-3 col-md-3"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></div>
+              </div>
+            </div>
 
-    <div class="row">
-      <div class="col-md-10 col-md-offset-2">
-
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-3">
-        <div class="panel panel-primary navigation">
-          <div class="panel-heading">
-            <h5>Menu</h5>
-          </div>
-          <div class="panel-body">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="javascript:void(0)">Pending task</a></li>
-                <li><a href="javascript:void(0)">Create Course</a></li>
-                <li><a href="javascript:void(0)">Manage Course</a></li>
-            </ul>
+            <div class="panel-body">
+              <ul class="nav nav-pills nav-stacked">
+                <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <li><a href="#">Manage Courses </a><span class="caret"></span></li>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <div class="card card-block">
+                    <ul>
+                      <a href="#"><li>IS</li></a>
+                      <a href="#"><li>CC</li></a>
+                      <a href="#"><li>CE</li></a>
+                    </ul>
+                  </div>
+                </div>
+                 </div>
+                  
+                    <li> <a href="#">Pending task</a></li>
+                    <li> <a href="#">Create Course</a></li>
+                    <li> <a href="#">Manage Users</a></li>
+              </ul>
+             
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-9">
+       <!--End of Menu Profile--> 
+      
+      <!--Bread Crumb-->  
+      
+      <div class="col-sm-* col-xs-* col-md-9">
         <ul class="breadcrumb">
-          <li><a href="javascript:void(0)">Home</a></li>
+          <li><h5><a href="javascript:void(0)">Home</a></h5></li>
         </ul>
-        <div class="row">
-          <div class="col-md-8">
-            <h3>Courses</h3>
-            <div class="panel panel-default courseHome">
+    	</div> 
+      
+      <!--End of Bread Crumb-->
+      
+        <!-- Timeline -->
+          <div class="row">
+            <div class= "container">
+            <div class="col-sm-* col-xs-* col-md-6">
+              <ul class="timeline">
+			          <li>
+				          <div class="avatar">
+                    <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png">
+					            <div class="hover">
+						            <div class="icon-twitter"></div>
+					            </div>
+				          </div>
+				          <div class="bubble-container">
+					          <div class="bubble">
+					            <div class="retweet"></div>
+						          <h3>Pedro</h3> enrolled in <h3>Java's Course</h3><br/>
+					              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
+						          <div class="over-bubble">
+							          <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+							          <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+							          <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a>
+						          </div>
+					           </div>
+					           <div class="arrow"></div>
+				          </div>
+			          </li>
+			          <li>
+			            <div class="avatar">
+                    <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png">
+					            <div class="hover">
+						            <div class="icon-twitter"></div>
+			                </div>
+				          </div>
+				          <div class="bubble-container">
+					          <div class="bubble">
+					            <div class="retweet">
+						            <div class="icon-retweet"></div>
+					            </div>
+						          <h3>Pedro</h3> enrolled in <h3>Java's Course</h3><br/>
+					              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
+						          <div class="over-bubble">
+							          <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+							          <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+							          <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a>
+						          </div>
+					           </div>
+					          <div class="arrow"></div>
+				          </div>
+				        </li>
+				          
+				        <li>
+				          <div class="avatar">
+                    <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png">
+					            <div class="hover">
+						            <div class="icon-twitter"></div>
+					            </div>
+				          </div>
+				          <div class="bubble-container">
+					          <div class="bubble">
+					            <div class="retweet">
+						          </div>
+						          <h3>Pedro</h3> enrolled in <h3>Java's Course</h3><br/>
+					              <p>Pedro is very close to complete!</p>
+					                <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                              60%
+                            </div>
+                          </div>
+						              <div class="over-bubble">
+						                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+		                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
+			                      <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a>  
+			                      </div>
+					           </div>
+					          <div class="arrow"></div> 
+				          </div>
+			          </li>
+			          
+			        </ul>
+            </div>
+            
+            <!--End of timeline-->
+            
+           <div class="col-sm-* col-xs-* col-md-3">
+    	       <div class="panel panel-warning">
+              <div class="panel-heading">
+                <h3 class="panel-title">Pending Stuffs</h3>
+                </div>
               <div class="panel-body">
-                <p>Computer science</p>
               </div>
-              <div class="panel-footer">
-                <ul>
-                    <li>Students: 5</li>
-                    <li>Beginning: 06/02/2020</li>
-                    <li>End: 15/09/2022</li>
-                </ul>
-              </div>
+       
             </div>
-            <div class="panel panel-default courseHome">
-              <div class="panel-body">
-                <p>Information systems</p>
-              </div>
-              <div class="panel-footer">
-                <ul>
-                    <li>Students: 10</li>
-                    <li>Beginning: 23/10/2020</li>
-                    <li>End: 30/08/2022</li>
-                </ul>
-              </div>
             </div>
-            <div class="panel panel-default courseHome">
-              <div class="panel-body">
-                <p>Computer engineering</p>
-              </div>
-              <div class="panel-footer">
-                <ul>
-                    <li>Students: 17</li>
-                    <li>Beginning: 16/12/2020</li>
-                    <li>End: 25/12/2022</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="well well-lg goal">
-              Goals
-            </div>
-          </div>
-        </div>
-      </div>
+            
+            
     </div>
     </div>
-    </div>
-
   </body>
 </html>
