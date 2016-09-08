@@ -106,11 +106,14 @@
                   </div>
                 </div>
               </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
                   <div class="row">
                     <div class="col-xs-6 col-md-6">
-                      Topico 1
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Topico 1
+                        </a>
                     </div>
                     <div class="col-xs-6 col-md-6">
                     <label>
@@ -120,28 +123,32 @@
                     </div>
                   </div>
                 </div>
-                <div class="panel-body">
-                  <p>
-                    <b>Description:</b>
-                    <i>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    </i>
-                  </p>
-                  <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                       <p><i class="material-icons">&#xE147;</i> Material</p>
-                    </div>
-                    <div class="col-xs-6 col-md-6">
-                      <p><i class="material-icons">&#xE147;</i> Activities</p>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p>
+                      <b>Description:</b>
+                      <i>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      </i>
+                    </p>
+                    <div class="row">
+                      <div class="col-xs-6 col-md-6">
+                        <p><i class="material-icons">&#xE147;</i> Material</p>
+                      </div>
+                      <div class="col-xs-6 col-md-6">
+                        <p><i class="material-icons">&#xE147;</i> Activities</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading role=" tab" id="headingTwo"">
                   <div class="row">
                     <div class="col-xs-6 col-md-6">
-                      Topico 2
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Topico 2
+                      </a>
                     </div>
                     <div class="col-xs-6 col-md-6">
                     <label>
@@ -151,23 +158,27 @@
                     </div>
                   </div>
                 </div>
-                <div class="panel-body">
-                  <p>
-                    <b>Description:</b>
-                    <i>
-                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    </i>
-                  </p>
-                  <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                      <p><i class="material-icons">&#xE147;</i> Material</p>
-                    </div>
-                    <div class="col-xs-6 col-md-6">
-                      <p><i class="material-icons">&#xE147;</i> Activities</p>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <p>
+                      <b>Description:</b>
+                      <i>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      </i>
+                    </p>
+                    <div class="row">
+                      <div class="col-xs-6 col-md-6">
+                        <p><i class="material-icons"> &#xE147;</i> Material</p>
+                      </div>
+                      <div class="col-xs-6 col-md-6">
+                        <p><i class="material-icons"> &#xE147;</i> Activities</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              </div>
+
             </div>
 
             <div class="col-md-2">
