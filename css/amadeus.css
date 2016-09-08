@@ -33,18 +33,21 @@
     margin-top: 20%;
     padding-bottom: 200px;
 }
+.panel-info{
+}
 .panel-default{
-    padding-bottom: 50px;
 }
 .panel-primary .panel-body{
     padding: 0% 0% 0% 0%;
 }
+.end{
+    text-align: right;
+}
 h5{
     text-align: center;
 }
-
 #img {
-    
+
     display: block;
     margin: auto;
     width: 50%;
@@ -266,11 +269,11 @@ h3 {
     width: 100%;
     display: block;
     font-size: 1.2em; }
-    
+
     #news{margin : 10px 0px 0px 150px}
 .alert_list{font-size: 11px; color:grey}
 li.alert_li {
-  font-size: 11px; 
+  font-size: 11px;
   color:grey;
   padding:10px 0px 2px 0px;
   border-bottom: thin solid #c0c0c0;
