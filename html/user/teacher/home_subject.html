@@ -117,11 +117,11 @@
                     </div>
                     <div class="col-xs-5 col-md-5">
                       <label>
-                        <input type="checkbox" value=""><i class="material-icons">&#xE8F4;</i>
+                        <input type="checkbox" value=""><i class="material-icons" onclick="edit(headingOne)" >&#xE8F4;</i>
                       </label>
                     </div>
                     <div class="col-xs-1 col-md-1">
-                      <i class="material-icons">&#xE254;</i>
+                      <i class="material-icons" aria-hidden="true">&#xE254;</i>
                     </div>
                   </div>
                 </div>
@@ -174,17 +174,26 @@
                 </div>
                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body">
-                    <p>
-                      <i>
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                      </i>
-                    </p>
+                    <div class="form-group is-empty">
+                      <label class="col-xs-2 col-md-2 control-label">Description</label>
+                      <div class="col-xs-10 col-md-10">
+                        <textarea class="form-control" rows="3" id="textarea"></textarea>
+                      </div>
+                    </div>
                     <div class="row">
                       <div class="col-xs-6 col-md-6">
                         <p><i class="material-icons"> &#xE147;</i> Material</p>
+                        <ul>
+                            <li><a href="#">Book 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-times" aria-hidden="true"></i></li>
+                            <li><a href="">Link 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-times" aria-hidden="true"></i></li>
+                        </ul>
                       </div>
                       <div class="col-xs-5 col-md-5">
                         <p><i class="material-icons"> &#xE147;</i> Activities</p>
+                        <ul>
+                            <li><a href="#">Activitie 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i><i class="fa fa-times" aria-hidden="true"></i></li>
+                            <li></li>
+                        </ul>
                       </div>
                       <div class="col-xs-1 col-md-1">
 
