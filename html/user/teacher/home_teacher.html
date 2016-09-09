@@ -2,6 +2,7 @@
 
 <html>
   <head>
+     <link rel="stylesheet" type="text/css" href="../../../css/amadeus.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -11,13 +12,14 @@
     <link rel="stylesheet" type="text/css" href="../../../font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../../css/base/header.css">
     <link rel="stylesheet" type="text/css" href="../../../css/base/icon.css">
+  
    
-    <link rel="stylesheet" type="text/css" href="../../../css/amadeus.css">
     <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
 	  <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
 	  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
     <!-- Jquery -->
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script src="../../../js/jquery-3.1.0.min.js"></script>
     <script src="../../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="../../../material/js/material.min.js"></script>
@@ -31,29 +33,15 @@
         $('[data-toggle="popover"]').popover()
         })
     </script>
+    
     <script>
       $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
       })
     </script>
+    
     <script>
       $('.collapse').collapse()
-    </script>
-    <script>
-      $("#news").popover({
-  'title' : 'Notifiche', 
-  'html' : true,
-  'placement' : 'bottom',
-  'content' : $(".alert_list").html()
-});
-
-$('.turn_off_alert').live('click', function(event){
-  var alert = $(this).parent();
-  var alert_id = alert.data("alert_id");
-  alert.hide("fast");
-  
-});
-
     </script>
     
     <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
@@ -77,13 +65,20 @@ $('.turn_off_alert').live('click', function(event){
               </div>
               <div class="navbar-collapse collapse navbar-responsive-collapse">
                 <ul class="nav navbar-nav navbar-right notifications">
-                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"><span class="badge">3</span></i></a> 
-                        
+                  <li> <a href="#"><i class="fa fa-bell-o" id="news"  aria-hidden="true"><span class="badge">3</span></i>News</a>
+                    <div style="display:none" class="alert_list">
+  <ul class="unstyled">
+    <li data-alert_id="1" class="alert_li"><a href="#" class="alert_message">Messaggio di notifica un po più lungo del normale</a> <br />
+    </li>
+  </ul>
+</div>
                   </li>
+                  
                   <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
                   <li> <a href="#">username</a></li>
                   <li> <a href="#">log out</a></li>
                 </ul>
+                 
               </div>
             </div>
         </div>
