@@ -30,33 +30,38 @@
       $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
       })
-    </script>
+    </script>   
 
   </head>
 
   <body>
-    <div class="row">
+    
+    <!-- header  -->
+    <div class="container-fluid">
+      <div class="row">
         <div class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
-              </div>
-              <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav navbar-right notifications">
-                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
-                  <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
-                  <li> <a href="#">username</a></li>
-                  <li> <a href="#">log out</a></li>
-                </ul>
-              </div>
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
             </div>
-        </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+              <ul class="nav navbar-nav navbar-right notifications">
+                 <li class="link"> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
+                 <li class="link"> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
+                 <li class="link"> <a href="../profile_user.html">username</a></li>
+                 <li class="link"> <a href="../login.html">log out</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
     </div>
+
+   
 
     <div class="row">
       <div class="col-md-12">
@@ -75,6 +80,18 @@
           </div>
           <div class="panel-body">
             <ul class="nav nav-pills nav-stacked">
+              <li><a href="javascript:void(0)">Home</a></li>
+              <li><a href="javascript:void(0)">Profile</a></li>
+              <li><a href="javascript:void(0)">Courses</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-primary navigation">
+          <div class="panel-heading">
+            <h5>Courses</h5>
+          </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
               <li><a href="javascript:void(0)">Course 1</a></li>
               <li><a href="javascript:void(0)">Course 2</a></li>
               <li><a href="javascript:void(0)">Course 3</a></li>
@@ -86,7 +103,7 @@
         <ul class="breadcrumb" style="margin-bottom: 5px;">
           <li><a href="javascript:void(0)">Home</a></li>
           <li><a href="javascript:void(0)">Courses</a></li>
-          <li class="active">Subjects</li>
+          <li class="active">Course 01</li>
         </ul>
         <div class="row">
           <div class="col-md-8">
@@ -96,23 +113,64 @@
               <h3 class="panel-title">Subject 1</h3>
               </div>
               <div class="panel-body">
-                Dummy Info
+                <p><b>Professor: </b>Dr. Fulano de Tal</p>
+                  <p>
+                    <b>Description: </b>
+                    <i>
+                      "Lorem ipsum dolor sit amet, consecctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining: </b>10/05/2017</p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End: </b>23/08/2019</p>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="panel panel-info">
               <div class="panel-heading">
-              <h3 class="panel-title">Subject 1</h3>
+              <h3 class="panel-title">Subject 2</h3>
               </div>
               <div class="panel-body">
-                Dummy Info
+                <p><b>Professor: </b></p>
+                  <p>
+                    <b>Description: </b>
+                    <i>
+                      
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining: </b></p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End: </b></p>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="panel panel-info">
               <div class="panel-heading">
-              <h3 class="panel-title">Subject 1</h3>
+              <h3 class="panel-title">Subject 3</h3>
               </div>
               <div class="panel-body">
-                Dummy Info
+                <p><b>Professor: </b></p>
+                  <p>
+                    <b>Description: </b>
+                    <i>
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining: </b></p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End: </b></p>
+                    </div>
+                  </div>
               </div>
             </div>
             </div>
