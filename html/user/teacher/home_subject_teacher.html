@@ -1,0 +1,465 @@
+<html>
+<!-- the header will start here -->
+<head>
+    <link rel="stylesheet" type="text/css" href="../../../css/forum.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../material/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../material/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/amadeus.css">
+    <link rel="stylesheet" type="text/css" href="../../../font-awesome-4.6.3/css/font-awesome.min.css">
+
+    <!-- Jquery -->
+    <script src="../../../js/jquery-3.1.0.min.js"></script>
+    <script src="../../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../../material/js/material.min.js"></script>
+    <script src="../../../material/js/ripples.min.js"></script>
+    <script src="../../../js/jquery-ui.js"></script>
+    <script>
+      $.material.init();
+    </script>
+
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker2").datepicker();
+  } );
+  </script>
+
+  <style type="text/css">
+.ui-datepicker {
+   background: white;
+   border: 1px solid black;
+ 
+   color: black;
+ }
+</style>
+
+    <script>
+      $('#myModal').modal(options)
+    </script>
+    <script src="../../js/base/header.js"></script>
+</head>
+<body>
+
+
+  <div class="container-fluid">
+
+      <div class="row">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right notifications">
+
+                   <li class="link" data-toggle="tooltip" data-placement="bottom" title data-original-title="notifications">
+                      <a href="../user/profile_user.html" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                       <ul class="dropdown-menu">
+                          <li class="dropdown-header">Notifications</li>
+
+                          <li>
+                            <a href="../user/profile_user.html"><div class="list-group-item">
+                            <div class="row-picture">
+                              <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                              <div class="least-content pull-right">10min</div>
+                            </div>
+                            <div class="row-content">
+
+                              <p class="list-group-item-text">O professor acabou de publicar o trabalho</p>
+                            </div>
+                            </div>
+                            </a>
+                          </li>
+
+                          <li>
+                              <a href="../user/profile_user.html">
+                                  <div class="list-group-item">
+                                    <div class="row-action-primary">
+                                      <i class="material-icons">folder</i>
+                                    </div>
+                                    <div class="row-content">
+
+                                      <div class="least-content pull-right">15m</div><h4 class="list-group-item-heading">Tile with a label</h4>
+
+                                      <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                                  </div>
+                               </a>
+                          </li>
+
+                          <li>
+                            <a>
+                            <div class="list-group-item">
+                                    <div class="row-action-primary">
+                                      <i class="material-icons">folder</i>
+                                    </div>
+                                    <div class="row-content">
+
+                                      <div class="least-content pull-right">25m</div>
+                                      <h4 class="list-group-item-heading">Tile with a label</h4>
+
+                                      <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                            </div>
+                            </a>
+                          </li>
+                        </ul>
+                   </li>
+                  <li class="link" data-toggle="tooltip" data-placement="bottom" title data-original-title="messages">
+                      <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a>
+                  </li>
+                  <li class="link"> <a href="../user/profile_user.html">username</a></li>
+                  <li class="link"> <a href="../user/login.html">log out</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="container-fluid">
+        <div class="col-md-2">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png" id="img" class="img-rounded">
+              <p></p>
+              <div class="row">
+                <div class="col-xs-3 col-md-3"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></div>
+              </div>
+            </div>
+
+            <div class="panel-body">
+              <ul class="nav nav-pills nav-stacked">
+                    <li> <a href="home_subject.html">Home</a></li>
+                    <li> <a href="../profile_user.html">Profile</a></li>
+                    <li> <a href="../../course/home_course.html">My courses</a></li>
+              </ul>
+
+            </div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+            <h3 class="panel-title">Actions</h3>
+            </div>
+            <div class="panel-body">
+              <div class="list-group">
+                <li class="list-group-item"><a href="javascript:void(0)" class="btn btn-default btn-sm">Participants</a></li>
+                <li class="list-group-item"><a href="javascript:void(0)" class="btn btn-default btn-sm">Replicate subject</a></li>
+                <li class="list-group-item"><a href="javascript:void(0)" class="btn btn-default btn-sm">Create subject</a></li>
+                <li class="list-group-item"><a href="javascript:void(0)" class="btn btn-default btn-sm">Edit subject</a></li>
+                <li class="list-group-item"><a href="javascript:void(0)" class="btn btn-default btn-sm">Remove subject</a></li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-10">
+          <ul class="breadcrumb">
+            <li><a href="javascript:void(0)">Home</a></li>
+            <li><a href="javascript:void(0)">Courses</a></li>
+            <li><a href="javascript:void(0)">Course01</a></li>
+            <li class="active">Subjects</li>
+          </ul>
+          <div class="row">
+            <div class="col-md-10">
+              <div class="panel panel-info">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Presentation Subject</h3>
+                </div>
+                <div class="panel-body">
+                  <p><b>Professor:</b> Dr. Fulano de Tal</p>
+                  <p>
+                    <b>Description:</b>
+                    <i>
+                      "Lorem ipsum dolor sit amet, consecctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining:</b>10/05/2017</p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End:</b>23/08/2019</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Topico 1
+                        </a>
+                    </div>
+                    <div class="col-xs-5 col-md-5">
+                      <label>
+                        <input type="checkbox" value=""><i class="material-icons" onclick="edit(headingOne)" >&#xE8F4;</i>
+                      </label>
+                    </div>
+                    <div class="col-xs-1 col-md-1">
+                      <i class="material-icons" aria-hidden="true">&#xE254;</i>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+                    <p>
+                      <i>
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                      </i>
+                    </p>
+                    <div class="row">
+                      <div class="col-xs-6 col-md-6">
+                        <h4>Material</h4>
+                        <ul>
+                            <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
+                            <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
+                        </ul>
+                        <!--Modal-->
+                        <div class="modal fade" id="linksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title" id="myModalLabel">Links</h4>
+                              </div>
+
+                              <div class="modal-body">
+                                <!-- Card -->
+                                  <article class="card animated fadeInLeft">
+                                   <img class="card-img-top img-responsive" src="https://www.python.org/static/opengraph-icon-200x200.png" align="left" />
+                                   <div class="card-block">
+                                    <b class="card-title">Python</b><p></p>
+                                    <b class="text-muted">Guido van Rossum</b>
+                                    <p class="card-text"> <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+                                    <a href="https://www.python.org/" class="btn btn-primary">Read more</a>
+                                   </div>
+                                  </article>
+                                  <!-- .end Card -->
+                              </div>
+                              <!--<div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>-->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xs-4 col-md-4">
+                        <h4>Activities</h4>
+                        <ul>
+                            <li><i class="material-icons">description</i> <a href="#" data-toggle="modal" data-target="#ActiviteModal">Activitie 1</a></li>
+                            <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum 1</a></li>
+                        </ul>
+                        <div class="modal fade" id="ActiviteModal" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Atividade 1</h4>
+                              </div>
+                              <div class="modal-body">
+                           
+<div class="panel panel-default">
+  <div class="panel-body">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Atividade Proposta</legend>
+    <div class="container-fluid">
+    <div class="form-group">
+      <label for="NomeAtividade" class="col-md-2 col-xs-2 col-sm-2 control-label">Name:</label>
+
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <input type="text" required="required" class="form-control" id="NomeAtividade" placeholder="Nome da Atividade">
+      </div>
+      </div>
+      <div class="form-group">
+      <label for="textArea" class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label>
+
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <textarea class="form-control" required="" rows="1" id="textArea"></textarea>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <label  >Inicio: </label><input type="text" required="" id="datepicker" >
+    
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <label >Final: </label><input type="text" required="" id="datepicker2">
+      </div>
+    </div>
+    </div>
+   <div class="form-group">
+      <div class="col-md-8 col-md-offset-2">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    
+  
+</div>
+</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+
+                        <div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                  <h4 class="modal-title" id="myModalLabel"></h4>
+                              </div>
+
+                              <div class="modal-body">
+
+
+
+
+  <div class="page-header">
+    <h1 id="timeline">Forum</h1>
+    <b>Descricao: </b>Learning Python<p>
+    <b>Abertura: </b>Sexta-feira, 10 Junho 2016
+  </div>
+  <ul class="timeline">
+    <li>
+      <div class="timeline-badge">
+      <img id="logo" src="https://uxdesign-html-japm94.c9users.io/atividades-amadeus/uxdesign-html/img/topo-amadeus.png">
+      </div><p></p>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Python is insteresting</h4>
+          <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago by </small>Carlos </p>
+        </div>
+        <div class="timeline-body">
+          <p>Who knows how working a String in python?</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-badge">
+        <img id="logo" src="https://uxdesign-html-japm94.c9users.io/atividades-amadeus/uxdesign-html/img/topo-amadeus.png">
+      </div><p></p>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4 class="timeline-title">Ruby's doubt</h4>
+             <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 5 hours ago by </small>Jurandi</p>
+        </div>
+        <div class="timeline-body">
+          <p>How works the Gems?</p>
+
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+
+
+
+
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-xs-2 col-md-2">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading role=" tab" id="headingTwo"">
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Topico 2
+                      </a>
+                    </div>
+                    <div class="col-xs-5 col-md-5">
+                    <label>
+                      <input type="checkbox" value=""><i class="material-icons">&#xE8F4;</i>
+                    </label>
+                    </div>
+                    <div class="col-xs-1 col-md-1">
+                      <i class="material-icons">&#xE254;</i>
+                    </div>
+                  </div>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                  <div class="panel-body">
+                    <div class="form-group is-empty">
+                      <label class="col-xs-2 col-md-2 control-label">Description</label>
+                      <div class="col-xs-10 col-md-10">
+                        <textarea class="form-control" rows="3" id="textarea"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-6 col-md-6">
+                        <p><i class="material-icons"> &#xE147;</i> Material</p>
+                        <ul>
+                            <li><a href="#">Book 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-times" aria-hidden="true"></i></li>
+                            <li><a href="">Link 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> <i class="fa fa-times" aria-hidden="true"></i></li>
+                        </ul>
+                      </div>
+                      <div class="col-xs-5 col-md-5">
+                        <p><i class="material-icons"> &#xE147;</i> Activities</p>
+                        <ul>
+                            <li><a href="#">Activitie 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i><i class="fa fa-times" aria-hidden="true"></i></li>
+                            <li></li>
+                        </ul>
+
+                      </div>
+                      <div class="col-xs-1 col-md-1">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+              <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block btn-raised">Create a new Topic</a>
+            </div>
+
+            <div class="col-md-2">
+              <div class="panel panel-warning">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Pending Stuffs</h3>
+                </div>
+                <div class="panel-body"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

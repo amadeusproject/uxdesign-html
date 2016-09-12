@@ -30,33 +30,100 @@
       $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
       })
-    </script>
+    </script>   
 
   </head>
 
   <body>
-    <div class="row">
-        <div class="navbar navbar-default">
-            <div class="container-fluid">
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
-              </div>
-              <div class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav navbar-right notifications">
-                  <li> <a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a> </li>
-                  <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
-                  <li> <a href="#">username</a></li>
-                  <li> <a href="#">log out</a></li>
-                </ul>
-              </div>
+    
+    <!-- header  -->
+    <div class="container-fluid">
+  <div class="row">
+      <div class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../img/topo-amadeus.png" alt="Logo"/></a>
             </div>
-        </div>
-    </div>
+            <div class="navbar-collapse collapse navbar-responsive-collapse">
+              <ul class="nav navbar-nav navbar-right notifications">
+                
+                 <li class="link" data-toggle="tooltip" data-placement="bottom" title data-original-title="notifications">         
+                    <a href="../user/profile_user.html" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                     <ul class="dropdown-menu">
+                        <li class="dropdown-header">Notifications</li>
+                        
+                        <li>
+                          <a href="../user/profile_user.html"><div class="list-group-item">
+                          <div class="row-picture">
+                            <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+                            <div class="least-content pull-right">10min</div>
+                          </div>
+                          <div class="row-content">
+                         
+                            <p class="list-group-item-text">O professor acabou de publicar o trabalho</p>
+                          </div>
+                          </div>
+                          </a>
+                        </li>
+                        
+                        <li>
+                            <a href="../user/profile_user.html">
+                                <div class="list-group-item">
+                                  <div class="row-action-primary">
+                                    <i class="material-icons">folder</i>
+                                  </div>
+                                  <div class="row-content">
+                                    
+                                    <div class="least-content pull-right">15m</div><h4 class="list-group-item-heading">Tile with a label</h4>
+
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                                </div>
+                             </a>
+                        </li>
+                        
+                        <li>
+                          <a>
+                          <div class="list-group-item">
+                                  <div class="row-action-primary">
+                                    <i class="material-icons">folder</i>
+                                  </div>
+                                  <div class="row-content">
+                                    
+                                    <div class="least-content pull-right">25m</div>
+                                    <h4 class="list-group-item-heading">Tile with a label</h4>
+
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus.</p>
+                          </div>
+                          </a>
+                        </li>
+                      
+                      
+                        
+                      </ul>
+
+                 </li>
+
+              
+               
+                <li class="link" data-toggle="tooltip" data-placement="bottom" title data-original-title="messages"> 
+                    <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> 
+                </li>
+                 
+                <li class="link"> <a href="../user/profile_user.html">username</a></li>
+                <li class="link"> <a href="../user/login.html">log out</a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+   
 
     <div class="row">
       <div class="col-md-12">
@@ -75,6 +142,18 @@
           </div>
           <div class="panel-body">
             <ul class="nav nav-pills nav-stacked">
+              <li><a href="javascript:void(0)">Home</a></li>
+              <li><a href="javascript:void(0)">Profile</a></li>
+              <li><a href="javascript:void(0)">Courses</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel panel-primary navigation">
+          <div class="panel-heading">
+            <h5>Courses</h5>
+          </div>
+          <div class="panel-body">
+            <ul class="nav nav-pills nav-stacked">
               <li><a href="javascript:void(0)">Course 1</a></li>
               <li><a href="javascript:void(0)">Course 2</a></li>
               <li><a href="javascript:void(0)">Course 3</a></li>
@@ -86,7 +165,7 @@
         <ul class="breadcrumb" style="margin-bottom: 5px;">
           <li><a href="javascript:void(0)">Home</a></li>
           <li><a href="javascript:void(0)">Courses</a></li>
-          <li class="active">Subjects</li>
+          <li class="active">Course 01</li>
         </ul>
         <div class="row">
           <div class="col-md-8">
@@ -96,23 +175,64 @@
               <h3 class="panel-title">Subject 1</h3>
               </div>
               <div class="panel-body">
-                Dummy Info
+                <p><b>Professor: </b>Dr. Fulano de Tal</p>
+                  <p>
+                    <b>Description: </b>
+                    <i>
+                      "Lorem ipsum dolor sit amet, consecctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining: </b>10/05/2017</p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End: </b>23/08/2019</p>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="panel panel-info">
               <div class="panel-heading">
-              <h3 class="panel-title">Subject 1</h3>
+              <h3 class="panel-title">Subject 2</h3>
               </div>
               <div class="panel-body">
-                Dummy Info
+                <p><b>Professor: </b></p>
+                  <p>
+                    <b>Description: </b>
+                    <i>
+                      
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining: </b></p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End: </b></p>
+                    </div>
+                  </div>
               </div>
             </div>
             <div class="panel panel-info">
               <div class="panel-heading">
-              <h3 class="panel-title">Subject 1</h3>
+              <h3 class="panel-title">Subject 3</h3>
               </div>
               <div class="panel-body">
-                Dummy Info
+                <p><b>Professor: </b></p>
+                  <p>
+                    <b>Description: </b>
+                    <i>
+                    </i>
+                  </p>
+                  <div class="row">
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>Begining: </b></p>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <p><b>End: </b></p>
+                    </div>
+                  </div>
               </div>
             </div>
             </div>
