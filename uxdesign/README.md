@@ -14,6 +14,9 @@ The content here is used to help developers to create and update new html protot
 3. experiments: 
 	Experiments in UI and UX that can be used in the future to improve our results/productivity.
 
+4. concepts: 
+	Drafts, images and other not-ready assets to be used in UX/UI documentation.
+
 ## References
 
 [1] https://github.com/amadeusproject/amadeuslms
