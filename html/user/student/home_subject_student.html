@@ -26,6 +26,7 @@
 </head>
 <body>
 
+
   <div class="container-fluid">
 
       <div class="row">
@@ -43,12 +44,12 @@
                 <ul class="nav navbar-nav navbar-right notifications">
 
                    <li class="link" data-toggle="tooltip" data-placement="bottom" title data-original-title="notifications">
-                      <a href="../user/profile_user.html" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
+                      <a href="user/profile_user.html" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o" aria-hidden="true"></i></a>
                        <ul class="dropdown-menu">
                           <li class="dropdown-header">Notifications</li>
 
                           <li>
-                            <a href="../user/profile_user.html"><div class="list-group-item">
+                            <a href="user/profile_user.html"><div class="list-group-item">
                             <div class="row-picture">
                               <img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
                               <div class="least-content pull-right">10min</div>
@@ -96,8 +97,8 @@
                   <li class="link" data-toggle="tooltip" data-placement="bottom" title data-original-title="messages">
                       <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a>
                   </li>
-                  <li class="link"> <a href="../user/profile_user.html">username</a></li>
-                  <li class="link"> <a href="../user/login.html">log out</a></li>
+                  <li class="link"> <a href="../profile_user.html">username</a></li>
+                  <li class="link"> <a href="../login.html">log out</a></li>
                 </ul>
               </div>
             </div>
@@ -234,9 +235,75 @@
                       <div class="col-xs-4 col-md-4">
                         <h4>Activities</h4>
                         <ul>
-                            <li><i class="material-icons">description</i> <a href="#">Activitie 1</a></li>
+                            <li><i class="material-icons">description</i> <a href="#" data-toggle="modal" data-target="#ActiviteModal">Activitie 1</a></li>
                             <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum</a></li>
                         </ul>
+                        <div class="modal fade" id="ActiviteModal" role="dialog">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              </div>
+                              <div class="modal-body">
+                            
+<div class="panel panel-default">
+  <div class="panel-body">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Atividade Proposta</legend>
+    <div class="container-fluid">
+    <div class="form-group">
+      <label  class="col-md-2 col-xs-2 col-sm-2 control-label">Name:</label><br>Atividade 1
+    </div>
+    <div class="form-group">
+      <label class="col-md-2 col-xs-2 col-sm-2 control-label">Describe: </label><br>Describe activite
+      
+    </div>
+    <div class="form-group">
+      <label class="col-md-2 col-xs-2 col-sm-2 control-label">Opening: </label><br>DD/MM/YYYY
+      
+    </div>
+    <div class="form-group">
+      <label class="col-md-2 col-xs-2 col-sm-2 control-label">Ending: </label><br>DD/MM/YYYY
+      
+    </div>
+      
+      <div class="form-group">
+      <label for="NomeAtividade" class="col-md-2 col-xs-2 col-sm-2 control-label">Name Studant:</label>
+
+      <div class="col-md-10 col-xs-10 col-sm-10">
+        <input type="text" required="required" class="form-control" id="NomeAluno" placeholder="Name student">
+      </div>
+      </div>
+      <div class="form-group">
+  <input type="file" id="inputFile4" multiple="">
+  <div class="input-group">
+      <span class="input-group-btn input-group-sm">
+        <button type="button" class="btn btn-fab btn-fab-mini">
+          <i class="material-icons">attach_file</i>
+        </button>
+      </span>
+   <input type="text" required="required" readonly="" class="form-control" placeholder="Placeholder w/file chooser...">
+  </div>
+</div>
+<div class="form-group">
+      <div class="col-md-10 col-md-offset-2">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+    </div>
+
+  </fieldset>
+</form>
+    
+  
+</div>
+</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
                         <div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
