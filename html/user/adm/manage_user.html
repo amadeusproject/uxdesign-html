@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+     <link rel="stylesheet" type="text/css" href="../../../css/amadeus.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../material/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../material/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/base/icon.css">
+
+
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Jquery -->
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <script src="../../../js/jquery-3.1.0.min.js"></script>
+    <script src="../../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../../material/js/material.min.js"></script>
+    <script src="../../../material/js/ripples.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="MascaraValidacao.js"></script>
+    <script>
+    $.material.init();
+    </script>
+    <script>
+        $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+    </script>
+
+    <script>
+      $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+      })
+    </script>
+
+    <script>
+      $('.collapse').collapse()
+    </script>
+
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+
+  </head>
+
+<body>
+    <!--Header-->
+    <div class="row">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)"><img class="logo" src="../../../img/topo-amadeus.png" alt="Logo"/></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right notifications">
+                  <li> <a href="#"><i class="fa fa-bell-o" id="news"  aria-hidden="true"><span class="badge">3</span></i></a>
+
+                  </li>
+
+                  <li> <a href="#"><i class="fa fa-comments" aria-hidden="true"></i></a> </li>
+                  <li> <a href="#">username</a></li>
+                  <li> <a href="#">log out</a></li>
+                </ul>
+
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!--The header will ends here-->
+
+    <!--Menu Profile-->
+    <div class="row">
+      <div class="container">
+        <div class="col-sm-* col-xs-* col-md-3">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png" id="img" class="img-rounded">
+              <p></p>
+              <div class="row">
+                <div class="col-xs-3 col-md-3"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></div>
+                <div class="col-xs-3 col-md-3"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></div>
+              </div>
+            </div>
+
+            <div class="panel-body">
+              <ul class="nav nav-pills nav-stacked">
+                <li> <a href="#">Add user</a></li>
+                <li> <a href="#">Send Email</a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+       <!--End of Menu Profile-->
+
+      <!--Bread Crumb-->
+
+      <div class="col-sm-* col-xs-* col-md-9">
+        <ul class="breadcrumb">
+          <li><a href="javascript:void(0)">Home</a></li>
+          <li class="active">Manage Users</li>
+        </ul>
+        <div class="row">
+          <div class="col-md-11">
+            <input type="text" class="form-control" placeholder="search">
+          </div>
+          <div class="col-md-1">
+            <span class="input-group-btn">
+                  <button type="button" class="btn btn-fab btn-fab-mini">
+                    <i class="material-icons">search</i>
+                  </button>
+                </span>
+          </div>
+        </div>
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <div class="row">
+                    <div class="col-md-4">
+                    <img src="../../../img/95.jpg" alt="photoUser" class="img-circle">
+                    </div>
+                    <div class="col-md-8">
+                      <p>Name: John Doe</p>
+                      <p>Profile: Student</p>
+                      <p>Email: john@john.com</p>
+                      <p>Contact: (81) 98877-6655</p>
+                      <div align="right">
+                        <a href="javascript:void(0)" class="btn btn-raised btn-success">Edit</a>
+                        <a href="javascript:void(0)" class="btn btn-raised btn-primary">Delete</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <!--End of Bread Crumb-->
+
+    </div>
+  </body>
+</html>
