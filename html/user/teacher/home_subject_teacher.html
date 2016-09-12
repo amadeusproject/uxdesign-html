@@ -16,15 +16,34 @@
     <script src="../../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
     <script src="../../../material/js/material.min.js"></script>
     <script src="../../../material/js/ripples.min.js"></script>
+    <script src="../../../js/jquery-ui.js"></script>
     <script>
       $.material.init();
     </script>
+
+    <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker2").datepicker();
+  } );
+  </script>
+
+  <style type="text/css">
+.ui-datepicker {
+   background: white;
+   border: 1px solid black;
+ 
+   color: black;
+ }
+</style>
+
     <script>
       $('#myModal').modal(options)
     </script>
     <script src="../../js/base/header.js"></script>
 </head>
 <body>
+
 
   <div class="container-fluid">
 
@@ -241,9 +260,69 @@
                       <div class="col-xs-4 col-md-4">
                         <h4>Activities</h4>
                         <ul>
-                            <li><i class="material-icons">description</i> <a href="#">Activitie 1</a></li>
-                            <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum</a></li>
+                            <li><i class="material-icons">description</i> <a href="#" data-toggle="modal" data-target="#ActiviteModal">Activitie 1</a></li>
+                            <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum 1</a></li>
                         </ul>
+                        <div class="modal fade" id="ActiviteModal" role="dialog">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Atividade 1</h4>
+                              </div>
+                              <div class="modal-body">
+                           
+<div class="panel panel-default">
+  <div class="panel-body">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Atividade Proposta</legend>
+    <div class="container-fluid">
+    <div class="form-group">
+      <label for="NomeAtividade" class="col-md-2 col-xs-2 col-sm-2 control-label">Name:</label>
+
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <input type="text" required="required" class="form-control" id="NomeAtividade" placeholder="Nome da Atividade">
+      </div>
+      </div>
+      <div class="form-group">
+      <label for="textArea" class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label>
+
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <textarea class="form-control" required="" rows="1" id="textArea"></textarea>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <label  >Inicio: </label><input type="text" required="" id="datepicker" >
+    
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <label >Final: </label><input type="text" required="" id="datepicker2">
+      </div>
+    </div>
+    </div>
+   <div class="form-group">
+      <div class="col-md-8 col-md-offset-2">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    
+  
+</div>
+</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
 
                         <div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                           <div class="modal-dialog" role="document">
@@ -354,6 +433,7 @@
                             <li><a href="#">Activitie 1</a> <i class="fa fa-pencil-square-o" aria-hidden="true"> </i><i class="fa fa-times" aria-hidden="true"></i></li>
                             <li></li>
                         </ul>
+
                       </div>
                       <div class="col-xs-1 col-md-1">
 
