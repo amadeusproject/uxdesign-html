@@ -1,0 +1,7 @@
+.panel-heading, .breadcrumb {
+    height: 40px !important;
+}
+
+.navbar.navbar-default {
+    height: 60px !important;
+}

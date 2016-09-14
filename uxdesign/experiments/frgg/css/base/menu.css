@@ -1,0 +1,16 @@
+menu.accordion {
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+ul.submenu {
+    display: none;
+}
+
+ul.submenu.show {
+    display: block;
+}
