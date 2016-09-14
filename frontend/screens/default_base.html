@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/measures.css">
+    <link rel="stylesheet" type="text/css" href="../../css/amadeus.css">
+
+    <!-- Jquery -->
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../material/js/material.min.js"></script>
+    <script src="../../material/js/ripples.min.js"></script>
+    <script>
+      $.material.init();
+    </script>
+    <script src="../../js/w3data.js"></script>
+  </head>
+
+  <body>
+    <div w3-include-html="../components/base/header.html"></div>
+
+    <div class="row">
+      <div class="container-fluid">
+
+        <div class="col-md-2" >
+            <div w3-include-html="../components/subjects/menus/menu.html"></div>
+            <div w3-include-html="../components/subjects/menus/actions_menu.html"></div>
+            <div w3-include-html="../components/subjects/menus/favorites.html"></div>
+        </div>
+
+        <div class="col-md-10">
+          <div w3-include-html="../components/base/breadcrumb.html"></div>
+        </div>
+
+        <div class="col-md-8">
+          <div w3-include-html="../components/subjects/cards/subject.html"></div>
+          <div w3-include-html="../components/subjects/cards/topic.html"></div>
+        </div>
+
+        <div class="col-md-2">
+          <div w3-include-html="../components/subjects/contextual/pending_stuffs.html"></div>
+          <div w3-include-html="../components/subjects/contextual/goals.html"></div>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- Script to include components html, so don't remove it -->
+  <script>
+    w3IncludeHTML();
+  </script>
+
+  </body>
+</html>
