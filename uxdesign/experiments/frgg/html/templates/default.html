@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
+    <link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/footer.css">
+    <link rel="stylesheet" type="text/css" href="../../css/base/measures.css">
+    <link rel="stylesheet" type="text/css" href="../../css/amadeus.css">
+
+    <!-- Jquery -->
+    <script src="../../js/jquery-3.1.0.min.js"></script>
+    <script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script src="../../material/js/material.min.js"></script>
+    <script src="../../material/js/ripples.min.js"></script>
+    <script>
+      $.material.init();
+    </script>
+
+  </head>
+
+  <body>
+    <script type="text/frigga" src="../components/header.html"></script>
+
+    <div class="row">
+      <div class="container-fluid">
+
+        <div class="col-md-2">
+            <script type="text/frigga" src="../components/menus/menu.html"></script>
+            <script type="text/frigga" src="../components/menus/actions_menu.html"></script>
+            <script type="text/frigga" src="../components/menus/favorites.html"></script>
+        </div>
+
+        <div class="col-md-10">
+          <script type="text/frigga" src="../components/breadcrumb.html"></script>
+        </div>
+
+        <div class="col-md-7">
+          <script type="text/frigga" src="../components/cards/subject.html"></script>
+          <script type="text/frigga" src="../components/cards/topic.html"></script>
+        </div>
+
+        <div class="col-md-3">
+          <script type="text/frigga" src="../components/contextual/pending_stuffs.html"></script>
+          <script type="text/frigga" src="../components/contextual/goals.html"></script>
+        </div>
+        
+      </div>
+    </div>
+    
+    <!--script type="text/frigga" src="../components/footer.html"></script-->
+    <script src="../../frgg/frgg.js"></script>
+  </body>
+</html>
