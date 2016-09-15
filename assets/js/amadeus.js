@@ -1,3 +1,7 @@
+/**
+ * Amadeus related variables and functions
+ * to use systemwide in development
+ */
 var Amadeus = {
     /**
      * Path related variables and functions
