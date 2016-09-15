@@ -119,6 +119,20 @@ ul {
 	height: 40%;
 }
 
+/* Modal */
+
+.modal-header {
+  min-height: 60px;
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 15px !important;
+}
+
+.modal-footer {
+  text-align: right;
+  padding-top: 5px !important;
+  border-top: 1px solid #e5e5e5 !important;
+}
+
 /*CSS TIMELINE*/
 
 .bubble {
