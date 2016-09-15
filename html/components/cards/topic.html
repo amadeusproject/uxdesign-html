@@ -1,45 +1,175 @@
 <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-        <div class="row">
-        <div class="col-xs-6 col-md-6">
-            <b>Topic 1</b>
-        </div>
-        <div class="col-xs-5 col-md-5">
-            <label>
-            
-            </label>
-        </div>
-        <div class="col-xs-1 col-md-1">
-            
-        </div>
-        </div>
-    </div>
-    
-    <div class="panel-body">
-    <p>
-        <i>
-        <input class="form-control" type ="text" placeholder="Lorem ipsum dolor sit amet (...)"/>
-        </i>
-    </p>
+
+  <div class="panel-heading" role="tab" id="headingOne">
     <div class="row">
+      <div class="col-xs-6 col-md-6">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Topico 1
+        </a>
+      </div>
+      <div class="col-xs-5 col-md-5">
+        <label>
+          <input type="checkbox" value=""><i class="material-icons" onclick="edit(headingOne)" >&#xE8F4;</i>
+        </label>
+      </div>
+      <div class="col-xs-1 col-md-1">
+        <i class="material-icons" aria-hidden="true">&#xE254;</i>
+      </div>
+    </div>
+  </div>
+  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+      <p>
+        <i>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </i>
+      </p>
+      <div class="row">
         <div class="col-xs-6 col-md-6">
-        <h4>Material</h4>
-        <ul>
-            <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
-            <li><i class="material-icons">link</i> <a href="">Link 1</a></li>
-        </ul>
-        </div>
-        <div class="col-xs-4 col-md-4">
-        <h4>Activities</h4>
-        <ul>
-            <li><i class="material-icons">description</i> <a href="#">Activity 1</a></li>
-            <li></li>
-        </ul>
-        </div>
-        <div class="col-xs-2 col-md-2">
+          <h4>Material</h4>
+            <ul>
+                <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
+                <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
+            </ul>
+
+            <!--Modal-->
+            <div class="modal fade" id="linksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Links</h4>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Card -->
+                    <article class="card animated fadeInLeft">
+                       <img class="card-img-top img-responsive" src="https://www.python.org/static/opengraph-icon-200x200.png" align="left" />
+                       <div class="card-block">
+                          <b class="card-title">Python</b><p></p>
+                          <b class="text-muted">Guido van Rossum</b>
+                          <p class="card-text"> <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+                          <a href="https://www.python.org/" class="btn btn-primary">Read more</a>
+                       </div>
+                    </article>
+                    <!-- .end Card -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- EndModal -->
+          </div>
+
+          <div class="col-xs-4 col-md-4">
+            <h4>Activities</h4>
+            <ul>
+                <li><i class="material-icons">description</i> <a href="#" data-toggle="modal" data-target="#ActivityModal">Activitie 1</a></li>
+                <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum</a></li>
+            </ul>
+
+            <!--Modal-->
+            <div class="modal fade" id="ActivityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-horizontal">
+                      <fieldset>
+                        <legend>Atividade Proposta</legend>
+                        <div class="container-fluid">
+                          <div class="form-group">
+                            <label for="NomeAtividade" class="col-md-2 col-xs-2 col-sm-2 control-label">Name:</label>
+                            <div class="col-md-8 col-xs-8 col-sm-8">
+                              <input type="text" required="required" class="form-control" id="NomeAtividade" placeholder="Nome da Atividade">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="textArea" class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label>
+                            <div class="col-md-8 col-xs-8 col-sm-8">
+                              <textarea class="form-control" required="" rows="1" id="textArea"></textarea>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-8 col-xs-8 col-sm-8">
+                              <label  >Inicio: </label><input type="text" required="" id="datepicker" >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-8 col-xs-8 col-sm-8">
+                              <label >Final: </label><input type="text" required="" id="datepicker2">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <div class="col-md-8 col-md-offset-2">
+                            <button type="button" class="btn btn-default">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- EndModal -->
+            <!-- Modal -->
+            <div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="page-header">
+                      <h1 id="timeline">Forum</h1>
+                      <b>Descricao: </b>Learning Python<p>
+                      <b>Abertura: </b>Sexta-feira, 10 Junho 2016
+                    </div>
+                    <ul class="timeline">
+                      <li>
+                        <div class="timeline-badge">
+                        <img id="logo" src="https://uxdesign-html-japm94.c9users.io/atividades-amadeus/uxdesign-html/img/topo-amadeus.png">
+                        </div><p></p>
+                        <div class="timeline-panel">
+                          <div class="timeline-heading">
+                            <h4 class="timeline-title">Python is insteresting</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago by </small>Carlos </p>
+                          </div>
+                          <div class="timeline-body">
+                            <p>Who knows how working a String in python?</p>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="timeline-badge">
+                          <img id="logo" src="https://uxdesign-html-japm94.c9users.io/atividades-amadeus/uxdesign-html/img/topo-amadeus.png">
+                        </div><p></p>
+                        <div class="timeline-panel">
+                          <div class="timeline-heading">
+                            <h4 class="timeline-title">Ruby's doubt</h4>
+                               <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 5 hours ago by </small>Jurandi</p>
+                          </div>
+                          <div class="timeline-body">
+                            <p>How works the Gems?</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- endModal -->
+
+          </div>
 
         </div>
-    </div>
-    </div>
+      </div>
 
-</div>
+
+    </div>
+  </div>
