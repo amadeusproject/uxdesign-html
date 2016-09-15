@@ -61,6 +61,19 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
  So, with that we don't worry about where the folder is, just using this pattern, we can refer anything in the project.   
  **The only exception in this case are the needed libs to make it work (w3data & amadeus.js).**
 
+ - Setting up breadcrumb (using Amadeus.setBreadcrumb):
+ - params:   
+ 	- 1. A list with objects of type { name: Displayname, path: URLPath (you can use Amadeus.paths.* to generate) }   
+	- 2. The name of the curent page (A pretty Displayname)   
+
+```Javascript
+	// set data to breadcrumb in Subject page
+	Amadeus.setBreadcrumb([
+		{ name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') },
+		{ name: 'Courses', path: Amadeus.paths.screens('/users/teacher/home_course_teacher.html') }
+	],'Subject');
+``` 
+
 ## Languages   
 We use HTML5, CSS3 and Javascript in our files. You are free to contribute and bring new patterns, such as SASS or LESS for CSS. 
 
