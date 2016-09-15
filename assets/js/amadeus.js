@@ -4,6 +4,13 @@
  */
 var Amadeus = {
     /**
+     * Application defauls
+     */
+    defaults: {
+        // resusable delay in millis
+        delay: 1000
+    },
+    /**
      * Set up page
      */
     setup: function() {
@@ -114,7 +121,7 @@ var Amadeus = {
     setBreadcrumb: function(inactive, active) {
         setTimeout(function() {
             w3DisplayData('breadcrumb', { 'active': active, inactive: inactive });
-        }, 500);
+        }, Amadeus.defaults.delay);
     },
     /**
      * Set Up the system navbar
@@ -129,7 +136,7 @@ var Amadeus = {
                 componentPath: Amadeus.paths.components(),
                 controllerPath: Amadeus.paths.assets('/js/controllers')
             });
-        }, 500);
+        }, Amadeus.defaults.delay);
     },
     /**
      * Set up needed environment vars for head
@@ -144,7 +151,7 @@ var Amadeus = {
                 componentPath: Amadeus.paths.components(),
                 controllerPath: Amadeus.paths.assets('/js/controllers')
             });
-        }, 500);
+        }, Amadeus.defaults.delay);
     },
     /**
      * Set up needed environment vars
