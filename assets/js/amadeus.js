@@ -4,6 +4,19 @@
  */
 var Amadeus = {
     /**
+     * Set up page
+     */
+    setup: function() {
+        // set environment variables
+        Amadeus.setEnvVars();
+
+        // import templates
+        Amadeus.importTemplates();
+
+        // set up the navbar
+        Amadeus.setUpNavbar();
+    },
+    /**
      * Path related variables and functions
      */
     paths: {
@@ -30,6 +43,15 @@ var Amadeus = {
         // screens path
         screens: function(path) {
             base = Amadeus.paths.host + '/html/screens';
+            if (path) {
+                return base + path;
+            } else {
+                return base;
+            }
+        },
+        // templates path
+        templates: function(path) {
+            base = Amadeus.paths.host + '/html/templates';
             if (path) {
                 return base + path;
             } else {
@@ -62,5 +84,16 @@ var Amadeus = {
                 screenPath: Amadeus.paths.screens()
             });
         }, 500);
+    },
+    /**
+     * Set up needed environment vars
+     */
+    setEnvVars: function() {
+        w3DisplayData('body', {
+            templatePath: Amadeus.paths.templates(),
+            assetPath: Amadeus.paths.assets(),
+            componentPath: Amadeus.paths.components(),
+            screenPath: Amadeus.paths.screens()
+        });
     }
 };
