@@ -9,6 +9,13 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
 * Material Design by FezVastra [2]
 * w3data [3]
 
+## Rules of the game
+
+ - Create you files based in the template from html/templates/default_page.html.
+ - Don't write css or javascript directly into html page.
+ - assets/css/amadeus.css is the place for css.
+ - assets/js/controllers/ is the place for page-specific javascript.
+
 ## Patterns for Folders
 
 1. html: All .html files are stored inside html/screens/app_folder, basically, as we are serving a django project, we think about where this html will be a better fit, example: "auth_user.html" will be on "html/screens/user" because it is best place it can be.   
@@ -21,8 +28,10 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
 	- 1.2. screens: the final screens composed using components.   
    
 	- 1.3. templates: page templates to use as base for new pages creation.   
+		- 1.3.1. default_page.html: the file to copy when starting a new page or refactoring one.   
+		- 1.3.2. head.html: prametric header (inclusions of css & js files).   
 
-2. assets: The assest folder, with all non-html things.   
+2. assets: The assets folder, with all non-html things.   
 	- 2.1. css: All .css files that are used.   
 		- 2.1.1. vendor: all external css libs used into project.   
    
@@ -35,6 +44,22 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
    	
 	- 2.4. js: All .js files that are used.   
 		- 2.4.1. vendor: all external js libs used into project.   
+		- 2.4.2. controllers: javascript files related with specific pages.   
+
+## About w3data usage and amadeus.js
+
+ - assets/js/amadeus.js is the default dev Amadeus lib, that uses w3data to work with templates.
+ - amadeus.js works with handle page referencing too. It provide default paths to be used as default.
+
+ > * **{{componentPath}}**: default path to components folder
+ > * **{{templatePath}}**: default path to templates folder
+ > * **{{controllerPath}}**: path to assets/js/controlers/ folder
+ > * **{{hostPath}}**: pages host
+ > * **{{assetPath}}**: default path to assets folder
+ > * **{{screenPath}}**: default path to screens folder
+
+ So, with that we don't worry about where the folder is, just using this pattern, we can refer anything in the project.   
+ **The only exception in this case are the needed libs to make it work (w3data & amadeus.js).**
 
 ## Languages   
 We use HTML5, CSS3 and Javascript in our files. You are free to contribute and bring new patterns, such as SASS or LESS for CSS. 

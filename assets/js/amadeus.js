@@ -122,9 +122,12 @@ var Amadeus = {
     setUpNavbar: function() {
         setTimeout(function() {
             w3DisplayData('navbar', {
+                templatePath: Amadeus.paths.templates(),
                 hostPath: Amadeus.paths.host,
                 assetPath: Amadeus.paths.assets(),
-                screenPath: Amadeus.paths.screens()
+                screenPath: Amadeus.paths.screens(),
+                componentPath: Amadeus.paths.components(),
+                controllerPath: Amadeus.paths.assets('/js/controllers')
             });
         }, 500);
     },
@@ -135,9 +138,11 @@ var Amadeus = {
         setTimeout(function() {
             w3DisplayData('head', {
                 templatePath: Amadeus.paths.templates(),
+                hostPath: Amadeus.paths.host,
                 assetPath: Amadeus.paths.assets(),
+                screenPath: Amadeus.paths.screens(),
                 componentPath: Amadeus.paths.components(),
-                screenPath: Amadeus.paths.screens()
+                controllerPath: Amadeus.paths.assets('/js/controllers')
             });
         }, 500);
     },
@@ -147,9 +152,10 @@ var Amadeus = {
     setEnvVars: function() {
         w3DisplayData('body', {
             templatePath: Amadeus.paths.templates(),
+            hostPath: Amadeus.paths.host,
             assetPath: Amadeus.paths.assets(),
-            componentPath: Amadeus.paths.components(),
             screenPath: Amadeus.paths.screens(),
+            componentPath: Amadeus.paths.components(),
             controllerPath: Amadeus.paths.assets('/js/controllers')
         });
     }
