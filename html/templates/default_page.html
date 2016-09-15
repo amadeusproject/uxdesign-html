@@ -1,14 +1,5 @@
 <html>
   <head>
-    <!-- jQuery & jQuery UI -->
-    <script type="text/javascript" src="../../assets/js/vendor/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/vendor/jquery-ui.js"></script>
-
-    <!-- Bootstrap and themes (material) -->
-    <script type="text/javascript" src="../../assets/js/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/vendor/material.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/vendor/ripples.min.js"></script>
-
     <!-- W3 'template engine' for html -->
     <script type="text/javascript" src="../../assets/js/vendor/w3data.js"></script>
 
@@ -65,6 +56,19 @@
         { name: 'Home', path: '../../' },
         { name: 'location', path: '../' }
       ],'here');
+
+      // Fix JS & init material bootstrap
+      with(Amadeus.utils) {
+        setTimeout(function() {
+          s = document.getElementsByTagName('script');
+          l = [];
+          for (i = 0; i < s.length; i++) {
+            l.push(s[i].src);
+          }
+          progressiveLoad(l, loadScript);
+          $.material.init();
+        }, 500);
+      }
     </script>
   </body>
 </html>

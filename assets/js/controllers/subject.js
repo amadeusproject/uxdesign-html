@@ -1,6 +1,2 @@
-(function() {
-    $('#myModal').modal(options);
-
-    $( "#datepicker" ).datepicker();
-    $("#datepicker2").datepicker();
-})();
+$("#datepicker").datepicker();
+$("#datepicker2").datepicker();
