@@ -82,6 +82,12 @@ ul {
  list-style-type:none
 }
 
+.ui-datepicker {
+    background: white;
+    border: 1px solid black;
+    color: black;
+}
+
 
 /*CSS TIMELINE*/
 
