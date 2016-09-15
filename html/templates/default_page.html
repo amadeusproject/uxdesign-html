@@ -65,7 +65,16 @@
       </div>
     </div>
 
-    <!-- Script to include components html, so don't remove it -->
-    <script>w3IncludeHTML();</script>
+    <!-- Script to include html components, so don't remove it -->
+    <script>
+      // import templates
+      Amadeus.importTemplates();
+      
+      // set data to needed templates
+      Amadeus.setBreadcrumb([
+        { name: 'Home', path: '../../' },
+        { name: 'location', path: '../' }
+      ],'here');
+    </script>
   </body>
 </html>
