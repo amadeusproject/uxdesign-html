@@ -8,7 +8,7 @@ var Amadeus = {
      */
     defaults: {
         // resusable delay in millis
-        delay: 1000
+        delay: 500
     },
     /**
      * Set up page
