@@ -42,7 +42,7 @@
 </head>
 <body>
   <!-- Application header -->
-    <div w3-include-html="../../../components/base/header.html"></div>
+    <div w3-include-html="../../../components/base/navbar.html"></div>
 
     <div class="row">
       <div class="container-fluid">
@@ -76,6 +76,14 @@
       </div>
     </div>
 
-  <script>w3IncludeHTML();</script>
+  <script>
+    w3IncludeHTML();
+
+    // set data to needed templates
+    Amadeus.setBreadcrumb([
+      { name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') },
+      { name: 'Courses', path: Amadeus.paths.screens('/users/teacher/home_course_teacher.html') }
+    ],'Subject');
+  </script>
 </body>
 </html>
