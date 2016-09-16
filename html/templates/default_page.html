@@ -1,39 +1,14 @@
 <html>
   <head>
-    <!-- Roboto font -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Jquery -->
-    <script type="text/javascript" src="../../assets/js/vendor/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/vendor/jquery-ui.js"></script>
-
-    <!-- Bootstrap and themes (material) -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/material.min.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/ripples.min.css">
-    <script type="text/javascript" src="../../assets/js/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/vendor/material.min.js"></script>
-    <script type="text/javascript" src="../../assets/js/vendor/ripples.min.js"></script>
-
-    <!-- Font awesome -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/vendor/font-awesome.min.css">
-
-    <!-- Custom styles -->
-    <link rel="stylesheet" type="text/css" href="../../assets/css/amadeus.css">
-
-    <!-- Custom scripts -->
-    <script type="text/javascript" src="../../assets/js/amadeus.js"></script>
-
-    <!-- Init material bootstrap -->
-    <script>$.material.init();</script>
-
     <!-- W3 'template engine' for html -->
-    <script src="../../assets/js/vendor/w3data.js"></script>
+    <script type="text/javascript" src="../../assets/js/vendor/w3data.js"></script>
+
+    <!-- Amadeus script (NECESSARY!!!) [change src path if needed] -->
+    <script type="text/javascript" src="../../assets/js/amadeus.js"></script>
   </head>
-  <body>
+  <body id="body">
     <!-- Application header -->
-    <div w3-include-html="../components/base/header.html"></div>
+    <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
     <!-- Main -->
     <div class="row">
@@ -41,44 +16,60 @@
 
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
-            <div w3-include-html="../components/menus/menu.html"></div>
-            <div w3-include-html="../components/menus/actions_menu.html"></div>
-            <div w3-include-html="../components/menus/favorites.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/menu.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/actions_menu.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/favorites.html"></div>
         </div>
 
         <!-- Breadcrumb -->
         <div class="col-md-10">
-          <div w3-include-html="../components/base/breadcrumb.html"></div>
+          <div w3-include-html="{{componentPath}}/base/breadcrumb.html"></div>
         </div>
 
         <!-- Content -->
         <div class="col-md-8">
-          <div w3-include-html="../components/cards/subject.html"></div>
-          <div w3-include-html="../components/cards/topic.html"></div>
+          
+          <!-- Put your content here! -->
+
         </div>
 
         <!-- Contextual lateral cards (right) -->
         <div class="col-md-2">
-          <div w3-include-html="../components/contextual/pending_stuffs.html"></div>
-          <div w3-include-html="../components/contextual/goals.html"></div>
+          <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
+          <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
         </div>
 
       </div>
     </div>
 
+    <!-- All needed libs -->
+    <div w3-include-html="{{templatePath}}/head.html"></div>
+
+    <!-- Custom scripts goes here -->
+
     <!-- Script to include html components, so don't remove it -->
     <script>
-      // import templates
-      Amadeus.importTemplates();
-
-      // set up the navbar
-      Amadeus.setUpNavbar();
+      // set up all (import templates, set up navbar and set environment variables)
+      Amadeus.setup();
       
       // set data to needed templates
       Amadeus.setBreadcrumb([
         { name: 'Home', path: '../../' },
         { name: 'location', path: '../' }
       ],'here');
+
+      // Fix JS & init material bootstrap
+      with(Amadeus.utils) {
+        setTimeout(function() {
+          s = document.getElementsByTagName('script');
+          l = [];
+          for (i = 0; i < s.length; i++) {
+            l.push(s[i].src);
+          }
+          progressiveLoad(l, loadScript);
+          $.material.init();
+        }, 500);
+      }
     </script>
   </body>
 </html>
