@@ -42,34 +42,19 @@
       </div>
     </div>
 
-    <!-- All needed libs -->
-    <div w3-include-html="{{templatePath}}/head.html"></div>
-
     <!-- Custom scripts goes here -->
 
     <!-- Script to include html components, so don't remove it -->
     <script>
       // set up all (import templates, set up navbar and set environment variables)
-      Amadeus.setup();
-      
-      // set data to needed templates
-      Amadeus.setBreadcrumb([
-        { name: 'Home', path: '../../' },
-        { name: 'location', path: '../' }
-      ],'here');
-
-      // Fix JS & init material bootstrap
-      with(Amadeus.utils) {
-        setTimeout(function() {
-          s = document.getElementsByTagName('script');
-          l = [];
-          for (i = 0; i < s.length; i++) {
-            l.push(s[i].src);
-          }
-          progressiveLoad(l, loadScript);
-          $.material.init();
-        }, 500);
-      }
+      Amadeus.load(function() {
+        $.material.init();
+        // set data to needed templates
+        Amadeus.setBreadcrumb([
+          { name: 'Home', path: '../../' },
+          { name: 'location', path: '../' }
+        ],'here');
+      });
     </script>
   </body>
 </html>
