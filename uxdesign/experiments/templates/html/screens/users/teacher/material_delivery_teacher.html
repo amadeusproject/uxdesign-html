@@ -1,0 +1,96 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="../../../bootstrap-3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../Material/css/bootstrap-material-design.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../Material/css/ripples.min.css">
+  	<link rel="stylesheet" type="text/css" href="../../../Material/css/style.css">
+	
+	<!-- Jquery -->
+	
+	<script src="../../../js/jquery-3.1.0.min.js"></script>
+	<script src="../../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../../material/js/material.min.js"></script>
+	<script src="../../../material/js/ripples.min.js"></script>
+  	<script src="../../../js/jquery-ui.js"></script>
+
+   <script>
+  $.material.init();
+  </script>
+ 
+  
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker2").datepicker();
+  } );
+  </script>
+
+  <style type="text/css">
+.ui-datepicker {
+   background: white;
+   border: 1px solid black;
+ 
+   color: black;
+ }
+</style>
+
+
+	
+</head>
+<body>
+
+<div class="col-md-5">
+<div class="panel panel-default">
+  <div class="panel-body">
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Atividade Proposta</legend>
+    <div class="container-fluid">
+    <div class="form-group">
+      <label for="NomeAtividade" class="col-md-2 col-xs-2 col-sm-2 control-label">Name:</label>
+
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <input type="text" required="required" class="form-control" id="NomeAtividade" placeholder="Nome da Atividade">
+      </div>
+      </div>
+      <div class="form-group">
+      <label for="textArea" class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label>
+
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <textarea class="form-control" required="" rows="1" id="textArea"></textarea>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <label  >Inicio: </label><input type="text" required="" id="datepicker" >
+    
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-8 col-xs-8 col-sm-8">
+        <label >Final: </label><input type="text" required="" id="datepicker2">
+      </div>
+    </div>
+    </div>
+   <div class="form-group">
+      <div class="col-md-8 col-md-offset-2">
+        <button type="button" class="btn btn-default">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>
