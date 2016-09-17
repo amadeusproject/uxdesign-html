@@ -29,127 +29,93 @@
 </head>
 
 <body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-5 col-xs-5 col-sm-5">
+				<div class="list-group-item">
+					
+					<div class="row-content">
+						<h4 class="list-group-item-heading">Profile User</h4>
+						<div class="row-picture">
+						<img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon">
+					</div>
 
-	<div class="row">
-		<div class="col-lg-offset-4 col-lg-2">
-			<img src="..." class="img-responsive center-block " alt="logo amadeus">
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2">
-			<div class="card">
-				<div class="card-content">
-					<div class="card-body">
-						<div class="row">
-							<div class="col-md-4">
-								<img src="../img/95.jpg" class="img-responsive center-block img-circle" alt="foto perfil" style="max-height:174px">
-							</div>
-							<div class="col-md-8">
-								<table class="table table-hover table-edited">
-									<tbody>
-										<tr>
-											<td>Status:</td>
-											<td>Offline</td>
-										</tr>
-										<tr>
-											<td>Nome:</td>
-											<td>Thiago de Souza Araújo</td>
-										</tr>
-										<tr>
-											<td>Login:</td>
-											<td>thiagosoara</td>
-										</tr>
-										<tr>
-											<td>Email:</td>
-											<td>thiagosoara@gmail.com</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
+						<div class="form-group">
+							<label id="teste" class="col-md-2 col-xs-2 col-sm-2 control-label">Status:</label><br>(On)
 						</div>
-						<div class="row">
-							<div class="col-md-10 col-md-offset-1">
-								<table class="table table-hover table-edited">
-									<tbody>
-										<tr>
-											<td>Tipo de usuário:</td>
-											<td>Admin</td>
-										</tr>
-										<tr>
-											<td>CPF:</td>
-											<td>999123999-81</td>
-										</tr>
-										<tr>
-											<td>Número de telefone:</td>
-											<td>(81) 99999-6331</td>
-										</tr>
-										<tr>
-											<td>Sexo:</td>
-											<td>Masculino</td>
-										</tr>
-										<tr>
-											<td>Data de Nascimento:</td>
-											<td>13/03/1995</td>
-										</tr>
-										<tr>
-											<td>Estado e Cidade:</td>
-											<td>PE - Recife</td>
-										</tr>
-										<tr>
-											<td>Titulação:</td>
-											<td>Mestrado</td>
-										</tr>
-										<tr>
-											<td>Ano:</td>
-											<td>2012</td>
-										</tr>
-										<tr>
-											<td>Instituição:</td>
-											<td>UFPE</td>
-										</tr>
-										<tr>
-											<td>Currículo:</td>
-											<td>-</td>
-										</tr>	
-									</tbody>
-								</table>
-							</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Name: </label><br>Administer
+
 						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">E-mail: </label><br>admin@amadeus.org.br
+
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">CPF: </label><br>111.111.111-00
+
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Phone Number:</label><br>99999-0000
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Sexo:</label><br>Masculino
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Data:</label><br>MM/DD/YYYY
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Address:</label><br>Rua fulano de tal
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Title:</label><br>-------
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Ano:</label><br>2011
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Institution:</label><br>UFPE
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 col-xs-2 col-sm-2 control-label">Curriculo:</label><br>------
+						</div>
+
+						
+							<div class="form-group">
+								<a href="edit_profile.html" target="_self"><button class="btn btn-flat">Edit Profile</button></a>
+								<button class="btn btn-flat btn-danger pull-right" data-toggle="modal" data-target="#myModal">Delete Account</button>
+
+							</div>
+							
+							<div class="modal" id="myModal">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+											<h4 class="modal-title">Delete User</h4>
+										</div>
+										<div class="modal-body">
+											<p>You want to delete your User?</p>
+										</div>
+										<div class="modal-footer">
+											<a><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></a>
+											<a href="login.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
 					</div>
 				</div>
-				<footer class="card-footer">
-					<div class="col-md-6">
-						<button class="btn btn-flat">Edit Profile</button>
-					</div>
-					<div class="col-md-6">
-						<button class="btn btn-flat btn-danger pull-right" data-toggle="modal" data-target="#myModal">Delete Account</button>
-
-					</div>
-					<div class="modal" id="myModal">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-									<h4 class="modal-title">Delete User</h4>
-								</div>
-								<div class="modal-body">
-									<p>You want to delete your User?</p>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-									<button type="button" class="btn btn-primary">Confirm</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</footer>
-
 			</div>
-
-
 		</div>
 	</div>
-</div>
+
+	
+	
 </body>
 
 </html>
