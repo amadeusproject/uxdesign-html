@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="forum.css">
+         <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+  <p></p>
+<form action="#" method="post" class="form-horizontal" id="commentForm" role="form"> 
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Comment</label>
+      <div class="col-sm-10">
+        <textarea class="form-control" name="addComment" id="addComment" rows="5"></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="uploadMedia" class="col-sm-2 control-label">Upload media</label>
+        <div class="col-sm-10">                    
+          <div class="input-group">
+            <div class="input-group-addon">http://</div>
+              <input type="text" class="form-control" name="uploadMedia" id="uploadMedia">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">                    
+            <button class="btn btn-success btn-circle text-uppercase" type="submit" id="submitComment"><span class="glyphicon glyphicon-send"></span> Summit comment</button>
+          </div>
+  </div>            
+</form>
