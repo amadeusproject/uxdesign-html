@@ -1,19 +1,26 @@
 <html>
 <head>
-	<meta charset="utf-8">
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-	<link rel="stylesheet" type="text/css" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../material/css/bootstrap-material-design.min.css">
-	<link rel="stylesheet" type="text/css" href="../../material/css/ripples.min.css">
-	<link rel="stylesheet" type="text/css" href="../../material/css/main.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/material.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/ripples.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/base/header.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/amadeus.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/forum.css">
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/font-awesome.min.css">
 
 	<!-- Jquery -->
-	<script src="../../js/jquery-3.1.0.min.js"></script>
-	<script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
-	<script src="../../material/js/material.min.js"></script>
-	<script src="../../material/js/ripples.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery-3.1.0.min.js"></script>
+	<script src="../../../assets/js/vendor/bootstrap.min.js"></script>
+	<script src="../../../assets/js/vendor/material.min.js"></script>
+	<script src="../../../assets/js/vendor/ripples.min.js"></script>
+	<script src="../../../assets/js/vendor/jquery-ui.js"></script>
+	<script src="../../../assets/js/header.js"></script>
+	<script src="../../../assets/js/amadeus.js"></script>
 	<script>
 		$.material.init();
 	</script>
@@ -115,7 +122,25 @@
 						<button class="btn btn-flat">Edit Profile</button>
 					</div>
 					<div class="col-md-6">
-						<button class="btn btn-flat btn-danger pull-right">Delete Account</button>
+						<button class="btn btn-flat btn-danger pull-right" data-toggle="modal" data-target="#myModal">Delete Account</button>
+
+					</div>
+					<div class="modal" id="myModal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+									<h4 class="modal-title">Delete User</h4>
+								</div>
+								<div class="modal-body">
+									<p>You want to delete your User?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-primary">Confirm</button>
+								</div>
+							</div>
+						</div>
 					</div>
 				</footer>
 
