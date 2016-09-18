@@ -17,7 +17,8 @@ var Amadeus = {
                 Amadeus.paths.assets('/js/vendor/jquery-3.1.0.min.js'),
                 Amadeus.paths.assets('/js/vendor/bootstrap.min.js'),
                 Amadeus.paths.assets('/js/vendor/material.min.js'),
-                Amadeus.paths.assets('/js/vendor/ripples.min.js')
+                Amadeus.paths.assets('/js/vendor/ripples.min.js'),
+                Amadeus.paths.assets('/js/vendor/bootstrap-datepicker.js')
             ];
         },
         // css assets
@@ -29,6 +30,7 @@ var Amadeus = {
                 Amadeus.paths.assets('/css/vendor/material.min.css'),
                 Amadeus.paths.assets('/css/vendor/ripples.min.css'),
                 Amadeus.paths.assets('/css/vendor/font-awesome.min.css'),
+                Amadeus.paths.assets('/css/vendor/datepicker.css'),
                 Amadeus.paths.assets('/css/amadeus.css')
             ];
         }
@@ -194,13 +196,30 @@ var Amadeus = {
         if (callback) callback();
     },
     /**
+     * load controller custom scrips if exsists
+     */
+    loadControllers: function(callback) {
+        scripts = document.getElementsByTagName('script');
+        for (i = 0; i < scripts.length; i++) {
+            if (scripts[i].src.indexOf(Amadeus.paths.assets('/js/controllers')) >= 0) {
+                Amadeus.utils.progressiveLoad([scripts[i].src], Amadeus.utils.loadScript);
+                parent = scripts[i].parentNode;
+                parent.removeChild(scripts[i]);
+            }
+        }
+        if (callback) callback();
+    },
+    /**
      * Responsible to load necessary assets
      */
     load: function(callback) {
         with (Amadeus.utils) {
             progressiveLoad(Amadeus.default.scripts(), loadScript, function() {
                 progressiveLoad(Amadeus.default.styles(), loadStyle, function() {
-                    Amadeus.setup(callback);
+                    Amadeus.setup(function() {
+                        $.material.init();
+                        Amadeus.loadControllers(callback);
+                    });
                 });
             });
         }

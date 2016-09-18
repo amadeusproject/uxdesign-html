@@ -44,14 +44,13 @@
     </div>
 
     <!-- Custom scripts goes here -->
-    <script type="text/javascript" src="{{controllerPath}}/subject.js"></script>
+    <script type="text/javascript" src="{{controllerPath}}/home_subject_teacher.js"></script>
 
     <!-- Script to include html components, so don't remove it -->
     <script>
       // set up all (import templates, set up navbar and set environment variables)
       Amadeus.load(function() {
-        $.material.init();
-        // set data to needed templates
+        // set data to breadcrumb
         Amadeus.setBreadcrumb([
           { name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') },
           { name: 'Courses', path: Amadeus.paths.screens('/users/teacher/home_course_teacher.html') }
