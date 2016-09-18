@@ -11,7 +11,7 @@
     <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
     <!-- Main -->
-    <div class="row">
+    <div class="row" id="main">
       <div class="container-fluid">
 
         <!-- Lateral menus (left) -->
@@ -40,20 +40,20 @@
         </div>
 
       </div>
+      
+      <!-- Custom scripts goes here -->
+
+      <!-- Script to include html components, so don't remove it -->
+      <script>
+        // set up all (import templates, set up navbar and set environment variables)
+        Amadeus.load(function() {
+          // set data to breadcrumb
+          Amadeus.setBreadcrumb([
+            { name: 'Home', path: '../../' },
+            { name: 'location', path: '../' }
+          ],'here');
+        });
+      </script>
     </div>
-
-    <!-- Custom scripts goes here -->
-
-    <!-- Script to include html components, so don't remove it -->
-    <script>
-      // set up all (import templates, set up navbar and set environment variables)
-      Amadeus.load(function() {
-        // set data to breadcrumb
-        Amadeus.setBreadcrumb([
-          { name: 'Home', path: '../../' },
-          { name: 'location', path: '../' }
-        ],'here');
-      });
-    </script>
   </body>
 </html>

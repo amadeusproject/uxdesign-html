@@ -43,11 +43,14 @@ var Amadeus = {
         Amadeus.setEnvVars(function() {
             // import templates
             Amadeus.importTemplates(function() {
+                // run callback Function (if exsists)
+                if (callback) callback();
+                
+                // set up the navbar
+                Amadeus.setUpNavbar();
+
                 // set environment variables for templates
-                Amadeus.setEnvVars(function() {
-                    // set up the navbar
-                    Amadeus.setUpNavbar(callback);
-                });
+                Amadeus.setUpMain();
             });
         });
     },
@@ -185,6 +188,15 @@ var Amadeus = {
     setUpNavbar: function(callback) {
         setTimeout(function() {
             w3DisplayData('navbar', Amadeus.paths.defaults());
+            if (callback) callback();
+        }, Amadeus.default.delay);
+    },
+    /**
+     * Set Up the system main content env variables
+     */
+    setUpMain: function(callback) {
+        setTimeout(function() {
+            w3DisplayData('main', Amadeus.paths.defaults());
             if (callback) callback();
         }, Amadeus.default.delay);
     },
