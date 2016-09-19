@@ -36,14 +36,53 @@
       <div class="form-group">
         <label for="questionType" class="col-md-2 control-label">Question Type</label>
         <div class="col-md-10">
-          <select id="questionType" class="form-control">
-            <option>Multiple Choice</option>
-            <option>True or False</option>
-            <option>Gap Filling</option>
-            <option>Discursive Question</option>
+          <select id="questionType" class="form-control" onchange="showDiv (this)">
+            <option selected disabled>Question Type</option>    
+            <option value="0">Multiple Choice</option>
+            <option value="1">True or False</option>
+            <option value="2">Gap Filling</option>
+            <option value="3">Discursive Question</option>
           </select>
         </div>
       </div>
+
+      <script>
+        function showDiv (elem) {
+          if (elem.value == 0) {
+            document.getElementById('multipleChoice').style.display = "block";
+          } else if (elem.value == 1) {
+            document.getElementById('trueOrFalse').style.display = "block";
+          }
+        }
+      </script>
+      
+      <div id="multipleChoice" class="form-group" style="display: none;">
+        <div class="row">
+          <label for="questionName" class="col-md-02 control-label">Question</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="questionName" placeholder="Question Name">
+          </div>
+        </div>
+        <div class="row">
+          <label for="alternative" class="col-md-02 control-label">Alternatives</label>
+          <div class="col-md-10">
+            <div class="radio radio-primary">
+              <label>
+                <input checked type="radio" class="form-control" id="alternative1" value="option1">
+                <textarea class="form-control" rows="1" id="alternative1" placeholder="Write your alternative"></textarea>
+              </label>
+            </div>
+            <div class="radio radio-primary">
+              <label>
+                <input type="radio" class="form-control" id="alternative2" value="option2">
+                <textarea class="form-control" rows="1" id="alternative2" placeholder="Write your alternative"></textarea>
+              </label>
+            </div>
+         </div>
+        </div>
+      </div>
+
+      <div id="" class="form-group"></div>
 
     </form>
   </div>
