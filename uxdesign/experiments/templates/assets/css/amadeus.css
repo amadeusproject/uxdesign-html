@@ -16,6 +16,8 @@
     width: 48px;
 }
 
+.datepicker{z-index:1151 !important;}
+
 .link{
 	transition-duration: 0.5s;
 }
