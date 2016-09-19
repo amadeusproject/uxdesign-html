@@ -53,43 +53,9 @@
       <div class="container-fluid">
         
         <div class="col-md-2">
-          <div class="panel panel-primary">
-            
-            <div class="panel-heading">
-              <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png" id="img" class="img-rounded">
-              <p></p>
-              <div class="row">
-                <div class="col-xs-3 col-md-3"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></div>
-                <div class="col-xs-3 col-md-3"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></div>
-                <div class="col-xs-3 col-md-3"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></div>
-                <div class="col-xs-3 col-md-3"><i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i></div>
-              </div>
-            </div>
-
-            <div class="panel-body">
-              <ul class="nav nav-pills nav-stacked">
-                <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <li><a href="#">Manage Courses </a><span class="caret"></span></li>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <div class="card card-block">
-                    <ul>
-                      <a href="#"><li>IS</li></a>
-                      <a href="#"><li>CC</li></a>
-                      <a href="#"><li>CE</li></a>
-                    </ul>
-                  </div>
-                </div>
-                 </div>
-                  
-                    <li> <a href="#">Pending task</a></li>
-                    <li> <a href="#">Create Course</a></li>
-                    <li> <a href="#">Manage Users</a></li>
-              </ul>
-             
-            </div>
-          </div>
+          <div w3-include-html="../../../components/menus/menu.html"></div>
+            <div w3-include-html="../../../components/menus/actions_menu.html"></div>
+            <div w3-include-html="../../../components/menus/favorites.html"></div>
         </div>
        <!--End of Menu Profile--> 
       
@@ -193,8 +159,7 @@
 
     // set data to needed templates
     Amadeus.setBreadcrumb([
-      { name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') },
-      { name: 'Courses', path: Amadeus.paths.screens('/users/teacher/home_course_teacher.html') }
-    ],'Subject');
+      { name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') }
+    ]);
   </script>
 </html>
