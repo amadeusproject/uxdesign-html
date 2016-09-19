@@ -6,6 +6,11 @@
 .navbar.navbar-default {
     height: 60px !important;
 }
+.icon-more-horiz{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
 
 /* Navbar related classes */
 .logo {
@@ -48,6 +53,7 @@
 .courseHome{
     text-align: center;
 }
+
 .courseHome ul{
     list-style-type: none;
     margin: 0;
