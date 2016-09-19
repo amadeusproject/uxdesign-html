@@ -44,8 +44,8 @@
   <!-- Application header -->
     <div w3-include-html="../../../components/base/navbar.html"></div>
 
-    <div class="row">
-      <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
 
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
@@ -57,20 +57,20 @@
         <!-- Breadcrumb -->
         <div class="col-md-10">
           <div w3-include-html="../../../components/base/breadcrumb.html"></div>
-        </div>
-
-        <!-- Content -->
-        <div class="col-md-8">
-          <div w3-include-html="../../../components/cards/subject.html"></div>
-          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <div w3-include-html="../../../components/cards/topic.html"></div>
+          <div class="row">
+            <!-- Content -->
+            <div class="col-md-10">
+              <div w3-include-html="../../../components/cards/subject.html"></div>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div w3-include-html="../../../components/cards/topic.html"></div>
+              </div>
+            </div>
+            <!-- Contextual lateral cards (right) -->
+            <div class="col-md-2">
+              <div w3-include-html="../../../components/contextual/pending_stuffs.html"></div>
+              <div w3-include-html="../../../components/contextual/goals.html"></div>
+            </div>
           </div>
-        </div>
-
-        <!-- Contextual lateral cards (right) -->
-        <div class="col-md-2">
-          <div w3-include-html="../../../components/contextual/pending_stuffs.html"></div>
-          <div w3-include-html="../../../components/contextual/goals.html"></div>
         </div>
 
       </div>
