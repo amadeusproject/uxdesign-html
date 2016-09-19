@@ -3,39 +3,45 @@
 <head>
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/material.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/ripples.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/base/header.css">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/amadeus.css">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/forum.css">
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/font-awesome.min.css">
 
-  <link rel="stylesheet" type="text/css" href="../../../bootstrap-3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../material/css/bootstrap-material-design.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../material/css/ripples.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../font-awesome-4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../css/base/header.css">
-  <link rel="stylesheet" type="text/css" href="../../../css/amadeus.css">
-
-   <script>
-  $.material.init();
-  </script>
- 
-  
+  <!-- Jquery -->
+  <script src="../../../../assets/js/vendor/jquery-3.1.0.min.js"></script>
+  <script src="../../../../assets/js/vendor/bootstrap.min.js"></script>
+  <script src="../../../../assets/js/vendor/material.min.js"></script>
+  <script src="../../../../assets/js/vendor/ripples.min.js"></script>
+  <script src="../../../../assets/js/vendor/jquery-ui.js"></script>
+  <script src="../../../../assets/js/header.js"></script>
+  <script src="../../../../assets/js/amadeus.js"></script>
+  <!--Not connected to js w3data.js -->
+  <script>$.material.init();</script>
+  <script>$('#myModal').modal(options)</script>
+  <script src="../../../../assets/js/vendor/w3data.js"></script>
   <script>
     $( function() {
       $( "#datepicker" ).datepicker();
       $("#datepicker2").datepicker();
-    });
+    } );
   </script>
-
   <style type="text/css">
     .ui-datepicker {
-      background: white;
-      border: 1px solid black;
- 
-      color: black;
-    }
+       background: white;
+       border: 1px solid black;
+
+       color: black;
+     }
   </style>
 
 </head>
 
 <body>
-  
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
@@ -47,7 +53,7 @@
             <form class="form-horizontal">
               <fieldset>
                 <legend class="text-center">Add Material</legend>
-                
+
                 <div class="form-group">
                   <label for="inputName" class="col-md-2 control-label">Name</label>
 
@@ -64,7 +70,7 @@
                       <input type="file" id="inputFile" multiple="">
                     </div>
                 </div>
-                
+
 
                 <div class="form-group">
                   <div class="col-md-8 col-md-offset-2">
