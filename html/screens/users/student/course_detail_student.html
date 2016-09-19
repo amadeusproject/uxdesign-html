@@ -16,7 +16,7 @@
 
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
-            <div w3-include-html="{{componentPath}}/menus/menu.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/student_base_menu.html"></div>
             <div w3-include-html="{{componentPath}}/menus/student_actions_menu.html"></div>
             <div w3-include-html="{{componentPath}}/menus/favorites.html"></div>
         </div>
@@ -28,10 +28,10 @@
 
         <!-- Content -->
         <div class="col-md-8">
-          
+
           <!-- Put your content here! -->
 
-          <div w3-include-html="{{componentPath}}/cards/course.html"></div>
+          <div w3-include-html="{{componentPath}}/cards/course_detail_student.html"></div>
           <div w3-include-html="{{componentPath}}/cards/subject_student.html"></div>
           <div w3-include-html="{{componentPath}}/cards/subject_student.html"></div>
 
@@ -55,13 +55,13 @@
     <script>
       // set up all (import templates, set up navbar and set environment variables)
       Amadeus.setup();
-      
+
       // set data to needed templates
       Amadeus.setBreadcrumb([
         { name: 'Home', path: Amadeus.paths.screens('/users/student/home_student.html') },
         { name: 'Courses', path: Amadeus.paths.screens('/users/student/home_course_student.html')}
     ],'Course 01');
-    
+
       // Fix JS & init material bootstrap
       with(Amadeus.utils) {
         setTimeout(function() {

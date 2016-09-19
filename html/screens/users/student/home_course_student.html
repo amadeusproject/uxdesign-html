@@ -1,10 +1,44 @@
 <html>
   <head>
-    <!-- W3 'template engine' for html -->
-    <script type="text/javascript" src="../../../../assets/js/vendor/w3data.js"></script>
 
-    <!-- Amadeus script (NECESSARY!!!) [change src path if needed] -->
-    <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/material.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/ripples.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/amadeus.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/forum.css">
+    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/font-awesome.min.css">
+
+    <!-- Jquery -->
+    <script src="../../../../assets/js/vendor/jquery-3.1.0.min.js"></script>
+    <script src="../../../../assets/js/vendor/bootstrap.min.js"></script>
+    <script src="../../../../assets/js/vendor/material.min.js"></script>
+    <script src="../../../../assets/js/vendor/ripples.min.js"></script>
+    <script src="../../../../assets/js/vendor/jquery-ui.js"></script>
+    <script src="../../../../assets/js/header.js"></script>
+    <script src="../../../../assets/js/amadeus.js"></script>
+    <!--Not connected to js w3data.js -->
+    <script>$.material.init();</script>
+    <script>$('#myModal').modal(options)</script>
+    <script src="../../../../assets/js/vendor/w3data.js"></script>
+    <script>
+      $( function() {
+        $( "#datepicker" ).datepicker();
+        $("#datepicker2").datepicker();
+      } );
+    </script>
+    <style type="text/css">
+      .ui-datepicker {
+         background: white;
+         border: 1px solid black;
+
+         color: black;
+       }
+    </style>
+
   </head>
   <body id="body">
     <!-- Application header -->
@@ -16,7 +50,7 @@
 
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
-            <div w3-include-html="{{componentPath}}/menus/menu.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/student_base_menu.html"></div>
             <!-- <div w3-include-html="{{componentPath}}/menus/actions_menu.html"></div> -->
             <div w3-include-html="{{componentPath}}/menus/favorites.html"></div>
         </div>
@@ -28,7 +62,7 @@
 
         <!-- Content -->
         <div class="col-md-8">
-          
+
           <!-- Put your content here! -->
 
           <div w3-include-html="{{componentPath}}/cards/course_student.html"></div>
@@ -55,7 +89,7 @@
     <script>
       // set up all (import templates, set up navbar and set environment variables)
       Amadeus.setup();
-      
+
       // set data to needed templates
       Amadeus.setBreadcrumb([
         { name: 'Home', path: Amadeus.paths.screens('/users/student/home_student.html') }
