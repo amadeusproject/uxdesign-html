@@ -69,78 +69,7 @@
       
         <!-- Timeline -->
       <div class="col-md-8">
-        <ul class="timeline">
-			          <li>
-				          <div class="avatar">
-                    <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png">
-					            
-				          </div>
-				          <div class="bubble-container">
-					          <div class="bubble">
-					            <div class="retweet"></div>
-						          <h3>Pedro</h3> enrolled in <h3>Java's Course</h3><br/>
-					              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
-						          
-							          <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-							          <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-							          <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a>
-							          
-					           </div>
-					           <div class="arrow"></div>
-				          </div>
-			          </li>
-			          <li>
-			            <div class="avatar">
-                    <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png">
-					            
-				          </div>
-				          <div class="bubble-container">
-					          <div class="bubble">
-					            <div class="retweet">
-						            <div class="icon-retweet"></div>
-					            </div>
-						          <h3>Pedro</h3> enrolled in <h3>Java's Course</h3><br/>
-					              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, iusto, maxime, ullam autem a voluptate rem quos repudiandae.
-						          
-							          <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-							          <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-							          <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a>
-							         
-						          
-					           </div>
-					          <div class="arrow"></div>
-				          </div>
-				        </li>
-				          
-				        <li>
-				          <div class="avatar">
-                    <img src="https://success.salesforce.com/resource/1472342400000/sharedlayout/img/new-user-image-default.png">
-					            <div class="hover">
-						            <div class="icon-twitter"></div>
-					            </div>
-				          </div>
-				          <div class="bubble-container">
-					          <div class="bubble">
-					            <div class="retweet">
-						          </div>
-						          <h3>Pedro</h3> enrolled in <h3>Java's Course</h3><br/>
-					              <p>Pedro is very close to complete!</p>
-					                <div class="progress">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                              60%
-                            </div>
-                          </div>
-						              
-						                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-		                        <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i></a>
-			                       <a href="#"><i class="fa fa-share" aria-hidden="true"></i></a> 
-			                     
-					           </div>
-					          <div class="arrow"></div> 
-				          </div>
-			          </li>
-			          
-			        </ul>
+        <div w3-include-html="../../../components/cards/timeline.html"></div>
       </div>
             
             <!--End of timeline-->
@@ -159,7 +88,7 @@
 
     // set data to needed templates
     Amadeus.setBreadcrumb([
-      { name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') }
+      {name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') }
     ]);
   </script>
 </html>
