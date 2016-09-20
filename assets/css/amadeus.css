@@ -11,6 +11,11 @@
   margin-bottom: 0px;
   padding-left: 0px;
 }
+.subjectLink div .panel-info:hover{
+  text-decoration: none;
+  box-shadow: 10px 10px 5px #888888;
+
+}
 
 /* Navbar related classes */
 .logo {

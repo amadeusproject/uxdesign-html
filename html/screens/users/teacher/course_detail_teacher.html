@@ -11,36 +11,38 @@
     <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
     <!-- Main -->
-    <div class="row">
-      <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
 
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
             <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="{{componentPath}}/menus/actions_subject_menu.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/teacher_actions_subject.html"></div>
             <div w3-include-html="{{componentPath}}/menus/favorites.html"></div>
         </div>
 
         <!-- Breadcrumb -->
         <div class="col-md-10">
           <div w3-include-html="{{componentPath}}/base/breadcrumb.html"></div>
-        </div>
+          <div class="row">
+            <!-- Content -->
+            <div class="col-md-10">
+              <!-- Put your content here! -->
+              <div w3-include-html="{{componentPath}}/cards/course_detail_teacher.html"></div>
+              <a href="home_subject_teacher.html" class="subjectLink">
+              <div w3-include-html="{{componentPath}}/cards/subject.html"></div>
+              </a>
+              <a href="home_subject_teacher.html" class="subjectLink">
+              <div w3-include-html="{{componentPath}}/cards/subject.html"></div>
+              </a>
+            </div>
+            <!-- Contextual lateral cards (right) -->
+            <div class="col-md-2">
+              <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
+              <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
+            </div>
 
-        <!-- Content -->
-        <div class="col-md-8">
-
-          <!-- Put your content here! -->
-
-          <div w3-include-html="{{componentPath}}/cards/course.html"></div>
-          <div w3-include-html="{{componentPath}}/cards/subject.html"></div>
-          <div w3-include-html="{{componentPath}}/cards/subject.html"></div>
-
-        </div>
-
-        <!-- Contextual lateral cards (right) -->
-        <div class="col-md-2">
-          <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
-          <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
+          </div>
         </div>
 
       </div>
