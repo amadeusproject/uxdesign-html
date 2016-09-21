@@ -6,35 +6,39 @@
   <body id="body">
 
     <!-- Main -->
-    <div class="row" id="main">
-      <div class="container-fluid">
+    <div class="container-fluid" id="main">
+      <div class="row">
 
         <div class="row logo-row">
-            <div class="col-md-offset-5 col-md-2 logoLogin">
-                <img src="{{assetPath}}/img/logos/amadeus.png" class="img-responsive center-block" alt="logo amadeus">
-            </div>
+          <div class="col-md-offset-5 col-md-2 col-sm-offset-5 col-sm-2 col-lg-offset-5 col-lg-2 logoLogin">
+            <img src="{{assetPath}}/img/logos/amadeus.png" class="img-responsive center-block" alt="logo amadeus">
+          </div>
         </div>
-        <div class="row ">
-            <div class="col-md-4 col-md-offset-4">
-                <div w3-include-html="{{componentPath}}/cards/form_login.html"></div>
+
+        <div class="row login-form">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-lg-6 col-lg-offset-3">
+              <div w3-include-html="{{componentPath}}/cards/form_login.html"></div>
             </div>
-        <div class="row">
-            <div class="col-lg-offset-4 col-lg-4">
-             <a href="{{screenPath}}/users/remember_password.html">
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-3 col-mdlg-6 col-sm-offset-3 col-sm-6 col-lg-offset-3 col-lg-6">
+              <a href="{{screenPath}}/users/remember_password.html">
                 <button class="btn btn-raised btn-primary btn-lg btn-block">Sign Up </button>
-             </a>
+              </a>
             </div>
+          </div>
+
         </div>
 
-      </div>
-      
-      <!-- Custom scripts goes here -->
+        <!-- Custom scripts goes here -->
 
-      <!-- Script to include html components, so don't remove it -->
-      <script>
-        // set up all (import templates, set up navbar and set environment variables)
-        Amadeus.load();
-      </script>
-    </div>
+        <!-- Script to include html components, so don't remove it -->
+        <script>
+          // set up all (import templates, set up navbar and set environment variables)
+          Amadeus.load();
+        </script>
+      </div>
   </body>
 </html>
