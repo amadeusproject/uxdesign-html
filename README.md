@@ -15,6 +15,7 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
  - Don't write css or javascript directly into html page.
  - assets/css/amadeus.css is the place for css.
  - assets/js/controllers/ is the place for page-specific javascript.
+ - To add new assets, put it on settings.js file. It configures witch css and js files will be loaded. Remenber to add the same to html/templates/head.html template
 
 ## Patterns for Folders
 
