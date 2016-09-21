@@ -52,6 +52,12 @@
 	font-size: 20px;
 }
 
+
+/* Breadcrumb */
+.breadcrumb .no-inactive {
+    display: none !important;
+}
+
 /* Login page related classes */
 .logoLogin{
     padding-bottom: 1%;
