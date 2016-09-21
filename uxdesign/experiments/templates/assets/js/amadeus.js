@@ -204,8 +204,11 @@ var Amadeus = {
                     progressiveLoad(Amadeus.default.scripts || [], loadScript, function() {
                         progressiveLoad(Amadeus.default.styles || [], loadStyle, function() {
                             Amadeus.setup(function() {
-                                $.material.init();
-                                Amadeus.loadControllers(callback);
+                                if (callback) callback();
+                                setTimeout(function() {
+                                    $.material.init();
+                                    Amadeus.loadControllers(callback);
+                                }, Amadeus.default.delay * 2 || 1000);
                             });
                         });
                     });

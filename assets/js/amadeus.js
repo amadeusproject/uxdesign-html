@@ -4,37 +4,37 @@
  */
 var Amadeus = {
     /**
-     * Application defauls
-     */
-    defaults: {
-        // resusable delay in millis
-        delay: 500
-    },
-    /**
      * Set up page
      */
-    setup: function() {
+    setup: function(callback) {
+        // run callback Function (if exsists)
+        if (callback) callback();
+        
         // set environment variables
-        Amadeus.setEnvVars();
+        Amadeus.setEnvVars(function() {
+            // import templates
+            Amadeus.importTemplates(function() {
+                // set up the navbar
+                Amadeus.setUpNavbar();
 
-        // import templates
-        Amadeus.importTemplates();
-
-        // set environment variables for head
-        Amadeus.setHead();
-
-        // set up the navbar
-        Amadeus.setUpNavbar();
+                // set environment variables for templates
+                Amadeus.setUpMain();
+            });
+        });
     },
     /**
      * Path related variables and functions
      */
     paths: {
         // application host
-        host: 'http://' + window.location.host,
+        host: window.location.protocol + '//' + window.location.host,
+        // application resolved host
+        resolveHost: function() {
+            return window.location.href.split(/html/g)[0] || Amadeus.paths.host;
+        },
         // assets path
         assets: function(path) {
-            base = Amadeus.paths.host + '/assets';
+            base = Amadeus.paths.resolveHost() + 'assets';
             if (path) {
                 return base + path;
             } else {
@@ -43,7 +43,7 @@ var Amadeus = {
         },
         // components path
         components: function(path) {
-            base = Amadeus.paths.host + '/html/components';
+            base = Amadeus.paths.resolveHost() + 'html/components';
             if (path) {
                 return base + path;
             } else {
@@ -52,7 +52,7 @@ var Amadeus = {
         },
         // screens path
         screens: function(path) {
-            base = Amadeus.paths.host + '/html/screens';
+            base = Amadeus.paths.resolveHost() + 'html/screens';
             if (path) {
                 return base + path;
             } else {
@@ -61,11 +61,22 @@ var Amadeus = {
         },
         // templates path
         templates: function(path) {
-            base = Amadeus.paths.host + '/html/templates';
+            base = Amadeus.paths.resolveHost() + 'html/templates';
             if (path) {
                 return base + path;
             } else {
                 return base;
+            }
+        },
+        // default paths
+        defaults: function() {
+            return {
+                templatePath: Amadeus.paths.templates(),
+                hostPath: Amadeus.paths.resolveHost(),
+                assetPath: Amadeus.paths.assets(),
+                screenPath: Amadeus.paths.screens(),
+                componentPath: Amadeus.paths.components(),
+                controllerPath: Amadeus.paths.assets('/js/controllers')
             }
         }
     },
@@ -107,13 +118,33 @@ var Amadeus = {
 
             // Fire the loading
             head.appendChild(script);
+        },
+        /**
+         * Function responsible to fetch stylesheets
+         */
+        loadStyle: function(url, callback) {
+            // Adding the script tag to the head as suggested before
+            var head = document.getElementsByTagName('head')[0];
+            var style = document.createElement('link');
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            style.href = url;
+
+            // Then bind the event to the callback function.
+            // There are several events for cross browser compatibility.
+            //style.onreadystatechange = callback;
+            style.onload = callback;
+
+            // Fire the loading
+            head.appendChild(style);
         }
     },
     /**
      * Import HTML templates using w3data library 
      */
-    importTemplates: function() {
+    importTemplates: function(callback) {
         w3IncludeHTML();
+        if (callback) callback();
     },
     /**
      * Set location in breadcrumb
@@ -121,49 +152,68 @@ var Amadeus = {
     setBreadcrumb: function(inactive, active) {
         setTimeout(function() {
             w3DisplayData('breadcrumb', { 'active': active, inactive: inactive });
-        }, Amadeus.defaults.delay);
+        }, Amadeus.default.delay || 500);
     },
     /**
      * Set Up the system navbar
      */
-    setUpNavbar: function() {
+    setUpNavbar: function(callback) {
         setTimeout(function() {
-            w3DisplayData('navbar', {
-                templatePath: Amadeus.paths.templates(),
-                hostPath: Amadeus.paths.host,
-                assetPath: Amadeus.paths.assets(),
-                screenPath: Amadeus.paths.screens(),
-                componentPath: Amadeus.paths.components(),
-                controllerPath: Amadeus.paths.assets('/js/controllers')
-            });
-        }, Amadeus.defaults.delay);
+            w3DisplayData('navbar', Amadeus.paths.defaults());
+            if (callback) callback();
+        }, Amadeus.default.delay || 500);
     },
     /**
-     * Set up needed environment vars for head
+     * Set Up the system main content env variables
      */
-    setHead: function() {
+    setUpMain: function(callback) {
         setTimeout(function() {
-            w3DisplayData('head', {
-                templatePath: Amadeus.paths.templates(),
-                hostPath: Amadeus.paths.host,
-                assetPath: Amadeus.paths.assets(),
-                screenPath: Amadeus.paths.screens(),
-                componentPath: Amadeus.paths.components(),
-                controllerPath: Amadeus.paths.assets('/js/controllers')
-            });
-        }, Amadeus.defaults.delay);
+            w3DisplayData('main', Amadeus.paths.defaults());
+            if (callback) callback();
+        }, Amadeus.default.delay || 500);
     },
     /**
      * Set up needed environment vars
      */
-    setEnvVars: function() {
-        w3DisplayData('body', {
-            templatePath: Amadeus.paths.templates(),
-            hostPath: Amadeus.paths.host,
-            assetPath: Amadeus.paths.assets(),
-            screenPath: Amadeus.paths.screens(),
-            componentPath: Amadeus.paths.components(),
-            controllerPath: Amadeus.paths.assets('/js/controllers')
-        });
+    setEnvVars: function(callback) {
+        w3DisplayData('body', Amadeus.paths.defaults());
+        if (callback) callback();
+    },
+    /**
+     * load controller custom scrips if exsists
+     */
+    loadControllers: function(callback) {
+        scripts = document.getElementsByTagName('script');
+        for (i = 0; i < scripts.length; i++) {
+            if (scripts[i].src.indexOf(Amadeus.paths.assets('/js/controllers')) >= 0) {
+                Amadeus.utils.progressiveLoad([scripts[i].src], Amadeus.utils.loadScript);
+                parent = scripts[i].parentNode;
+                parent.removeChild(scripts[i]);
+            }
+        }
+        if (callback) callback();
+    },
+    /**
+     * Responsible to load necessary assets
+     */
+    load: function(callback) {
+        settings = Amadeus.paths.resolveHost() + 'settings.js'
+        with (Amadeus.utils) {
+            progressiveLoad([settings], loadScript, function() {
+                if (Amadeus.default) {
+                    progressiveLoad(Amadeus.default.scripts || [], loadScript, function() {
+                        progressiveLoad(Amadeus.default.styles || [], loadStyle, function() {
+                            Amadeus.setup(function() {
+                                if (callback) callback();
+                                setTimeout(function() {
+                                    $.material.init();
+                                    Amadeus.loadControllers();
+                                }, Amadeus.default.delay * 2 || 1000);
+                            });
+                        });
+                    });
+                }
+            });
+        }
     }
 };

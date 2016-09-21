@@ -6,6 +6,7 @@
 .navbar.navbar-default {
     height: 60px !important;
 }
+
 .icon-more-horiz{
   margin-top: 0px;
   margin-bottom: 0px;
@@ -14,7 +15,6 @@
 .subjectLink div .panel-info:hover{
   text-decoration: none;
   box-shadow: 10px 10px 5px #888888;
-
 }
 
 /* Navbar related classes */
@@ -25,6 +25,8 @@
 	height: 48px;
     width: 48px;
 }
+
+.datepicker{z-index:1151 !important;}
 
 .link{
 	transition-duration: 0.5s;
@@ -58,7 +60,6 @@
 .courseHome{
     text-align: center;
 }
-
 .courseHome ul{
     list-style-type: none;
     margin: 0;
@@ -233,7 +234,6 @@ ul {
   color: white;
   text-align: center;
   margin-top: 1em;
-  font-family: "Lato";
   font-size: 1.6em;
   -moz-border-radius-topleft: 8px;
   -webkit-border-top-left-radius: 8px;
@@ -297,7 +297,6 @@ ul {
 h3 {
   font-size: 1.2em;
   font-weight: bold;
-  font-family: 'Lato';
   display: inline-block;
   margin-bottom: .2em;
   color: #95a5a6; }
