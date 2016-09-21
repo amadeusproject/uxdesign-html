@@ -30,11 +30,11 @@ var Amadeus = {
         host: window.location.protocol + '//' + window.location.host,
         // application resolved host
         resolveHost: function() {
-            return window.location.href.split(/html/g)[0] || Amadeus.paths.host;
+            return window.location.href.split(/\/html\//g)[0] || Amadeus.paths.host;
         },
         // assets path
         assets: function(path) {
-            base = Amadeus.paths.resolveHost() + 'assets';
+            base = Amadeus.paths.resolveHost() + '/assets';
             if (path) {
                 return base + path;
             } else {
@@ -43,7 +43,7 @@ var Amadeus = {
         },
         // components path
         components: function(path) {
-            base = Amadeus.paths.resolveHost() + 'html/components';
+            base = Amadeus.paths.resolveHost() + '/html/components';
             if (path) {
                 return base + path;
             } else {
@@ -52,7 +52,7 @@ var Amadeus = {
         },
         // screens path
         screens: function(path) {
-            base = Amadeus.paths.resolveHost() + 'html/screens';
+            base = Amadeus.paths.resolveHost() + '/html/screens';
             if (path) {
                 return base + path;
             } else {
@@ -61,7 +61,7 @@ var Amadeus = {
         },
         // templates path
         templates: function(path) {
-            base = Amadeus.paths.resolveHost() + 'html/templates';
+            base = Amadeus.paths.resolveHost() + '/html/templates';
             if (path) {
                 return base + path;
             } else {
@@ -197,7 +197,7 @@ var Amadeus = {
      * Responsible to load necessary assets
      */
     load: function(callback) {
-        settings = Amadeus.paths.resolveHost() + 'settings.js'
+        settings = Amadeus.paths.resolveHost() + '/settings.js'
         with (Amadeus.utils) {
             progressiveLoad([settings], loadScript, function() {
                 if (Amadeus.default) {
