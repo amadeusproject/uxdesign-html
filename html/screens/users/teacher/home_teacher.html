@@ -1,93 +1,49 @@
-<!DOCTYPE html>
-
 <html>
-   <head>
+  <head>
+    <!-- Amadeus script (NECESSARY!!!) [change src if needed!!!] -->
+    <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
+  </head>
+  <body id="body">
+    <!-- Application header -->
+    <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/material.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/ripples.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/base/header.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/amadeus.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/forum.css">
-    <link rel="stylesheet" type="text/css" href="../../../../assets/css/vendor/font-awesome.min.css">
-
-    <!-- Jquery -->
-    <script src="../../../../assets/js/vendor/jquery-3.1.0.min.js"></script>
-    <script src="../../../../assets/js/vendor/bootstrap.min.js"></script>
-    <script src="../../../../assets/js/vendor/material.min.js"></script>
-    <script src="../../../../assets/js/vendor/ripples.min.js"></script>
-    <script src="../../../../assets/js/vendor/jquery-ui.js"></script>
-    <script src="../../../../assets/js/header.js"></script>
-    <script src="../../../../assets/js/amadeus.js"></script>
-    <!--Not connected to js w3data.js -->
-    <script>$.material.init();</script>
-    <script>$('#myModal').modal(options)</script>
-    <script src="../../../../assets/js/vendor/w3data.js"></script>
-    <script>
-      $( function() {
-        $( "#datepicker" ).datepicker();
-        $("#datepicker2").datepicker();
-      } );
-    </script>
-    <style type="text/css">
-      .ui-datepicker {
-         background: white;
-         border: 1px solid black;
-
-         color: black;
-       }
-    </style>
-
-</head>
-<body>
-  <!-- Application header -->
-    <div w3-include-html="../../../components/base/navbar.html"></div>
-
-
-    <!--The header will ends here-->
-
-    <!--Menu Profile-->
-    <div class="row">
+    <!-- Main -->
+    <div class="row" id="main">
       <div class="container-fluid">
 
+        <!-- Lateral menus (left) -->
+        <div class="col-md-2" >
+            <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="col-md-10">
+          <div w3-include-html="{{componentPath}}/base/breadcrumb.html"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-8">
+          <!-- Put your content here! -->
+          <div w3-include-html="{{componentPath}}/cards/timeline.html"></div>
+        </div>
+
+        <!-- Contextual lateral cards (right) -->
         <div class="col-md-2">
-          <div w3-include-html="../../../components/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="../../../components/menus/favorites.html"></div>
+          <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
+          <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
         </div>
-       <!--End of Menu Profile-->
-
-      <!--Bread Crumb-->
-
-      <div class="col-md-10">
-          <div w3-include-html="../../../components/base/breadcrumb.html"></div>
       </div>
+      
+      <!-- Custom scripts goes here -->
 
-      <!--End of Bread Crumb-->
-
-        <!-- Timeline -->
-      <div class="col-md-8">
-        <div w3-include-html="../../../components/cards/timeline.html"></div>
-      </div>
-
-            <!--End of timeline-->
-         <div class="col-md-2">
-          <div w3-include-html="../../../components/contextual/pending_stuffs.html"></div>
-          <div w3-include-html="../../../components/contextual/goals.html"></div>
-        </div>
-
-
-     </div>
-   </div>
-
+      <!-- Script to include html components, so don't remove it -->
+      <script>
+        // set up all (import templates, set up navbar and set environment variables)
+        Amadeus.load(function() {
+          // set data to breadcrumb
+          Amadeus.setBreadcrumb(null,'Home');
+        });
+      </script>
+    </div>
   </body>
-  <script>
-    w3IncludeHTML();
-
-    // set data to needed templates
-    Amadeus.setBreadcrumb([
-      {name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') }
-    ]);
-  </script>
 </html>
