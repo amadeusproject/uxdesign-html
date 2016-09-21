@@ -1,37 +1,31 @@
 <html>
-<head>
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <head>
+    <!-- Amadeus script (NECESSARY!!!) [change src if needed!!!] -->
+    <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
+  </head>
+  <body id="body">
+    <!-- Application header -->
+    <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/material.min.css">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/ripples.min.css">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/base/header.css">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/amadeus.css">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/forum.css">
-	<link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/font-awesome.min.css">
+    <!-- Main -->
+    <div class="row" id="main">
+      <div class="container-fluid">
 
-	<!-- Jquery -->
-	<script src="../../../assets/js/vendor/jquery-3.1.0.min.js"></script>
-	<script src="../../../assets/js/vendor/bootstrap.min.js"></script>
-	<script src="../../../assets/js/vendor/material.min.js"></script>
-	<script src="../../../assets/js/vendor/ripples.min.js"></script>
-	<script src="../../../assets/js/vendor/jquery-ui.js"></script>
-	<script src="../../../assets/js/header.js"></script>
-	<script src="../../../assets/js/amadeus.js"></script>
-	<script>
-		$.material.init();
-	</script>
+        <!-- Lateral menus (left) -->
+        <div class="col-md-2" >
+            <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/actions_menu.html"></div>
+        </div>
 
+        <!-- Breadcrumb -->
+        <div class="col-md-10">
+          <div w3-include-html="{{componentPath}}/base/breadcrumb.html"></div>
+        </div>
 
-</head>
-
-<body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-6 col-xs-6 col-sm-6">
+        <!-- Content -->
+        <div class="col-md-8">
+          
+          <div class="col-lg-6 col-xs-6 col-sm-6">
 				<div class="list-group-item">
 
 					<div class="row-content">
@@ -112,7 +106,7 @@
 									</div>
 									<div class="modal-footer">
 										<a><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></a>
-										<a href="profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+										<a href="{{screenPath}}/users/profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
 
 									</div>
 								</div>
@@ -124,11 +118,30 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 
+        </div>
 
+        <!-- Contextual lateral cards (right) -->
+        <div class="col-md-2">
+          <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
+          <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
+        </div>
 
-</body>
+      </div>
+      
+      <!-- Custom scripts goes here -->
 
+      <!-- Script to include html components, so don't remove it -->
+      <script>
+        // set up all (import templates, set up navbar and set environment variables)
+        Amadeus.load(function() {
+          // set data to breadcrumb
+          Amadeus.setBreadcrumb([
+            { name: 'Path', path: '{{screenPath}}' },
+            { name: 'To', path: '{{screenPath}}' }
+          ],'here');
+        });
+      </script>
+    </div>
+  </body>
 </html>
