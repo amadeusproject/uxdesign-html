@@ -30,7 +30,7 @@ h5 {text-align: center !important;}
 .panel-primary .panel-body {padding: 0% 0% 0% 0% !important;}
 .datepicker {
   z-index:1151 !important; background: #ffffff !important; border: 0 !important; color: #939598 !important; border-radius: 0 !important;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12) !important;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19) !important;
 }
 .datepicker th, .datepicker td {border-radius: 0 !important;}
 .datepicker .active {color: #ffffff !important; background-color: #47B8C0 !important; background-image: none !important;}
