@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <!-- Jquery -->
+    <script type="text/javascript" src="../../../assets/js/vendor/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/jquery-ui.js"></script>
+
+    <!-- Bootstrap and themes (material) -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/material.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/ripples.min.css">
+    <script type="text/javascript" src="../../../assets/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/material.min.js"></script>
+    <script type="text/javascript" src="../../../assets/js/vendor/ripples.min.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/vendor/font-awesome.min.css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/amadeus.css">
+
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="../../../assets/js/amadeus.js"></script>
+
+    <!-- Init material bootstrap -->
+    <script>$.material.init();</script>
+
+    <!-- W3 'template engine' for html -->
+    <script src="../../../assets/js/vendor/w3data.js"></script>
+  </head>
+  <body>
+    <!-- Application header -->
+    <div w3-include-html="../../components/base/navbar.html"></div>
+
+    <!-- Main -->
+    <div class="row">
+      <div class="container-fluid">
+
+        <!-- Lateral menus (left) -->
+        <div class="col-md-2" >
+            <div w3-include-html="../../components/menus/teacher_base_menu.html"></div>
+            <div w3-include-html="../../components/menus/actions_menu.html"></div>
+            <div w3-include-html="../../components/menus/favorites.html"></div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="col-md-10">
+          <div w3-include-html="../../components/base/breadcrumb.html"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-8">
+          
+          <div w3-include-html="../../components/cards/user_participants.html"></div>
+         
+        </div>
+
+        <!-- Contextual lateral cards (right) -->
+        <div class="col-md-2">
+          <div w3-include-html="../../components/contextual/pending_stuffs.html"></div>
+          <div w3-include-html="../../components/contextual/goals.html"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <script>
+      w3IncludeHTML();
+  
+      // set data to needed templates
+      Amadeus.setBreadcrumb([
+        { name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') },
+        { name: 'Courses', path: Amadeus.paths.screens('/users/teacher/home_course_teacher.html') }
+      ],'Participants');
+    </script>
+  </body>
+</html>
