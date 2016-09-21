@@ -4,38 +4,6 @@
  */
 var Amadeus = {
     /**
-     * Application defauls
-     */
-    default: {
-        // resusable delay in millis
-        delay: 500,
-        // script assets
-        scripts: function() {
-            return [
-                Amadeus.paths.assets('/js/vendor/jquery-3.1.0.min.js'),
-                Amadeus.paths.assets('/js/vendor/jquery-ui.js'),
-                Amadeus.paths.assets('/js/vendor/jquery-3.1.0.min.js'),
-                Amadeus.paths.assets('/js/vendor/bootstrap.min.js'),
-                Amadeus.paths.assets('/js/vendor/material.min.js'),
-                Amadeus.paths.assets('/js/vendor/ripples.min.js'),
-                Amadeus.paths.assets('/js/vendor/bootstrap-datepicker.js')
-            ];
-        },
-        // css assets
-        styles: function() {
-            return [
-                'http://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
-                'https://fonts.googleapis.com/icon?family=Material+Icons',
-                Amadeus.paths.assets('/css/vendor/bootstrap.min.css'),
-                Amadeus.paths.assets('/css/vendor/material.min.css'),
-                Amadeus.paths.assets('/css/vendor/ripples.min.css'),
-                Amadeus.paths.assets('/css/vendor/font-awesome.min.css'),
-                Amadeus.paths.assets('/css/vendor/datepicker.css'),
-                Amadeus.paths.assets('/css/amadeus.css')
-            ];
-        }
-    },
-    /**
      * Set up page
      */
     setup: function(callback) {
@@ -59,10 +27,14 @@ var Amadeus = {
      */
     paths: {
         // application host
-        host: 'http://' + window.location.host,
+        host: window.location.protocol + '//' + window.location.host,
+        // application resolved host
+        resolveHost: function() {
+            return window.location.href.split(/html/g)[0] || Amadeus.paths.host;
+        },
         // assets path
         assets: function(path) {
-            base = Amadeus.paths.host + '/assets';
+            base = Amadeus.paths.resolveHost() + 'assets';
             if (path) {
                 return base + path;
             } else {
@@ -71,7 +43,7 @@ var Amadeus = {
         },
         // components path
         components: function(path) {
-            base = Amadeus.paths.host + '/html/components';
+            base = Amadeus.paths.resolveHost() + 'html/components';
             if (path) {
                 return base + path;
             } else {
@@ -80,7 +52,7 @@ var Amadeus = {
         },
         // screens path
         screens: function(path) {
-            base = Amadeus.paths.host + '/html/screens';
+            base = Amadeus.paths.resolveHost() + 'html/screens';
             if (path) {
                 return base + path;
             } else {
@@ -89,7 +61,7 @@ var Amadeus = {
         },
         // templates path
         templates: function(path) {
-            base = Amadeus.paths.host + '/html/templates';
+            base = Amadeus.paths.resolveHost() + 'html/templates';
             if (path) {
                 return base + path;
             } else {
@@ -100,7 +72,7 @@ var Amadeus = {
         defaults: function() {
             return {
                 templatePath: Amadeus.paths.templates(),
-                hostPath: Amadeus.paths.host,
+                hostPath: Amadeus.paths.resolveHost(),
                 assetPath: Amadeus.paths.assets(),
                 screenPath: Amadeus.paths.screens(),
                 componentPath: Amadeus.paths.components(),
@@ -180,7 +152,7 @@ var Amadeus = {
     setBreadcrumb: function(inactive, active) {
         setTimeout(function() {
             w3DisplayData('breadcrumb', { 'active': active, inactive: inactive });
-        }, Amadeus.default.delay);
+        }, Amadeus.default.delay || 500);
     },
     /**
      * Set Up the system navbar
@@ -189,7 +161,7 @@ var Amadeus = {
         setTimeout(function() {
             w3DisplayData('navbar', Amadeus.paths.defaults());
             if (callback) callback();
-        }, Amadeus.default.delay);
+        }, Amadeus.default.delay || 500);
     },
     /**
      * Set Up the system main content env variables
@@ -198,7 +170,7 @@ var Amadeus = {
         setTimeout(function() {
             w3DisplayData('main', Amadeus.paths.defaults());
             if (callback) callback();
-        }, Amadeus.default.delay);
+        }, Amadeus.default.delay || 500);
     },
     /**
      * Set up needed environment vars
@@ -225,14 +197,19 @@ var Amadeus = {
      * Responsible to load necessary assets
      */
     load: function(callback) {
+        settings = Amadeus.paths.resolveHost() + 'settings.js'
         with (Amadeus.utils) {
-            progressiveLoad(Amadeus.default.scripts(), loadScript, function() {
-                progressiveLoad(Amadeus.default.styles(), loadStyle, function() {
-                    Amadeus.setup(function() {
-                        $.material.init();
-                        Amadeus.loadControllers(callback);
+            progressiveLoad([settings], loadScript, function() {
+                if (Amadeus.default) {
+                    progressiveLoad(Amadeus.default.scripts || [], loadScript, function() {
+                        progressiveLoad(Amadeus.default.styles || [], loadStyle, function() {
+                            Amadeus.setup(function() {
+                                $.material.init();
+                                Amadeus.loadControllers(callback);
+                            });
+                        });
                     });
-                });
+                }
             });
         }
     }
