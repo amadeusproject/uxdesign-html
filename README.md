@@ -69,7 +69,9 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
 ```Javascript
 	// set data to breadcrumb in Subject page
 	Amadeus.setBreadcrumb([
-		{ name: 'Home', path: Amadeus.paths.screens('/users/teacher/home_teacher.html') },
+		// this way...
+		{ name: 'Home', path: '{{screenPath}}/users/teacher/home_teacher.html' },
+		// ...or like this
 		{ name: 'Courses', path: Amadeus.paths.screens('/users/teacher/home_course_teacher.html') }
 	],'Subject');
 ``` 
