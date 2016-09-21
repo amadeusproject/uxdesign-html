@@ -1,159 +1,106 @@
-/* Measures and utils */
-.panel-heading, .breadcrumb {
-    height: 40px !important;
-}
+/**
+ * General area
+ */
 
-.navbar.navbar-default {
-    height: 60px !important;
-}
+/* Measures */
+.panel-heading, .breadcrumb {height: 40px !important;}
+.navbar.navbar-default {height: 60px !important;}
 
-.icon-more-horiz{
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-left: 0px;
-}
-.subjectLink div .panel-info:hover{
-  text-decoration: none;
-  box-shadow: 10px 10px 5px #888888;
-}
+/* Overrides and Fixes */
+ul {list-style-type: none !important;}
+h5 {text-align: center !important;}
+.datepicker {z-index:1151 !important;}
+.panel-primary .panel-body {padding: 0% 0% 0% 0% !important;}
 
-/* Navbar related classes */
-.logo {
-    position: absolute;
-    top: 6px;
-    text-align: center;
-	height: 48px;
-    width: 48px;
-}
+/* Perception elements */
+.icon-more-horiz {margin-top: 0px; margin-bottom: 0px; padding-left: 0px;}
+.subjectLink div .panel-info:hover {text-decoration: none; box-shadow: 10px 10px 5px #E6E7E8;}
 
-.datepicker{z-index:1151 !important;}
 
-.link{
-	transition-duration: 0.5s;
-}
 
-.link:hover{
-	transform:scale(1.1);
-}
+/**
+ * Component specific area
+ */
 
-.notifications{
-	font-size: 20px;
-}
+/* Navbar */
+nav .logo {position: absolute; top: 6px; text-align: center; height: 48px; width: 48px;}
+nav .link {transition-duration: 0.5s;}
+nav .link:hover {transform:scale(1.1);}
+nav .notifications{font-size: 20px;}
 
-.link{
-	transition-duration: 0.5s;
-}
-
-.link:hover{
-	transform:scale(1.1);
-}
-
-.notifications{
-	font-size: 20px;
-}
-
+/* Modal */
+.modal-header {min-height: 60px; border-bottom: 1px solid #E6E7E8 !important; padding-bottom: 15px !important;}
+.modal-footer {text-align: right; padding-top: 5px !important; border-top: 1px solid #E6E7E8 !important;}
 
 /* Breadcrumb */
-.breadcrumb .no-inactive {
-    display: none !important;
-}
+.breadcrumb .no-inactive {display: none !important;}
 
-/* Login page related classes */
-.logoLogin{
-    padding-bottom: 1%;
-    width: 15%;
-}
-.courseHome{
-    text-align: center;
-}
+
+
+/**
+ * Page specific area
+ */
+
+/* Login page */
+.row.logo-row{height: 30% !important; padding-top: 5% !important;}
+.row.login-form{height: 40% !important; padding-bottom: 5% !important;}
+.logo-row .logoLogin{padding-bottom: 1%; width: 15%;}
+
+/* Course pages */
+.courseHome{text-align: center;}
 .courseHome ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin-left: 2%;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				margin-left: 2%;
 }
 .courseHome ul li{
-    display:inline;
-    text-align: center;
-    padding: 16px;
+				display:inline;
+				text-align: center;
+				padding: 16px;
 }
 .goal{
-    margin: 0%;
-    margin-top: 10%;
-    padding-bottom: 200px;
-}
-.favorites{
-    margin: 0%;
-    margin-top: 20%;
-    padding-bottom: 200px;
-}
-.panel-info{
-}
-.panel-default{
-}
-.panel-primary .panel-body{
-    padding: 0% 0% 0% 0%;
+				margin: 0%;
+				margin-top: 10%;
+				padding-bottom: 200px;
 }
 
 .table-edited{
-	margin-top: 5px;
+				margin-top: 5px;
 }
 .table-edited tr td:first-child{
-	color: green;
+				color: green;
 }
 .table-edited tr td{
-	border-top: none !important;
+				border-top: none !important;
 }
 .end{
-    text-align: right;
+				text-align: right;
 }
-h5{
-    text-align: center;
-}
+
 #img {
 
-    display: block;
-    margin: auto;
-    width: 50%;
+				display: block;
+				margin: auto;
+				width: 50%;
 
-}
-ul {
- list-style-type:none
 }
 
 .ui-datepicker {
-    background: white;
-    border: 1px solid black;
-    color: black;
+				background: white;
+				border: 1px solid black;
+				color: black;
 }
 
 .img-logo{
-	margin: 0 auto;
-	height: 100%;
-}
-
-.logo-row{
-	height: 40%;
-}
-
-/* Modal */
-
-.modal-header {
-  min-height: 60px;
-  border-bottom: 1px solid #e5e5e5 !important;
-  padding-bottom: 15px !important;
-}
-
-.modal-footer {
-  text-align: right;
-  padding-top: 5px !important;
-  border-top: 1px solid #e5e5e5 !important;
+				margin: 0 auto;
+				height: 100%;
 }
 
 .list-group-item{
-        padding-top: 16px;
-    padding-bottom: 0px;
-    padding-left: 16px;
-    padding-right: 0px;
+  padding-top: 16px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  padding-right: 0px;
 }
