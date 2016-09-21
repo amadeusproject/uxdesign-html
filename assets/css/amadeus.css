@@ -6,11 +6,34 @@
 .panel-heading, .breadcrumb {height: 40px !important;}
 .navbar.navbar-default {height: 60px !important;}
 
+/* Utils */
+.width100 {min-width: 100px !important;}
+.width200 {min-width: 200px !important;}
+.float-left {float: left !important;}
+.float-right {float: right !important;}
+.width100p {width: 100% !important;}
+.height200 {height: 200px !important;}
+.width300 {min-width: 300px !important;}
+.pRight5 {padding-right: 5px !important;}
+.pLeft5 {padding-left: 5px !important;}
+.pRight5p {padding-right: 5% !important;}
+.pLeft5p {padding-left: 5% !important;}
+.pRight10 {padding-right: 10px !important;}
+.pLeft10 {padding-left: 10px !important;}
+.pRight10p {padding-right: 10% !important;}
+.pLeft10p {padding-left: 10% !important;}
+
 /* Overrides and Fixes */
-ul {list-style-type: none !important;}
+ul, li {list-style-type: none !important; text-decoration: none !important;}
 h5 {text-align: center !important;}
-.datepicker {z-index:1151 !important;}
+.list-group-item {padding: 16px 0 0 16px !important;}
 .panel-primary .panel-body {padding: 0% 0% 0% 0% !important;}
+.datepicker {
+  z-index:1151 !important; background: #ffffff !important; border: 0 !important; color: #939598 !important; border-radius: 0 !important;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12) !important;
+}
+.datepicker th, .datepicker td {border-radius: 0 !important;}
+.datepicker .active {color: #ffffff !important; background-color: #47B8C0 !important; background-image: none !important;}
 
 /* Perception elements */
 .icon-more-horiz {margin-top: 0px; margin-bottom: 0px; padding-left: 0px;}
@@ -44,63 +67,11 @@ nav .notifications{font-size: 20px;}
 /* Login page */
 .row.logo-row{height: 30% !important; padding-top: 5% !important;}
 .row.login-form{height: 40% !important; padding-bottom: 5% !important;}
-.logo-row .logoLogin{padding-bottom: 1%; width: 15%;}
+.row.logo-row .logoLogin{padding-bottom: 1%; width: 15%;}
 
-/* Course pages */
-.courseHome{text-align: center;}
-.courseHome ul{
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-				margin-left: 2%;
-}
-.courseHome ul li{
-				display:inline;
-				text-align: center;
-				padding: 16px;
-}
-.goal{
-				margin: 0%;
-				margin-top: 10%;
-				padding-bottom: 200px;
-}
-
-.table-edited{
-				margin-top: 5px;
-}
-.table-edited tr td:first-child{
-				color: green;
-}
-.table-edited tr td{
-				border-top: none !important;
-}
-.end{
-				text-align: right;
-}
-
-#img {
-
-				display: block;
-				margin: auto;
-				width: 50%;
-
-}
-
-.ui-datepicker {
-				background: white;
-				border: 1px solid black;
-				color: black;
-}
-
-.img-logo{
-				margin: 0 auto;
-				height: 100%;
-}
-
-.list-group-item{
-  padding-top: 16px;
-  padding-bottom: 0px;
-  padding-left: 16px;
-  padding-right: 0px;
-}
+/* Home_Admin */
+.panel.panel-default.courseHome {text-align: center;}
+.panel.panel-default.courseHome ul {list-style-type: none; margin: 0; padding: 0; overflow: hidden; margin-left: 2%;}
+.panel.panel-default.courseHome ul li {display:inline; text-align: center; padding: 16px;}
+.well.goal{margin: 0%; margin-top: 10%; padding-bottom: 200px;}
+#img {display: block; margin: auto; width: 50%;}
