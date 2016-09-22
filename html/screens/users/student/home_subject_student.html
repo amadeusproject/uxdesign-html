@@ -2,7 +2,8 @@
   <head>
     <!-- Amadeus script (NECESSARY!!!) [change src if needed!!!] -->
     <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
-    <script type="text/javascript" src="../../../../assets/js/forum.css"></script>
+    <!-- Custom scripts goes here -->
+    <script type="text/javascript" src="{{controllerPath}}/home_subject_teacher.js"></script>
   </head>
   <body id="body">
     <!-- Application header -->
@@ -40,7 +41,7 @@
       </div>
 
       <!-- Custom scripts goes here -->
-    
+
 
       <!-- Script to include html components, so don't remove it -->
       <script>
@@ -51,6 +52,7 @@
             { name: 'Home', path: '{{screenPath}}/users/student/home_student.html' },
             { name: 'Courses', path: '{{screenPath}}/users/student/home_course_student.html' }
           ],'Subject');
+
         });
       </script>
     </div>
