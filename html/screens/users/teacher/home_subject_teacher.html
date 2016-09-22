@@ -8,7 +8,7 @@
     <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
     <!-- Main -->
-  <div class="container-fluid" id="main">
+    <div class="container-fluid" id="main">
       <div class="row">
 
         <!-- Lateral menus (left) -->
@@ -48,7 +48,8 @@
           // set data to breadcrumb
           Amadeus.setBreadcrumb([
             { name: 'Home', path: '{{screenPath}}/users/teacher/home_teacher.html' },
-            { name: 'Courses', path: '{{screenPath}}/users/teacher/home_course_teacher.html' }
+            { name: 'Courses', path: '{{screenPath}}/users/teacher/home_course_teacher.html' },
+            { name: 'Information Systems', path: '{{screenPath}}/users/teacher/course_detail_teacher.html' }
           ],'Subject');
         });
       </script>

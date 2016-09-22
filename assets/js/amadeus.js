@@ -9,7 +9,7 @@ var Amadeus = {
     setup: function(callback) {
         // run callback Function (if exsists)
         if (callback) callback();
-        
+
         // set environment variables
         Amadeus.setEnvVars(function() {
             // import templates
@@ -140,7 +140,7 @@ var Amadeus = {
         }
     },
     /**
-     * Import HTML templates using w3data library 
+     * Import HTML templates using w3data library
      */
     importTemplates: function(callback) {
         w3IncludeHTML();
