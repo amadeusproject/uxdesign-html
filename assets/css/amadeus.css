@@ -36,8 +36,6 @@ h5 {text-align: center !important;}
 .datepicker .active {color: #ffffff !important; background-color: #47B8C0 !important; background-image: none !important;}
 
 /* Perception elements */
-.icon-more-horiz {margin-top: 0px; margin-bottom: 0px; padding-left: 0px;}
-.subjectLink div .panel-info:hover {text-decoration: none; box-shadow: 10px 10px 5px #E6E7E8;}
 
 
 
@@ -95,4 +93,7 @@ nav .notifications{font-size: 20px;}
 }
 #titleTopic{
     padding-top: 18px;
+}
+#titleTopic h4{
+    margin-top: 0px;
 }
