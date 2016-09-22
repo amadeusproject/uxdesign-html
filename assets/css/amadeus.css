@@ -78,6 +78,7 @@ nav .notifications{font-size: 20px;}
 
 /* Icon Topic */
 #divMoreActions {
+    text-align: right;
     height: 39px;
 }
 
