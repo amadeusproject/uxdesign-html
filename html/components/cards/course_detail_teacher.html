@@ -1,56 +1,83 @@
-<html>
-  <head>
-    <!-- Amadeus script (NECESSARY!!!) [change src if needed!!!] -->
-    <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
-  </head>
-  <body id="body">
-    <!-- Application header -->
-    <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
 
-    <!-- Main -->
-   <div class="container-fluid" id="main">
+<div class="panel panel-info">
+    <div class="panel-heading" id="headingOne">
       <div class="row">
+          <div class="col-xs-9 col-md-10" id="titleTopic">
+            <h4>Course</h4>
+          </div>
+          <div class="col-xs-3 col-md-2" id="divMoreActions">
+            <div class="btn-group">
+              <button id="eye" type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="Visible">
+                <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+              </button>
 
-        <!-- Lateral menus (left) -->
-        <div class="col-md-2" >
-            <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="{{componentPath}}/menus/teacher_actions_subject.html"></div>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="moreActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="moreActions">
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4"><a href="#"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>&nbsp; Replicate</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal3"><a href="#"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Edit</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal2"><a href="#"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
+              </ul>
+            </div>
+            <div class="modal" id="myModal2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <p>Delete your Topic?</p>
+              </div>
+              <div class="modal-footer">
+
+                <a href="{{screenPath}}/users/profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="myModal3">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                <label class="col-md-2 col-xs-2 col-sm-2 control-label">Module's Name:</label><br>Modulo 1
+                </div>
+                <div class="form-group">
+                  <label class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label><br>------
+                </div>
+              </div>
+              <div class="modal-footer">
+
+                <a href="profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Breadcrumb -->
-        <div class="col-md-10">
-          <div w3-include-html="{{componentPath}}/base/breadcrumb.html"></div>
-        </div>
 
-        <!-- Content -->
-        <div class="col-md-8">
-          <!-- Put your content here! -->
-            <div w3-include-html="{{componentPath}}/cards/course_detail_teacher.html"></div>
-            <div w3-include-html="{{componentPath}}/cards/subject_home_teacher.html"></div>
-            <div w3-include-html="{{componentPath}}/cards/subject_home_teacher.html"></div>
-        </div>
-
-        <!-- Contextual lateral cards (right) -->
-        <div class="col-md-2">
-          <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
-          <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
-        </div>
       </div>
-
-      <!-- Custom scripts goes here -->
-
-      <!-- Script to include html components, so don't remove it -->
-      <script>
-        // set up all (import templates, set up navbar and set environment variables)
-        Amadeus.load(function() {
-          // set data to breadcrumb
-          Amadeus.setBreadcrumb([
-            { name: 'Home', path: '{{screenPath}}/users/teacher/home_teacher.html' },
-            { name: 'Courses', path: '{{screenPath}}/users/teacher/home_course_teacher.html' }
-          ],'Information Systems');
-        });
-
-      </script>
     </div>
-  </body>
-</html>
+    </div>
+    <div class="panel-body">
+      <p><b>Course Name: </b>Computer Science</p>
+      <p><b>Duration (in semesters): </b>09</p>
+      <p><b>Coordinator: </b>Alan Turing</p>
+      <p>
+        <b>Description:</b>
+        <i>
+          "Lorem ipsum dolor sit amet, consecctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </i>
+      </p>
+
+    </div>
+</div>
