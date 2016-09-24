@@ -208,6 +208,7 @@ var Amadeus = {
                                 setTimeout(function() {
                                     $.material.init();
                                     Amadeus.loadControllers();
+                                    progressiveLoad([Amadeus.paths.assets('/js/main.js')], loadScript);
                                 }, Amadeus.default.delay * 2 || 1000);
                             });
                         });
