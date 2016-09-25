@@ -10,6 +10,7 @@ Amadeus.default = {
         Amadeus.paths.assets('/js/vendor/jquery-3.1.0.min.js'),
         Amadeus.paths.assets('/js/vendor/jquery-ui.js'),
         Amadeus.paths.assets('/js/vendor/bootstrap.min.js'),
+        Amadeus.paths.assets('/js/vendor/bootstrap-acessibility.min.js'),
         Amadeus.paths.assets('/js/vendor/material.min.js'),
         Amadeus.paths.assets('/js/vendor/ripples.min.js'),
         Amadeus.paths.assets('/js/vendor/bootstrap-datepicker.js')

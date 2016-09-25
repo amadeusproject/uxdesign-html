@@ -8,6 +8,7 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
 * Jquery (a pre-requisite for Material Design Bootstrap)
 * Material Design by FezVastra [2]
 * w3data [3]
+* Acessibility plugin for Bootstrap 3 [4]
 
 ## Rules of the game
 
@@ -106,3 +107,5 @@ We set our tasks on the project using the issue system of github, any commit you
 [2] https://github.com/FezVrasta/bootstrap-material-design
 
 [3] http://www.w3schools.com/howto/howto_html_include.asp
+
+[4] https://github.com/paypal/bootstrap-accessibility-plugin
