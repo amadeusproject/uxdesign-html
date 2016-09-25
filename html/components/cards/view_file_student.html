@@ -1,40 +1,25 @@
-<div class="col-md-9">
-  <div class="row">
-    <div class="col-md-8">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title">View File</h3>
-        </div>
-        <div class="panel-body">
-          Files:
 
-          <div class="btn-group">
-            <a href="bootstrap-elements.html" data-target="#" class="btn btn-raised dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">archive</i> Materials
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:void(0)">Dropdown link</a></li>
-              <li><a href="javascript:void(0)">Dropdown link</a></li>
-              <li><a href="javascript:void(0)">Dropdown link</a></li>
-            </ul>
+    <form class="form-horizontal">
+      <fieldset>
+        <legend class="text-center">Add Material</legend>
+
+        <div class="form-group">
+          <label for="inputName" class="col-md-2 control-label">Name</label>
+
+          <div class="col-md-10">
+            <input disabled type="text" class="form-control" id="inputText" placeholder="File Name">
           </div>
-
-
-          <div class="btn-group">
-            <a href="bootstrap-elements.html" data-target="#" class="btn btn-raised dropdown-toggle" data-toggle="dropdown">
-              <i class="material-icons">description</i> Activities
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:void(0)">Dropdown link</a></li>
-              <li><a href="javascript:void(0)">Dropdown link</a></li>
-              <li><a href="javascript:void(0)">Dropdown link</a></li>
-            </ul>
-          </div>
-
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+        <div class="form-group">
+          <label for="inputFile" class="col-md-2 control-label">File</label>
+
+          <div class="col-md-10">
+            <a href="https://github.com/FezVrasta/bootstrap-material-design/archive/master.zip" class="btn btn-sup btn-material-pink btn-raised">
+              <i class="material-icons">file_download</i>
+              <span>DOWNLOAD</span>
+            </a>
+          </div>
+        </div>
+      </fieldset>
+    </form>
