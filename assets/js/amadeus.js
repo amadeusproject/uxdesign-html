@@ -152,6 +152,10 @@ var Amadeus = {
     setBreadcrumb: function(inactive, active) {
         setTimeout(function() {
             w3DisplayData('breadcrumb', { 'active': active, inactive: inactive });
+
+            if (inactive === null) {
+              $('#breadcrumb').addClass('no-inactive');
+            }
         }, Amadeus.default.delay || 500);
     },
     /**

@@ -54,7 +54,8 @@ nav .notifications{font-size: 20px;}
 .modal-footer {text-align: right; padding-top: 5px !important; border-top: 1px solid #E6E7E8 !important;}
 
 /* Breadcrumb */
-.breadcrumb .no-inactive {display: none !important;}
+.breadcrumb.no-inactive li:first-child {display: none !important;}
+.breadcrumb.no-inactive li.active::before {display: none !important;}
 
 
 
