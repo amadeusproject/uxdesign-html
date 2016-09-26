@@ -48,6 +48,11 @@ Project that fill @amadeuslms[1] with new UI and UX ideas and discussions.
 		- 2.4.1. vendor: all external js libs used into project.   
 		- 2.4.2. controllers: javascript files related with specific pages.   
 
+## Running application pages
+
+To run, is just needed a server landing in the project folder (root folder) and open the 'server_url/html/*' files    
+Tested with [**Apache hpptd (Apache2)**] (https://httpd.apache.org/), [**Cloud9**] (https://c9.io/), and [**Webserver for Chrome**] (https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb).     
+
 ## About w3data usage and amadeus.js
 
  - assets/js/amadeus.js is the default dev Amadeus lib, that uses w3data to work with templates.
