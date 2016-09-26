@@ -25,9 +25,10 @@
         <!-- Content -->
         <div class="col-md-8">
           <!-- Put your content here! -->
-          <div w3-include-html="{{componentPath}}/cards/course_home_teacher.html"></div>
-          <div w3-include-html="{{componentPath}}/cards/course_home_teacher.html"></div>
-          <div w3-include-html="{{componentPath}}/cards/course_home_teacher.html"></div>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+            <div class="group" w3-include-html="{{componentPath}}/cards/course_home_teacher.html"></div>
+            <div class="group" w3-include-html="{{componentPath}}/cards/course_home_teacher_2.html"></div>
+          </div>
         </div>
 
         <!-- Contextual lateral cards (right) -->
@@ -38,6 +39,7 @@
       </div>
 
       <!-- Custom scripts goes here -->
+      <script type="text/javascript" src="{{controllerPath}}/home_course_teacher.js"></script>
 
       <!-- Script to include html components, so don't remove it -->
       <script>
