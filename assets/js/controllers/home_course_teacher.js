@@ -1,6 +1,6 @@
 $("#accordion")
   .accordion({
-    header: "> div > a"
+    header: "> div > h4"
   })
   .sortable({
     axis: "y",
