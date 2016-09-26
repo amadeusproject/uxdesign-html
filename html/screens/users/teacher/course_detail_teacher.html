@@ -26,8 +26,10 @@
         <div class="col-md-8">
           <!-- Put your content here! -->
             <div w3-include-html="{{componentPath}}/cards/course_detail_teacher.html"></div>
-            <div w3-include-html="{{componentPath}}/cards/subject_home_teacher.html"></div>
-            <div w3-include-html="{{componentPath}}/cards/subject_home_teacher.html"></div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
+              <div w3-include-html="{{componentPath}}/cards/subject_home_teacher.html"></div>
+              <div w3-include-html="{{componentPath}}/cards/subject_home_teacher_2.html"></div>
+            </div>
         </div>
 
         <!-- Contextual lateral cards (right) -->
@@ -38,7 +40,7 @@
       </div>
 
       <!-- Custom scripts goes here -->
-
+      <script type="text/javascript" src="{{controllerPath}}/home_subject_teacher.js"></script>
       <!-- Script to include html components, so don't remove it -->
       <script>
         // set up all (import templates, set up navbar and set environment variables)
