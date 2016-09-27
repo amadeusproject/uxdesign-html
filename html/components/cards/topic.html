@@ -40,6 +40,7 @@
             <ul>
                 <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
                 <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
+                <li><i class="fa fa-file" aria-hidden="true"></i> <a href="#" data-toggle="modal" data-target="#deliveryModal">Delivery Material</a></li>
             </ul>
 
             <!--Modal-->
@@ -67,6 +68,46 @@
               </div>
             </div>
             <!-- EndModal -->
+            
+            <!--Modal-->
+            <div class="modal fade" id="deliveryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Delivery Material</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="inputEmail" class="col-md-2 control-label">Topic's Name:</label>
+                      <div class="col-md-10">
+                        <input type="text" class="form-control" id="inputEmail" placeholder="Name">
+                      </div>
+                    </div>
+                    <form class="form-horizontal">
+                      <div class="form-group">
+                        <label for="textArea" class="col-md-2 control-label">Description</label>
+              
+                        <div class="col-md-10">
+                            <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            <span class="help-block">Material description</span>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <!-- Don't remove that!!!  
+                    <button type="button" class="btn btn-danger btn-raised" data-dismiss="modal">Close</button>-->
+            
+                    <!-- Put curtom buttons here!!!  -->
+                    <button type="button" class="btn btn-primary btn-raised">Confirm</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- EndModal -->
+            
           </div>
 
           <div class="col-xs-4 col-md-4">
