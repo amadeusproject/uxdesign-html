@@ -26,7 +26,7 @@
 
         <!-- Content -->
         <div class="col-md-8">
-          <div w3-include-html="{{componentPath}}/cards/subject.html"></div>
+          <div w3-include-html="{{componentPath}}/cards/subject_detail_student.html"></div>
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div w3-include-html="{{componentPath}}/cards/topic.html"></div>
           </div>
@@ -50,7 +50,8 @@
           // set data to breadcrumb
           Amadeus.setBreadcrumb([
             { name: 'Home', path: '{{screenPath}}/users/student/home_student.html' },
-            { name: 'Courses', path: '{{screenPath}}/users/student/home_course_student.html' }
+            { name: 'Courses', path: '{{screenPath}}/users/student/home_course_student.html' },
+            { name: 'information Systems', path: '{{screenPath}}/users/student/course_detail_student.html' }
           ],'Subject');
 
         });
