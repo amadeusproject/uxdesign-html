@@ -14,7 +14,7 @@
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
             <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="{{componentPath}}/menus/teacher_actions_subject.html"></div>
+            <div w3-include-html="{{componentPath}}/menus/student_actions_menu.html"></div>
         </div>
 
         <!-- Breadcrumb -->
@@ -24,8 +24,7 @@
 
         <!-- Content -->
         <div class="col-md-8">
-          <!-- Put your content here! -->
-            <div w3-include-html="{{screenPath}}/users/teacher/participant.html"></div>
+          <div w3-include-html="{{screenPath}}/users/student/participant.html"></div>
         </div>
 
         <!-- Contextual lateral cards (right) -->
@@ -33,10 +32,11 @@
           <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
           <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
         </div>
-      </div>
 
+      </div>
+      
       <!-- Custom scripts goes here -->
-      <script type="text/javascript" src="{{controllerPath}}/home_subject_teacher.js"></script>
+
       <!-- Script to include html components, so don't remove it -->
       <script>
         // set up all (import templates, set up navbar and set environment variables)
