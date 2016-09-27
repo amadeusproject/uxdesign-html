@@ -1,9 +1,9 @@
 <div class="panel panel-info">
 
-  <div class="panel-heading" role="tab" id="headingTwo">
+  <div class="panel-heading headingTwo" role="tab">
     <div class="row">
-        <div class="col-xs-9 col-md-10" id="titleTopic">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <div class="col-xs-9 col-md-10 titleTopic">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href=".collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <h4>Course 2</h4>
           </a>
         </div>
@@ -20,58 +20,15 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="moreActions">
                 <li><a href="{{screenPath}}/users/teacher/course_detail_teacher.html"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>&nbsp; Access</a></li>
-                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4"><a href="#"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>&nbsp; Replicate</a></li>
-                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal2"><a href="#"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>&nbsp; Replicate</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#removeCourse2"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
               </ul>
             </div>
-            <div class="modal" id="myModal2">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                <h4 class="modal-title"></h4>
-              </div>
-              <div class="modal-body">
-                <p>Delete your Topic?</p>
-              </div>
-              <div class="modal-footer">
-
-                <a href="{{screenPath}}/users/profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal" id="myModal3">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-                <h4 class="modal-title"></h4>
-              </div>
-              <div class="modal-body">
-                <div class="form-group">
-                <label class="col-md-2 col-xs-2 col-sm-2 control-label">Module's Name:</label><br>Modulo 1
-                </div>
-                <div class="form-group">
-                  <label class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label><br>------
-                </div>
-              </div>
-              <div class="modal-footer">
-
-                <a href="profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-
         </div>
     </div>
   </div>
 
-  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+  <div class="panel-collapse collapse collapseTwo" role="tabpanel" aria-labelledby="headingTwo">
     <div class="panel-body">
       <p><b>Course Name: </b>Computer Science</p>
       <p><b>Duration (in semesters): </b>09</p>
@@ -84,5 +41,24 @@
       </p>
 
     </div>
+  </div>
+</div>
+
+<div class="modal" id="removeCourse2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Delete your course?</p>
+      </div>
+      <div class="modal-footer">
+
+        <a href="{{screenPath}}/users/profile_user.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+
+      </div>
     </div>
+  </div>
 </div>
