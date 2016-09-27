@@ -40,7 +40,7 @@
             <ul>
                 <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
                 <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
-                <li><i class="fa fa-file" aria-hidden="true"></i> <a href="#" data-toggle="modal" data-target="#deliveryModal">Delivery Material</a></li>
+                <li><i class="fa fa-file" aria-hidden="true"></i> <a href="#" data-toggle="modal" data-target="#embedModal">EMBED Material</a></li>
             </ul>
 
             <!--Modal-->
@@ -70,16 +70,16 @@
             <!-- EndModal -->
             
             <!--Modal-->
-            <div class="modal fade" id="deliveryModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="embedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Delivery Material</h4>
+                    <h4 class="modal-title" id="myModalLabel">Material EMBED</h4>
                   </div>
                   <div class="modal-body">
                     <div class="form-group">
-                      <label for="inputEmail" class="col-md-2 control-label">Topic's Name:</label>
+                      <label for="inputEmail" class="col-md-2 control-label">Name:</label>
                       <div class="col-md-10">
                         <input type="text" class="form-control" id="inputEmail" placeholder="Name">
                       </div>
@@ -89,7 +89,7 @@
                         <label for="textArea" class="col-md-2 control-label">Description</label>
               
                         <div class="col-md-10">
-                            <textarea class="form-control" rows="3" id="textArea"></textarea>
+                            <textarea class="form-control" rows="2" id="textArea"></textarea>
                             <span class="help-block">Material description</span>
                         </div>
                       </div>
@@ -264,7 +264,6 @@
                     <div class="form-group">
                       <div class="input-group">
                         <input type="text" id="addon3a" class="form-control">
-                          <p class="help-block">Maximum 140 character</p>
                           <span class="input-group-btn">
                             <button type="button" class="btn btn-fab btn-fab-mini">
                               <i class="material-icons">send</i>
