@@ -1,0 +1,123 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">True or False</h3>
+  </div>
+  <div class="panel-body">
+<form class="form-horizontal">
+  <fieldset id="multiple-choice">
+    <div class="form-group">
+
+      <label for="questionName" class="col-md-2 control-label">Question</label>
+
+
+      <div class="col-md-10">
+        <textarea class="form-control" rows="1" id="questionName" placeholder="Wording"></textarea>
+      </div>
+
+
+    </div>
+    <div class="form-group" id="radios">
+      <label for="alternative" class="col-md-2 control-label">Alternatives: T/F</label>
+      <div class="col-md-10">
+        <!-- alternative -->
+        <div class="radio radio-primary">
+            <label>
+            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
+          </label>
+          <label>
+            <input type="radio" name="alternative1" value="T">
+          </label>
+          <label>
+            <input type="radio" name="alternative1" value="F">
+          </label>
+        </div>
+        <!-- alternative -->
+        <div class="radio radio-primary">
+            <label>
+            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
+          </label>
+          <label>
+            <input type="radio" name="alternative2" value="T">
+          </label>
+          <label>
+            <input type="radio" name="alternative2" value="F">
+          </label>
+        </div>
+        <!-- alternative -->
+        <div class="radio radio-primary">
+            <label>
+            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
+          </label>
+          <label>
+            <input type="radio" name="alternative3" value="T">
+          </label>
+          <label>
+            <input type="radio" name="alternative3" value="F">
+          </label>
+        </div>
+        <!-- alternative -->
+        <div class="radio radio-primary">
+            <label>
+            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
+          </label>
+          <label>
+            <input type="radio" name="alternative4" value="T">
+          </label>
+          <label>
+            <input type="radio" name="alternative4" value="F">
+          </label>
+        </div>
+        <!-- alternative -->
+        <div class="radio radio-primary">
+            <label>
+            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
+          </label>
+          <label>
+            <input type="radio" name="alternative5" value="T">
+          </label>
+          <label>
+            <input type="radio" name="alternative5" value="F">
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-12 col-md-offset-2">
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="cancel" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
+
+  </fieldset>
+</form>
+</div>
+</div>
+
+<!-- <script>
+  function newAlternative () {
+    // Your existing code unmodified...
+    var iDiv = document.createElement('div');
+    iDiv.id = 'genericAlternative';
+    iDiv.className = 'radio';
+    // Now create and append to innerDiv
+    var iLabel = document.createElement('label');
+    var iInput = document.createElement('input');
+    iInput.class = 'form-control';
+    iInput.value = 'optionN';
+    iInput.type = 'radio';
+    var iTextArea = document.createElement('textarea');
+    iTextArea.class = 'form-control';
+    iTextArea.rows = '1';
+
+    iDiv.appendChild(iLabel);
+    iLabel.appendChild(iInput);
+    iLabel.appendChild(iTextArea);
+
+
+    document.getElementsById('radios').appendChild(iDiv);
+  }
+
+  function showAlternative () {
+      document.getElementById('genericAlternative').style.display = "block";
+  }
+</script>-->
