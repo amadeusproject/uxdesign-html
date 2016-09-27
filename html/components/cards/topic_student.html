@@ -1,0 +1,236 @@
+<div class="panel panel-default">
+  <div class="panel-heading headingOne" role="tab">
+    <div class="row">
+        <div class="col-xs-9 col-md-10 titleTopic">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Topic 1
+          </a>
+        </div>
+        <div class="col-xs-3 col-md-2" id="divMoreActions">
+          <!-- Don't actions -->
+    </div>
+  </div>
+  </div>
+
+  <div class="panel-collapse collapse collapseOne" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+      <p>
+        <i>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </i>
+      </p>
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <h4>Material</h4>
+            <ul>
+                <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
+                <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
+            </ul>
+
+            <!--Modal-->
+            <div class="modal fade" id="linksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Links</h4>
+                  </div>
+                  <div class="modal-body">
+                    <!-- Card -->
+                    <article class="card animated fadeInLeft">
+                       <img class="card-img-top img-responsive" src="https://www.python.org/static/opengraph-icon-200x200.png" align="left" />
+                       <div class="card-block">
+                          <b class="card-title">Python</b><p></p>
+                          <b class="text-muted">Guido van Rossum</b>
+                          <p class="card-text"> <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+                          <a href="https://www.python.org/" class="btn btn-primary">Read more</a>
+                       </div>
+                    </article>
+                    <!-- .end Card -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- EndModal -->
+          </div>
+
+          <div class="col-xs-4 col-md-4">
+            <h4>Activities</h4>
+            <ul>
+                <li><i class="material-icons">description</i> <a href="#" data-toggle="modal" data-target="#ActivityModal">Activitie 1</a></li>
+                <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum</a></li>
+            </ul>
+
+            <!--Modal-->
+            <div class="modal fade" id="ActivityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title" id="myModalLabel"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-horizontal">
+                      <form class="form-horizontal">
+                  <fieldset>
+                    <legend>Atividade Proposta</legend>
+                    <div class="form-group">
+                      <label for="NameIn" class="col-md-2 control-label">Name:</label>
+                      <div class="col-md-10">
+                        <input type="text" id="NameIn" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DescIn" class="col-md-2 control-label">Describe:</label>
+                      <div class="col-md-10">
+                        <textarea class="form-control" id="DescIn" rows="2"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DateIn" class="col-md-2 control-label" >Opening: </label>
+                      <div class="col-md-10">
+                        <input type="text" id="DateIn" class="form-control date-picker" requerid="" >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DateIn" class="col-md-2 control-label" >Ending: </label>
+                      <div class="col-md-10">
+                        <input type="text" id="DateIn" class="form-control date-picker" requerid="">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 0;">
+                      <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Send Later
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-10 col-md-offset-2">
+                        <button type="button" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
+
+
+                  </fieldset>
+                </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- EndModal -->
+            <!-- Modal -->
+            <div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Forum</h4>
+                  </div>
+                  <div class="modal-body">
+
+                    <!--Forum-->
+                    <section>
+
+                      <!--Main wrapper-->
+                      <div class="comments-list">
+                          <div class="section-heading">
+                              <h1>Python</h1>
+                              <h4><b>Description:</b>High-level Language</h4>
+                              <h4><b>Opened in:</b> September 1st</h4>
+                          </div>
+                          <!--First row-->
+                          <div class="row">
+
+                              <!--Content column-->
+                              <div class="col-sm-10 col-xs-12">
+                                  <h3 class="user-name">Gerson Jefferson</h3>
+
+                                  <div class="card-data">
+                                     <p class="comment-date"><i class="fa fa-clock-o"></i> 05/10/2015</p>
+                                  </div>
+
+                                  <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                      cupidatat non proident.</p>
+                              </div>
+                              <!--/.Content column-->
+
+                          </div>
+                          <!--/.First row-->
+
+                          <!--Second row-->
+                          <div class="row">
+
+                              <!--Content column-->
+                              <div class="col-sm-10 col-xs-12">
+                                  <h3 class="user-name">Cherielly</h3>
+
+                                  <div class="card-data">
+                                    <p class="comment-date"><i class="fa fa-clock-o"></i> 08/10/2015</p>
+                                  </div>
+
+                                  <p class="comment-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                                      voluptatem quia voluptas sit aspernatur.</p>
+                              </div>
+                              <!--/.Content column-->
+
+                          </div>
+                          <!--/.Second row-->
+
+                          <!--Third row-->
+                          <div class="row">
+
+
+                             <!--Content column-->
+                              <div class="col-sm-10 col-xs-12">
+                                  <h3 class="user-name">Gemozecleia</h3>
+
+                                  <div class="card-data">
+                                    <p class="comment-date"><i class="fa fa-clock-o"></i> 17/10/2015</>
+                                  </div>
+
+                                  <p class="comment-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                                      qui officia.
+                                  </p>
+                              </div>
+                              <!--/.Content column-->
+
+                          </div>
+                          <!--/.Third row-->
+
+                      </div>
+                      <!--/.Main wrapper-->
+
+                    </section>
+                    <!--End of Forum-->
+                    <div class="form-group">
+                      <div class="input-group">
+                        <input type="text" id="addon3a" class="form-control">
+                          <p class="help-block">Maximum 140 character</p>
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-fab btn-fab-mini">
+                              <i class="material-icons">send</i>
+                            </button>
+                          </span>
+                      </div>
+                    </div>
+
+                  </div>
+                   <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+
+                </div>
+              </div>
+          </div>
+          <!-- endModal -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
