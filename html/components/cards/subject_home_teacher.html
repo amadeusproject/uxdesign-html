@@ -1,9 +1,9 @@
 <div class="panel panel-info">
 
-  <div class="panel-heading" role="tab" id="headingOne">
+  <div class="panel-heading headingOne" role="tab">
     <div class="row">
-        <div class="col-xs-9 col-md-10" id="titleTopic">
-          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <div class="col-xs-9 col-md-10 titleTopic">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
           <h4>Subject 1</h4>
           </a>
         </div>
@@ -20,14 +20,14 @@
             <ul class="dropdown-menu" aria-labelledby="moreActions">
               <li><a href="{{screenPath}}/users/teacher/home_subject_teacher.html"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>&nbsp; Access</a></li>
               <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Replicate</a></li>
-              <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal2"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
+              <li><a href="javascript:void(0)" data-toggle="modal" data-target="#removeSubject"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
             </ul>
           </div>
         </div>
     </div>
   </div>
 
-  <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+  <div class="panel-collapse collapse collapseOne" role="tabpanel" aria-labelledby="headingOne">
     <div class="panel-body">
       <p><b>Professor:</b> Dr. Fulano de Tal</p>
       <p>
