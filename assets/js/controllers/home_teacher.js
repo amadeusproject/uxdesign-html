@@ -15,13 +15,13 @@ $("#accordion")
     }
   });
 
-  $("#eye").on('click', function(){
+  $(".eye").on('click', function(){
     if( $(this).attr('title') == 'invisible'){
       $(this).attr('title','Visible');
-      $("#eye").css('color','black');
+      $(this).css('color','black');
     }else{
       $(this).attr('title','invisible');
-      $("#eye").css('color','white');
+      $(this).css('color','white');
     }
   });
 
