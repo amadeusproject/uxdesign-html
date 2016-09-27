@@ -14,3 +14,14 @@ $("#accordion")
       $(this).accordion("refresh");
     }
   });
+
+  $("#eye").on('click', function(){
+    if( $(this).attr('title') == 'invisible'){
+      $(this).attr('title','Visible');
+      $("#eye").css('color','black');
+    }else{
+      $(this).attr('title','invisible');
+      $("#eye").css('color','white');
+    }
+  });
+
