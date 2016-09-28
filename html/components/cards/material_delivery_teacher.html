@@ -1,45 +1,51 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <form class="form-horizontal">
-      <fieldset>
-        <legend>Atividade Proposta</legend>
-        <div class="container-fluid">
-          <div class="form-group">
-            <label for="NomeAtividade" class="col-md-2 col-xs-2 col-sm-2 control-label">Name:</label>
+ <form class="form-horizontal">
+                  <fieldset>
+                    <legend>Atividade Proposta</legend>
+                    <div class="form-group">
+                      <label for="NameIn" class="col-md-2 control-label">Name:</label>
+                      <div class="col-md-10">
+                        <input type="text" id="NameIn" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DescIn" class="col-md-2 control-label">Describe:</label>
+                      <div class="col-md-10">
+                        <textarea class="form-control" id="DescIn" rows="2"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DateIn" class="col-md-2 control-label" >Opening: </label>
+                      <div class="col-md-10">
+                        <input type="date" id="DateIn" class="form-control" requerid="" >
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="DateIn" class="col-md-2 control-label" >Ending: </label>
+                      <div class="col-md-10">
+                        <input type="date" id="DateIn" class="form-control" requerid="">
+                      </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 0;"> 
+                      <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox"> Visible Material
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-md-10 col-md-offset-2">
+                        <button type="button" class="btn btn-default">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </div>
+                    </div>
 
-            <div class="col-md-8 col-xs-8 col-sm-8">
-              <input type="text" required="required" class="form-control" id="NomeAtividade" placeholder="activite name">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="textArea" class="col-md-2 col-xs-2 col-sm-2 control-label">Describe:</label>
 
-            <div class="col-md-8 col-xs-8 col-sm-8">
-              <textarea class="form-control" required="" rows="1" id="textArea"></textarea>
-
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-8 col-xs-8 col-sm-8">
-              <label>Opening: </label><input type="date" required="">
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-md-8 col-xs-8 col-sm-8">
-              <label>Ending:  </label><input type="date" required="">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="col-md-8 col-md-offset-2">
-              <button type="button" class="btn btn-default">Cancel</button>
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </div>
-      </fieldset>
-    </form>
+                  </fieldset>
+                </form>
 
     </div>
   </div>
-</div>
