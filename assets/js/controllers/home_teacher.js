@@ -1,4 +1,4 @@
-$("#accordion")
+$(".accordion")
   .accordion({
     header: "> div > a"
   })
