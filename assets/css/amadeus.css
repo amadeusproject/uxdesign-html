@@ -88,3 +88,6 @@ nav .notifications{font-size: 20px;}
     right: 0;
   }
 .accordion .group { margin-bottom: 10px;}
+.editation{
+    display: none;
+}
