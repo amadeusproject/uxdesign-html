@@ -370,8 +370,8 @@
             <ul>
                 <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
                 <li><a href="#">Book 1</a> </li>
-                <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
-                <li><a href="#">Link 1</a></li>
+                <li class="edit_remove"> <a href="#" data-toggle="modal" data-target="#linksModalEdit"><i class="fa fa-pencil" aria-hidden="true"></i></a>  <i class="fa fa-trash" aria-hidden="true"></i></li>
+                <li><a href="#" data-toggle="modal" data-target="#linksModals">Link 1</a></li>
                 <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
                 <li><a href="#">EMBED Material</a></li>
             </ul>
@@ -386,6 +386,59 @@
             </ul>
           </div>
         </div>
+        <!--Modal-->
+        <div class="modal fade" id="linksModals" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Links</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Card -->
+                <article class="card animated fadeInLeft">
+                   <img class="card-img-top img-responsive" src="https://www.python.org/static/opengraph-icon-200x200.png" align="left" />
+                   <div class="card-block">
+                      <b class="card-title">Python</b><p></p>
+                      <b class="text-muted">Guido van Rossum</b>
+                      <p class="card-text"> <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+                      <a href="https://www.python.org/" class="btn btn-primary">Read more</a>
+                   </div>
+                </article>
+                <!-- .end Card -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- EndModal -->
+        <!--Modal-->
+        <div class="modal fade" id="linksModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Links</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Card -->
+                <div class="form-group">
+                  <input type="text" readonly="" class="form-control" placeholder="Image...">
+                  <input type="file" id="inputFile" multiple="">
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="inputDefault">Name</label>
+                  <input value="Python" type="text" class="form-control" id="inputDefault">
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="inputDefault">Url</label>
+                  <input value="https://www.python.org/" type="text" class="form-control" id="inputDefault">
+                </div>
+                <!-- .end Card -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- EndModal -->
         <div class="form-group">
           <div class="col-md-10">
             <button type="button" class="btn btn-raised btn-default edit_card_end">Cancel</button>
