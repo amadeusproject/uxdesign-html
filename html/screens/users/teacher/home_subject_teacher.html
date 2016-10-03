@@ -14,7 +14,6 @@
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
             <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="{{componentPath}}/menus/actions_menu.html"></div>
         </div>
 
         <!-- Breadcrumb -->
@@ -28,6 +27,9 @@
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
             <div class="group" w3-include-html="{{componentPath}}/cards/topics.html"></div>
             <div class="group" w3-include-html="{{componentPath}}/cards/topic2.html"></div>
+          </div>
+          <div class="form-group">
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#createTopic" class="btn btn-primary btn-lg btn-block btn-raised">Create Topic</a>
           </div>
         </div>
 
@@ -52,3 +54,37 @@
     </div>
   </body>
 </html>
+
+<!-- MODAL CREATE -->
+<div class="modal" tabindex="-1" role="dialog  " id="createTopic">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Create a New Topic</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Name</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" name="nameTopic">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Description</label>
+              <div class="col-md-8">
+                <textarea class="form-control" rows="3" id="textAreaSubject"></textarea>
+                <span class="help-block">Sign the objectives of the course until the end of the course.</span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+          <a href="#" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

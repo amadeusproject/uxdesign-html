@@ -14,7 +14,6 @@
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
             <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="{{componentPath}}/menus/teacher_actions_subject.html"></div>
         </div>
 
         <!-- Breadcrumb -->
@@ -29,6 +28,9 @@
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
               <div w3-include-html="{{componentPath}}/cards/subject_home_teacher.html"></div>
               <div w3-include-html="{{componentPath}}/cards/subject_home_teacher_2.html"></div>
+            </div>
+            <div class="form-group">
+              <a href="javascript:void(0)" data-toggle="modal" data-target="#createSubject" class="btn btn-primary btn-lg btn-block btn-raised">Create Subject</a>
             </div>
         </div>
 
@@ -48,3 +50,72 @@
     </div>
   </body>
 </html>
+
+<!-- MODAL CREATE SUBJECT -->
+<div class="modal" tabindex="-1" role="dialog  " id="createSubject">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Create a New Subject</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Name</label>
+              <div class="col-md-8 col-xs-8">
+                <input type="text" class="form-control" name="nameSubject">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Description</label>
+              <div class="col-md-8 col-xs-8">
+                <textarea class="form-control" rows="3" id="textAreaSubject"></textarea>
+                <span class="help-block">Sign the description of the course.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Goals</label>
+              <div class="col-md-8 col-xs-8">
+                <textarea class="form-control" rows="3" id="textAreaSubject"></textarea>
+                <span class="help-block">Sign the objectives of the course until the end of the course.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Students Limit</label>
+              <div class="col-md-8 col-xs-8">
+                <input type="number" class="form-control" name="StudentLimit">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="row">
+                  <div class="form-group">
+                    <label class="control-label col-md-4 col-xs-4 col-xs-offset-1">Begining</label>
+                    <div class="col-md-8 col-xs-6">
+                      <input type="date" class="form-control" name="BeginDate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <div class="row">
+                  <div class="form-group">
+                    <label class="control-label col-md-4 col-xs-4 col-xs-offset-1">End</label>
+                    <div class="col-md-8 col-xs-6">
+                      <input type="date" class="form-control" name="EndDate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+          <a href="#" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
