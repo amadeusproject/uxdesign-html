@@ -14,7 +14,6 @@
         <!-- Lateral menus (left) -->
         <div class="col-md-2" >
             <div w3-include-html="{{componentPath}}/menus/teacher_base_menu.html"></div>
-            <div w3-include-html="{{componentPath}}/menus/actions_course_menu.html"></div>
         </div>
 
         <!-- Breadcrumb -->
@@ -23,19 +22,17 @@
         </div>
 
         <!-- Content -->
-        <div class="col-md-8">
+        <div class="col-md-10">
           <!-- Put your content here! -->
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="false">
             <div class="group" w3-include-html="{{componentPath}}/cards/course_home_teacher.html"></div>
             <div class="group" w3-include-html="{{componentPath}}/cards/course_home_teacher_2.html"></div>
           </div>
+          <div class="form-group">
+            <a href="javascript:void(0)" class="btn btn-primary btn-lg btn-block btn-raised">Create Course</a>
+          </div>
         </div>
 
-        <!-- Contextual lateral cards (right) -->
-        <div class="col-md-2">
-          <div w3-include-html="{{componentPath}}/contextual/pending_stuffs.html"></div>
-          <div w3-include-html="{{componentPath}}/contextual/goals.html"></div>
-        </div>
       </div>
 
       <!-- Custom scripts goes here -->
