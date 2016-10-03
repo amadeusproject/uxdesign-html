@@ -91,3 +91,6 @@ nav .notifications{font-size: 20px;}
 .editation{
     display: none;
 }
+.edit_remove{
+    float: right;
+}
