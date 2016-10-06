@@ -91,6 +91,13 @@ nav .notifications{font-size: 20px;}
 .editation{
     display: none;
 }
-.edit_remove{
+.icon_edit_remove{
     float: right;
+}
+.resource_inline{
+    display: inline-block;
+}
+.resource_inline a i {
+    height: 30px;
+    width: 30px;
 }

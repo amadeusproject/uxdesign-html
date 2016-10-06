@@ -65,22 +65,42 @@
         </div>
         <div class="row">
           <div class=" col-xs-6 col-md-4">
-            <h4>Material <i class="fa fa-plus-circle" aria-hidden="true"></i></h4>
+            <div class="resource_inline">
+              <h4>Material</h4>
+            </div>
+            <div class="resource_inline">
+              <div class="dropdown">
+                <a href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li><a href="javascript:void(0)" data-toggle="modal" data-target="#createLinksModal">Create a Link</a></li>
+                </ul>
+              </div>
+            </div>
             <ul>
-                <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
+                <li class="icon_edit_remove"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  <i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
                 <li><a href="#" data-toggle="modal" data-target="#fileModal">Book 1</a> </li>
-                <li class="edit_remove"> <a href="#" data-toggle="modal" data-target="#linksModalEdit"><i class="fa fa-pencil" aria-hidden="true"></i></a>  <i class="fa fa-trash" aria-hidden="true"></i></li>
+                <li class="icon_edit_remove"> <a href="#" data-toggle="modal" data-target="#linksModalEdit"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>  <a href="#" data-toggle="modal" data-target="#removeLink"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></li>
                 <li><a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
-                <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
+                <li class="icon_edit_remove"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  <i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
                 <li><a href="#" data-toggle="modal" data-target="#embedModal">EMBED Material</a></li>
             </ul>
           </div>
           <div class="col-xs-4 col-md-offset-1 col-md-4">
-            <h4>Activities <i class="fa fa-plus-circle" aria-hidden="true"></i></h4>
+            <div class="resource_inline">
+              <h4>Activities</h4>
+            </div>
+            <div class="resource_inline">
+              <div class="dropdown">
+                <a href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li>Qualquer coisa</li>
+                </ul>
+              </div>
+            </div>
             <ul>
-              <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
+              <li class="icon_edit_remove"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  <i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
               <li><a href="#" data-toggle="modal" data-target="#ActivityModal">Activitie 1</a></li>
-              <li class="edit_remove"><i class="fa fa-pencil" aria-hidden="true"></i>  <i class="fa fa-trash" aria-hidden="true"></i></li>
+              <li class="icon_edit_remove"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  <i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
               <li><a href="#" data-toggle="modal" data-target="#forumModal">Forum</a></li>
             </ul>
           </div>
@@ -199,6 +219,60 @@
   </div>
 </div>
 <!-- EndModal -->
+
+<!--MODAL CREATE LINK-->
+<div class="modal fade" id="createLinksModal" tabindex="-1" role="dialog" aria-labelledby="createLink">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="createLink">Create a New Link</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Card -->
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Name</label>
+          <input type="text" class="form-control" id="inputDefault">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Url</label>
+          <input type="text" class="form-control" id="inputDefault">
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Descrição</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <a href="javascript:void(0)" class="btn btn-raised btn-default">Cancel</a>
+          <a href="javascript:void(0)" class="btn btn-raised btn-primary">Submit</a>
+      </div>
+        <!-- .end Card -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EndModal -->
+
+<!-- MODAL REMOVE LINK -->
+<div class="modal" id="removeLink">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this link?</p>
+      </div>
+      <div class="modal-footer">
+
+        <a href="#" target="_self"><button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Confirm</button></a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END -->
 
 <!-- MODAL EMBEED-->
 <div class="modal fade" id="embedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -455,10 +529,6 @@
       <div class="modal-body">
         <!-- Card -->
         <div class="form-group">
-          <input type="text" readonly="" class="form-control" placeholder="Image...">
-          <input type="file" id="inputFile" multiple="">
-        </div>
-        <div class="form-group">
           <label class="control-label" for="inputDefault">Name</label>
           <input value="Python" type="text" class="form-control" id="inputDefault">
         </div>
@@ -466,6 +536,14 @@
           <label class="control-label" for="inputDefault">Url</label>
           <input value="https://www.python.org/" type="text" class="form-control" id="inputDefault">
         </div>
+        <div class="form-group">
+          <label class="control-label" for="inputDefault">Descrição</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <a href="javascript:void(0)" class="btn btn-raised btn-default">Cancel</a>
+          <a href="javascript:void(0)" class="btn btn-raised btn-primary">Submit</a>
+      </div>
         <!-- .end Card -->
       </div>
     </div>
