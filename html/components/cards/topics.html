@@ -37,7 +37,7 @@
           <div class="col-xs-6 col-md-6">
             <h4>Material</h4>
             <ul>
-                <li><i class="material-icons">archive</i> <a href="#" data-toggle="modal" data-target="#fileModal">Book 1</a></li>
+                <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
                 <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
                 <li><i class="fa fa-file" aria-hidden="true"></i> <a href="#" data-toggle="modal" data-target="#embedModal">EMBED Material</a></li>
             </ul>
@@ -73,12 +73,13 @@
                 <a href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a>
                 <ul class="dropdown-menu" aria-labelledby="dLabel">
                   <li><a href="javascript:void(0)" data-toggle="modal" data-target="#createLinksModal">Create a Link</a></li>
+                  <li><a href="javascript:void(0)" data-toggle="modal" data-target="#createFileModal">Create a file</a></li>
                 </ul>
               </div>
             </div>
             <ul>
-                <li class="icon_edit_remove"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  <i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
-                <li><a href="#" data-toggle="modal" data-target="#fileModal">Book 1</a> </li>
+                <li class="icon_edit_remove"> <a href="#" data-toggle="modal" data-target="#editFileModal"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>  <a href="#" data-toggle="modal" data-target="#removeFileModal"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></li>
+                <li><a href="#">Book 1</a> </li>
                 <li class="icon_edit_remove"> <a href="#" data-toggle="modal" data-target="#linksModalEdit"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>  <a href="#" data-toggle="modal" data-target="#removeLink"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a></li>
                 <li><a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
                 <li class="icon_edit_remove"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>  <i class="fa fa-trash fa-lg" aria-hidden="true"></i></li>
@@ -138,17 +139,72 @@
 </div>
 <!-- END -->
 
-<!-- MODAL ADD FILE -->
-<div class="modal fade" id="fileModal" tabindex="-1" role="dialog" aria-labelledby="fileModalLabel">
+<!-- MODAL EDIT FILE -->
+<div class="modal fade" id="editFileModal" tabindex="-1" role="dialog" aria-labelledby="editFileLabel">
 <div class="modal-dialog" role="document">
 <div class="modal-content">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h4 class="modal-title" id="fileModalLabel">Add File</h4>
+    <h4 class="modal-title" id="editFileLabel">Add File</h4>
   </div>
   <div class="modal-body">
     <!-- Card -->
-      
+
+            <form class="form-horizontal">
+              <fieldset>
+
+                  <div class="form-group">
+                    <label for="inputName" class="col-md-2 control-label">Name</label>
+
+                    <div class="col-md-10">
+                      <input type="text" class="form-control" id="inputText" placeholder="Name" value="Book 1">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="inputFile" class="col-md-2 control-label">File</label>
+
+                    <div class="col-md-10">
+                      <input type="text" readonly="" class="form-control" placeholder="Browse...">
+                      <input type="file" id="inputFile" multiple="">
+                    </div>
+                  </div>
+
+
+                  <div class="form-group">
+                    <div class="col-md-12 text-center">
+                      <p><b>The file size shouldn't exceed 10MB</b></p>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-md-12">
+                      <a href="javascript:void(0)" class="btn btn-raised btn-default">Cancel</a>
+                      <a href="javascript:void(0)" class="btn btn-raised btn-primary">Submit</a>
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+
+
+        <!-- .end Card -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EndModal -->
+
+<!-- MODAL CREATE FILE -->
+<div class="modal fade" id="createFileModal" tabindex="-1" role="dialog" aria-labelledby="createFileLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="createFileLabel">Add File</h4>
+  </div>
+  <div class="modal-body">
+    <!-- Card -->
+
             <form class="form-horizontal">
               <fieldset>
 
@@ -177,21 +233,42 @@
                   </div>
 
                   <div class="form-group">
-                    <div class="col-md-12 text-center">
-                      <button type="cancel" class="btn btn-default">Cancel</button>
-                      <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="col-md-12">
+                      <a href="javascript:void(0)" class="btn btn-raised btn-default">Cancel</a>
+                      <a href="javascript:void(0)" class="btn btn-raised btn-primary">Submit</a>
                     </div>
                   </div>
                 </fieldset>
               </form>
 
-          
+
         <!-- .end Card -->
       </div>
     </div>
   </div>
 </div>
 <!-- EndModal -->
+
+<!-- MODAL REMOVE FILE -->
+<div class="modal" id="removeFileModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this file?</p>
+      </div>
+      <div class="modal-footer">
+
+        <a href="#" target="_self"><button type="button" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Confirm</button></a>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END -->
 
 <!--MODAL VIEW LINK-->
 <div class="modal fade" id="linksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -517,7 +594,7 @@
 </div>
 <!--EndForumModal-->
 
-<!-- MODAL LINK EDITATION-->
+<!-- MODAL LINK EDIT-->
 <div class="modal fade" id="linksModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
