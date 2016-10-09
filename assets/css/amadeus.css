@@ -97,11 +97,14 @@ nav .notifications{font-size: 20px;}
 .resource_inline{
     display: inline-block;
 }
-.resource_inline a i {
-    height: 30px;
-    width: 30px;
-}
-.imgTimeLine img{
-    width: 50%;
+.imgTimeLine{
+    width: 100%;
     height: auto;
+    padding-top: 10px;
+}
+.timeLine div .col-md-11{
+    padding-left: 0px;
+}
+.timeLine div .col-md-11 i{
+    padding-right: 5px;
 }
