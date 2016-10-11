@@ -4,6 +4,7 @@
   </div>
   <div class="panel-body">
     <form class="form-horizontal">
+      <fieldset>
 
       <div class="form-group">
         <label for="examName" class="col-md-2 control-label">Exam Name</label>
@@ -18,10 +19,9 @@
         <label for="Date" class="col-md-2 control-label">Exam Period</label>
         <div class="col-md-5">
           <input type="date" class="form-control" id="beginDate" placeholder="Begin Date">
-
         </div>
         <div class="col-md-5">
-          <input type="date" class="form-control" id="endDate" placeholder="End Date">
+          <input type="text" class="form-control" id="datepicker" placeholder="End Date">
 
         </div>
       </div>
@@ -45,7 +45,26 @@
           </select>
         </div>
       </div>
+      <div class="form-group" id="multipleChoice" style="display: none;">
+        <p>teste 0</p>
+      </div>
+      <div class="form-group" id="trueOrFalse" style="display: none;">
+        <p>teste 1</p>
+      </div>
+      <div class="form-group" id="gapFilling" style="display: none;">
+        <p>teste 2</p>
+      </div>
+      <div class="form-group" id="discursiveQuestion" style="display: none;">
+        <p>teste 3</p>
+      </div>
+      <div class="form-group">
+        <div class="col-md-12 col-md-offset-2">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="cancel" class="btn btn-default">Cancel</button>
+      </div>
+    </div>
     </form>
+    </fieldset>
   </div>
 </div>
 
@@ -53,8 +72,28 @@
   function showDiv (elem) {
     if (elem.value == 0) {
       document.getElementById('multipleChoice').style.display = "block";
+      document.getElementById('trueOrFalse').style.display = "none";
+      document.getElementById('gapFilling').style.display = "none";
+      document.getElementById('discursiveQuestion').style.display = "none";
     } else if (elem.value == 1) {
-        document.getElementById('trueOrFalse').style.display = "block";
+      document.getElementById('trueOrFalse').style.display = "block";
+      document.getElementById('multipleChoice').style.display = "none";
+      document.getElementById('gapFilling').style.display = "none";
+      document.getElementById('discursiveQuestion').style.display = "none";
+    } else if (elem.value == 2) {
+      document.getElementById('gapFilling').style.display = "block";
+      document.getElementById('multipleChoice').style.display = "none";
+      document.getElementById('trueOrFalse').style.display = "none";
+      document.getElementById('discursiveQuestion').style.display = "none";
+    } else if (elem.value == 3) {
+      document.getElementById('discursiveQuestion').style.display = "block";
+      document.getElementById('multipleChoice').style.display = "none";
+      document.getElementById('trueOrFalse').style.display = "none";
+      document.getElementById('gapFilling').style.display = "none";
     }
   }
+
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
 </script>
