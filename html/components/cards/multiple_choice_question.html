@@ -1,6 +1,6 @@
 <form class="form-horizontal">
-  <fieldset id="multiple-choice">
-    <div class="form-group">
+  <fieldset>
+    <div class="form-group" id="multipleChoice">
 
       <label for="questionName" class="col-md-2 control-label">Question</label>
 
@@ -11,39 +11,27 @@
 
 
     </div>
-    <div class="form-group" id="radios">
+    <div class="form-group">
       <label for="alternative" class="col-md-2 control-label">Alternatives</label>
-      <div class="col-md-10">
+      <div class="col-md-10" id="radios">
         <div class="radio radio-primary">
           <label>
-            <input checked type="radio" name="alternatives" id="alternative1" value="option1">
+            <input checked type="radio" name="alternatives" id="alternative1" value="1">
             <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
           </label>
         </div>
         <div class="radio radio-primary">
           <label>
-            <input type="radio" name="alternatives" id="alternative2" value="option2">
+            <input type="radio" name="alternatives" id="alternative2" value="2">
             <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
           </label>
         </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="alternatives" id="alternative3" value="option3">
-            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="alternatives" id="alternative4" value="option4">
-            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
-          </label>
-        </div>
-        <div class="radio radio-primary">
-          <label>
-            <input type="radio" name="alternatives" id="alternative5" value="option5">
-            <textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>
-          </label>
-        </div>
+      </div>
+    </div>
+    <!-- new alternative button -->
+    <div class="form-group">
+      <div class="col-md-12 col-md-offset-2">
+      <button type="button" class="btn btn-primary" id="newAlternative">New Alternative</button>
       </div>
     </div>
     <div class="form-group">
@@ -56,31 +44,18 @@
   </fieldset>
 </form>
 
-<!-- <script>
-  function newAlternative () {
-    // Your existing code unmodified...
-    var iDiv = document.createElement('div');
-    iDiv.id = 'genericAlternative';
-    iDiv.className = 'radio';
-    // Now create and append to innerDiv
-    var iLabel = document.createElement('label');
-    var iInput = document.createElement('input');
-    iInput.class = 'form-control';
-    iInput.value = 'optionN';
-    iInput.type = 'radio';
-    var iTextArea = document.createElement('textarea');
-    iTextArea.class = 'form-control';
-    iTextArea.rows = '1';
+<script>
+  var alternativeValue = 3;
 
-    iDiv.appendChild(iLabel);
-    iLabel.appendChild(iInput);
-    iLabel.appendChild(iTextArea);
-
-
-    document.getElementsById('radios').appendChild(iDiv);
-  }
-
-  function showAlternative () {
-      document.getElementById('genericAlternative').style.display = "block";
-  }
-</script> -->
+  $('#newAlternative').click(function () {
+    var element = '<div class="radio radio-primary">' +
+          '<label>' +
+            '<input type="radio" name="alternatives" id="alternative4"' + 'value="' +alternativeValue + '">' +
+            '<textarea class="form-control" rows="1" placeholder="Write your alternative"></textarea>' +
+          '</label>' +
+        '</div>';
+    $('#radios').append(element);
+    
+    alternativeValue++;
+  });
+</script>
