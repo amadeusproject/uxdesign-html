@@ -4,6 +4,7 @@
     <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
     <!-- Custom scripts goes here -->
     <script type="text/javascript" src="{{controllerPath}}/home_subject_teacher.js"></script>
+     <link rel="stylesheet" href="../../../../assets/css/icons_subjetc.css" type="text/css"/>
   </head>
   <body id="body">
     <!-- Application header -->
@@ -29,6 +30,8 @@
           <div w3-include-html="{{componentPath}}/cards/subject_detail_student.html"></div>
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <div w3-include-html="{{componentPath}}/cards/topic_student.html"></div>
+            <div w3-include-html="{{componentPath}}/cards/topic_student2.html"></div>
+
           </div>
         </div>
 
@@ -37,7 +40,7 @@
 
       <!-- Custom scripts goes here -->
 
-
+<script type="text/javascript" src="{{controllerPath}}/sum_posts.js"></script>
       <!-- Script to include html components, so don't remove it -->
       <script>
         // set up all (import templates, set up navbar and set environment variables)
