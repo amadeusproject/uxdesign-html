@@ -1,13 +1,13 @@
 
 <div class="panel panel-info">
-    <div class="panel-heading headingOne" role="tab" data-toggle="collapse" data-parent=".accordion" href=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
+    <div class="panel-heading headingOne">
       <div class="row">
         <div class="col-xs-9 col-md-2 titleTopic">
-          <a role="button">
+          <a role="button" href="{{screenPath}}/users/teacher/course_detail_teacher.html">
             <h4>Course 1</h4>
           </a>
         </div>
-        <div class="col-xs-4 col-md-2 col-md-offset-8 divMoreActions">
+        <div class="col-xs-4 col-md-10 divMoreActions" data-toggle="collapse" data-parent=".accordion" href=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
             <div class="btn-group">
               <button type="button" class="btn btn-default btn-sm eye" data-toggle="tooltip" data-placement="bottom" title="Visible">
                 <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
@@ -19,7 +19,6 @@
                 <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
               </button>
               <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="moreActions">
-                <li><a href="{{screenPath}}/users/teacher/course_detail_teacher.html"><i class="fa fa-angle-double-right fa-fw" aria-hidden="true"></i>&nbsp; Access</a></li>
                 <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>&nbsp; Replicate</a></li>
                 <li><a href="javascript:void(0)" data-toggle="modal" data-target="#removeCourse"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
               </ul>
