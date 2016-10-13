@@ -109,3 +109,6 @@ nav .notifications{font-size: 20px;}
 .timeLine div .col-md-11 i{
     padding-right: 5px;
 }
+.topic, .subject{
+  margin-left: 5%;
+}
