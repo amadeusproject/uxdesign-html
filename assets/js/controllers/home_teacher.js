@@ -18,10 +18,10 @@ $(".accordion")
   $(".eye").on('click', function(){
     if( $(this).attr('title') == 'invisible'){
       $(this).attr('title','Visible');
-      $(this).css('color','black');
+      jQuery(this).html("<i class='fa fa-eye fa-2x' aria-hidden='true'></i>").css('color','#212121');
     }else{
       $(this).attr('title','invisible');
-      $(this).css('color','white');
+      jQuery(this).html("<i class='fa fa-low-vision fa-2x' aria-hidden='true'></i>").css('color','#757575');
     }
   });
 
