@@ -84,6 +84,7 @@ nav .notifications{font-size: 20px;}
 .headingTwo {padding-top: 0px; padding-bottom: 50px;}
 .panel-heading{cursor:move;}
 .titleTopic {padding-top: 18px;}
+.titleTopic-detail {padding-top: 8px;}
 .titleTopic a h4 {margin-top: 0px; color: white; cursor:pointer;}
 .dropdown-menu .pull-right {
     right: 0;
