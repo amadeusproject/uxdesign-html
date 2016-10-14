@@ -113,3 +113,7 @@ nav .notifications{font-size: 20px;}
 .topic, .subject{
   margin-left: 5%;
 }
+.new-material{
+  padding-left: 3%;
+  color: red;
+}
