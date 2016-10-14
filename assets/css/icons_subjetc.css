@@ -1,13 +1,13 @@
 #count1, #count2, #countTotal{
 
-	background: transparent; 
+	background: transparent;
 	border: 0 none;
 	width: 12px;
 	font-size: 80%;
 }
 
-#balon{
-margin-bottom: 10px;
+#balon-1, #balon-2, #balon-3, #balon-4{
+margin-bottom: 40%;
 background-color: red;
 border-radius: 50%;
 
@@ -20,9 +20,12 @@ border-radius: 50%;
 }
 #Titulo{
 background-color: rgba(3, 169, 244, 0.42);
-	
+
 }
 #icons2{
 	margin-top: 10px;
 
+}
+.btn-group button i span{
+  background-color: red;
 }

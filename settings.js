@@ -24,6 +24,7 @@ Amadeus.default = {
         Amadeus.paths.assets('/css/vendor/ripples.min.css'),
         Amadeus.paths.assets('/css/vendor/font-awesome.min.css'),
         Amadeus.paths.assets('/css/vendor/datepicker.css'),
-        Amadeus.paths.assets('/css/amadeus.css')
+        Amadeus.paths.assets('/css/amadeus.css'),
+        Amadeus.paths.assets('/css/icons_subjetc.css')
     ]
 };
