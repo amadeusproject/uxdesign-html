@@ -23,9 +23,11 @@
 
         <!-- Content -->
         <div class="col-md-10">
-          <div w3-include-html="{{componentPath}}/cards/subject_home_student.html"></div>
-          <div w3-include-html="{{componentPath}}/cards/subject_home_student.html"></div>
-          <div w3-include-html="{{componentPath}}/cards/subject_home_student.html"></div>
+          <div w3-include-html="{{componentPath}}/cards/course_detail_student.html"></div>
+            <div class="panel-group accordion" role="tablist" aria-multiselectable="false">
+              <div class="group" w3-include-html="{{componentPath}}/cards/subject_home_student.html"></div>
+            <div class="group" w3-include-html="{{componentPath}}/cards/subject_home_student_2.html"></div>
+          </div>
           <!-- <div w3-include-html="{{componentPath}}/cards/multiple_choice_question.html"></div> -->
         </div>
 
