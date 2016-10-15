@@ -30,16 +30,16 @@
       </div>
 
       <!-- Custom scripts goes here -->
-
+      <script type="text/javascript" src="{{controllerPath}}/home_teacher.js"></script>
       <!-- Script to include html components, so don't remove it -->
       <script>
         // set up all (import templates, set up navbar and set environment variables)
         Amadeus.load(function() {
           // set data to breadcrumb
           Amadeus.setBreadcrumb([
-            { name: 'Home', path: '{{screenPath}}/users/teacher/home_teacher.html' },
-            { name: 'Courses', path: '{{screenPath}}/users/teacher/home_course_teacher.html' },
-            { name: 'Course1', path: '{{screenPath}}/users/teacher/course_detail_teacher.html' }
+            { name: 'Home', path: '{{screenPath}}/users/student/home_student.html' },
+            { name: 'Courses', path: '{{screenPath}}/users/student/home_course_student.html' },
+            { name: 'Course1', path: '{{screenPath}}/users/student/course_detail_student.html' }
           ],'Participants');
         });
       </script>
