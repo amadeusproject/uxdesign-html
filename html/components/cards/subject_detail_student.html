@@ -1,44 +1,127 @@
 <div class="panel panel-info">
+    <div class="panel-heading headingOne">
+      <div class="row">
+          <div class="col-xs-8 col-md-10 titleTopic-detail">
+            <h4>Subject</h4>
+          </div>
+          <div class="col-xs-4 col-md-2 divMoreActions">
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-sm eye" data-toggle="tooltip" data-placement="bottom" title="Visible">
+                <i class="fa fa-eye fa-2x" aria-hidden="true"></i>
+              </button>
 
-  <div class="panel-heading">
-  <div class="col-md-11">
-    <h3 class="panel-title">Presentation Subject</h3>
-
-    </div>
-    <div class="col-md-1">
-    
-  <!--<input type="text" id="SUM" style="width:40px; color: black; border-radius: 9px" >-->
-
-  <li class="link"><a href="#"> <span id="balon" class="badge notification-count">
-    <input type="text" id="countTotal">
-  </span><i class="fa fa-commenting fa-2x" aria-hidden="true"></i></a>
-
-
-      
- 
-    </div>
-  </div>
-  
-  <div class="panel-body">
-    <p><b>Professor: </b>Dr. Fulano de Tal</p>
-    <p>
-      <b>Description: </b>
-      <i>
-        "Lorem ipsum dolor sit amet, consecctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="moreActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+              </button>
+              <ul class="dropdown-menu pull-right" aria-labelledby="moreActions">
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#myModal4"><i class="fa fa-files-o fa-fw" aria-hidden="true"></i>&nbsp; Replicate</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#editSubject"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Edit</a></li>
+                <li><a href="javascript:void(0)" data-toggle="modal" data-target="#removeSubject"><i class="fa fa-trash fa-fw" aria-hidden="true"></i>&nbsp; Remove</a></li>
+              </ul>
+            </div>
 
 
 
-      </i>
-    </p>
-    <div class="row">
-      <div class="col-xs-6 col-md-6">
-
-        <p><b>Begining: </b>10/05/2017</p>
       </div>
-      <div class="col-xs-6 col-md-6">
-        <p><b>End: </b>23/08/2019</p>
+    </div>
+    </div>
+    <div class="panel-body">
+      <p><b>Professor:</b> Dr. Fulano de Tal</p>
+      <p>
+        <b>Description:</b>
+        <i>
+          "Lorem ipsum dolor sit amet, consecctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </i>
+      </p>
+      <div class="row">
+        <div class="col-xs-6 col-md-6">
+          <p><b>Begining:</b>10/05/2017</p>
+        </div>
+        <div class="col-xs-6 col-md-6">
+          <p><b>End:</b>23/08/2019</p>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- MODAL REMOVE SUBJECT-->
+<div class="modal" id="removeSubject">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to remove this subject?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+        <a href="{{screenPath}}/users/teacher/home_course_teacher.html" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+
       </div>
     </div>
   </div>
 </div>
+<!-- MODAL EDIT SUBJECT -->
+<div class="modal" tabindex="-1" role="dialog  " id="editSubject">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Subject</h4>
+      </div>
+      <div class="modal-body">
+        <div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Name</label>
+              <div class="col-md-8 col-xs-8">
+                <input type="text" class="form-control" name="nameSubject" value="Information Systems">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Goals</label>
+              <div class="col-md-8 col-xs-8">
+                <textarea class="form-control" rows="3" id="textAreaSubject">Goals 1, Goals 2, Goals 3.</textarea>
+                <span class="help-block">Sign the objectives of the course until the end of the course.</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-2 col-md-offset-1 col-xs-2 col-xs-offset-1">Students Limit</label>
+              <div class="col-md-8 col-xs-8">
+                <input type="number" class="form-control" name="StudentLimit" value="20">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-xs-12">
+                <div class="row">
+                  <div class="form-group">
+                    <label class="control-label col-md-4 col-xs-4 col-xs-offset-1">Begining</label>
+                    <div class="col-md-8 col-xs-8">
+                      <input type="date" class="form-control" name="BeginDate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-12">
+                <div class="row">
+                  <div class="form-group">
+                    <label class="control-label col-md-4 col-xs-4 col-xs-offset-1">End</label>
+                    <div class="col-md-8 col-xs-8">
+                      <input type="date" class="form-control" name="EndDate">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" class="btn btn-default">Cancel</button>
+          <a href="#" target="_self"><button type="button" class="btn btn-primary">Confirm</button></a>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+

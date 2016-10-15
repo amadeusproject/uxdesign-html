@@ -1,237 +1,341 @@
-<div class="panel panel-info">
-  <div class="panel-heading headingOne" id="Titulo" role="tab">
+<div class="panel panel-default topic">
+  <div class="panel-heading headingOne" data-toggle="collapse" data-parent=".accordion" href=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
     <div class="row">
-        <div class="col-md-8 titleTopic">
-          <a role="button" data-toggle="collapse" data-parent=".accordion" href=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Topic 1
-          </a>
+      <div class="col-xs-9 col-md-6 titleTopic">
+        <a role="button">
+        Topic 1
+        </a>
+      </div>
+      <div class="col-xs-3 col-md-6 divMoreActions">
+        <div class="btn-group">
+          <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="Material">
+           <i class="fa fa-book fa-2x" aria-hidden="true"></i><span id="balon-1" class="badge notification-count">1</span>
+          </button>
         </div>
-        <div class="col-md-4" id="divMoreActions">
-      <li class="link"><a href="#" > <span id="balon" class="badge notification-count"><input id="count1" type="text">
-     </span><i  id="icons" class="fa fa-commenting fa-2x" aria-hidden="true"></i></a>
-    </div>
-  </div>
-  </div>
-
-  <div class="panel-collapse collapse collapseOne" role="tabpanel" aria-labelledby="headingOne">
-    <div class="panel-body">
-      <p>
-        <i>
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        </i>
-      </p>
-      <div class="row">
-        <div class="col-xs-6 col-md-6">
-          <h4>Material</h4>
-            <ul>
-                <li><i class="material-icons">archive</i> <a href="#">Book 1</a></li>
-                <li><i class="material-icons">link</i> <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
-            </ul>
-
-            <!--Modal-->
-            <div class="modal fade" id="linksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Links</h4>
-                  </div>
-                  <div class="modal-body">
-                    <!-- Card -->
-                    <article class="card animated fadeInLeft">
-                       <img class="card-img-top img-responsive" src="https://www.python.org/static/opengraph-icon-200x200.png" align="left" />
-                       <div class="card-block">
-                          <b class="card-title">Python</b><p></p>
-                          <b class="text-muted">Guido van Rossum</b>
-                          <p class="card-text"> <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
-                          <a href="https://www.python.org/" class="btn btn-primary">Read more</a>
-                       </div>
-                    </article>
-                    <!-- .end Card -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- EndModal -->
-          </div>
-
-          <div class="col-xs-4 col-md-4">
-            <h4>Activities</h4>
-            <ul>
-                <li><i class="material-icons">description</i> <a href="#" data-toggle="modal" data-target="#ActivityModal">Activitie 1</a></li>
-                <li><i class="material-icons">list</i> <a href="#" data-toggle="modal" data-target="#forumModal">Forum</a></li>
-            </ul>
-
-            <!--Modal-->
-            <div class="modal fade" id="ActivityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title" id="myModalLabel"></h4>
-                  </div>
-                  <div class="modal-body">
-                    <form class="form-horizontal">
-                      <form class="form-horizontal">
-                  <fieldset>
-                    <legend>Atividade Proposta</legend>
-                    <div class="form-group">
-                      <label for="NameIn" class="col-md-2 control-label">Name:</label>
-                      <div class="col-md-10">
-                        <input type="text" id="NameIn" class="form-control">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="DescIn" class="col-md-2 control-label">Describe:</label>
-                      <div class="col-md-10">
-                        <textarea class="form-control" id="DescIn" rows="2"></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="DateIn" class="col-md-2 control-label" >Opening: </label>
-                      <div class="col-md-10">
-                        <input type="text" id="DateIn" class="form-control date-picker" requerid="" >
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="DateIn" class="col-md-2 control-label" >Ending: </label>
-                      <div class="col-md-10">
-                        <input type="text" id="DateIn" class="form-control date-picker" requerid="">
-                      </div>
-                    </div>
-                    <div class="form-group" style="margin-top: 0;">
-                      <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                          <label>
-                            <input type="checkbox"> Send Later
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="col-md-10 col-md-offset-2">
-                        <button type="button" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </div>
-                    </div>
-
-
-                  </fieldset>
-                </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- EndModal -->
-            <!-- Modal -->
-            <div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Forum</h4>
-                  </div>
-                  <div class="modal-body">
-
-                    <!--Forum-->
-                    <section>
-
-                      <!--Main wrapper-->
-                      <div class="comments-list">
-                          <div class="section-heading">
-                              <h1>Python</h1>
-                              <h4><b>Description:</b>High-level Language</h4>
-                              <h4><b>Opened in:</b> September 1st</h4>
-                          </div>
-                          <!--First row-->
-                          <div class="row">
-
-                              <!--Content column-->
-                              <div class="col-sm-10 col-xs-12">
-                                  <h3 class="user-name">Gerson Jefferson</h3>
-
-                                  <div class="card-data">
-                                     <p class="comment-date"><i class="fa fa-clock-o"></i> 05/10/2015</p>
-                                  </div>
-
-                                  <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                      cupidatat non proident.</p>
-                              </div>
-                              <!--/.Content column-->
-
-                          </div>
-                          <!--/.First row-->
-
-                          <!--Second row-->
-                          <div class="row">
-
-                              <!--Content column-->
-                              <div class="col-sm-10 col-xs-12">
-                                  <h3 class="user-name">Cherielly</h3>
-
-                                  <div class="card-data">
-                                    <p class="comment-date"><i class="fa fa-clock-o"></i> 08/10/2015</p>
-                                  </div>
-
-                                  <p class="comment-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                                      voluptatem quia voluptas sit aspernatur.</p>
-                              </div>
-                              <!--/.Content column-->
-
-                          </div>
-                          <!--/.Second row-->
-
-                          <!--Third row-->
-                          <div class="row">
-
-
-                             <!--Content column-->
-                              <div class="col-sm-10 col-xs-12">
-                                  <h3 class="user-name">Gemozecleia</h3>
-
-                                  <div class="card-data">
-                                    <p class="comment-date"><i class="fa fa-clock-o"></i> 17/10/2015</>
-                                  </div>
-
-                                  <p class="comment-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
-                                      qui officia.
-                                  </p>
-                              </div>
-                              <!--/.Content column-->
-
-                          </div>
-                          <!--/.Third row-->
-
-                      </div>
-                      <!--/.Main wrapper-->
-
-                    </section>
-                    <!--End of Forum-->
-                    <div class="form-group">
-                      <div class="input-group">
-                        <input type="text" id="addon3a" class="form-control">
-                          <p class="help-block">Maximum 140 character</p>
-                          <span class="input-group-btn">
-                            <button type="button" class="btn btn-fab btn-fab-mini">
-                              <i class="material-icons">send</i>
-                            </button>
-                          </span>
-                      </div>
-                    </div>
-
-                  </div>
-                   <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-
-                </div>
-              </div>
-          </div>
-          <!-- endModal -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-placement="bottom" title="Comments">
+            <i class="fa fa-comments fa-2x" aria-hidden="true"></i><span id="balon-2" class="badge notification-count">8</span>
+          </button>
         </div>
       </div>
-
-
     </div>
   </div>
+  <div class="panel-collapse collapse collapseOne" role="tabpanel" aria-labelledby="headingOne">
+    <div class="panel-body">
+      <div class="presentation">
+        <p>
+          <i>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          </i>
+        </p>
+        <div class="row">
+          <div class="col-xs-6 col-md-6">
+            <div class="resource_inline">
+              <h4>Material</h4>
+            </div>
+            <div class="resource_inline">
+              <div class="dropdown">
+                <a href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li><a href="javascript:void(0)" data-toggle="modal" data-target="#createLinksModal">Create a Link</a></li>
+                  <li><a href="javascript:void(0)" data-toggle="modal" data-target="#createFileModal">Create a file</a></li>
+                </ul>
+              </div>
+            </div>
+            <ul>
+                <li><i class="fa fa-book" aria-hidden="true"></i> <a href="#">Book 1</a></li>
+                <li><i class="fa fa-link" aria-hidden="true"></i>  <a href="#" data-toggle="modal" data-target="#linksModal">Link 1</a></li>
+                <li><i class="fa fa-file-code-o" aria-hidden="true"></i> <a href="#" data-toggle="modal" data-target="#embedModal">EMBED Material</a> <i class="fa fa-exclamation-circle new-material" aria-hidden="true"> New</i></li>
+            </ul>
+          </div>
+          <div class="col-xs-4 col-md-4">
+            <div class="resource_inline">
+              <h4>Activities</h4>
+            </div>
+            <div class="resource_inline">
+              <div class="dropdown">
+                <a href="#" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                  <li>Qualquer coisa</li>
+                </ul>
+              </div>
+            </div>
+            <ul>
+                <li><i class="fa fa-file-text" aria-hidden="true"></i> <a href="#" data-toggle="modal" data-target="#ActivityModal">Activitie 1</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--MODAL VIEW LINK-->
+<div class="modal fade" id="linksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Links</h4>
+      </div>
+      <div class="modal-body">
+        <!-- Card -->
+        <article class="card animated fadeInLeft">
+           <img class="card-img-top img-responsive" src="https://www.python.org/static/opengraph-icon-200x200.png" align="left" />
+           <div class="card-block">
+              <b class="card-title">Python</b><p></p>
+              <b class="text-muted">Guido van Rossum</b>
+              <p class="card-text"> <p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+              <a href="https://www.python.org/" class="btn btn-primary">Read more</a>
+           </div>
+        </article>
+        <!-- .end Card -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EndModal -->
+
+<!-- MODAL EMBEED-->
+<div class="modal fade" id="embedModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Material EMBED</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="inputEmail" class="col-md-2 control-label">Name:</label>
+          <div class="col-md-10">
+            <input type="text" class="form-control" id="inputEmail" placeholder="Name">
+          </div>
+        </div>
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="textArea" class="col-md-2 control-label">Code:</label>
+
+            <div class="col-md-10">
+                <textarea class="form-control" rows="2" id="textArea"></textarea>
+                <span class="help-block">Material description</span>
+            </div>
+          </div>
+          <div class="form-group">
+          <label for="number" class="col-md-2 control-label">Height</label>
+            <div class="col-md-4">
+              <input type="number" class="form-control" id="inputNumber" placeholder="Heiht">
+            </div>
+          </div>
+          <div class="form-group">
+          <label for="number" class="col-md-2 control-label">Weight</label>
+            <div class="col-md-4">
+              <input type="number" class="form-control" id="inputNumber" placeholder="Weight">
+            </div>
+          </div>
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <!-- Don't remove that!!!
+        <button type="button" class="btn btn-danger btn-raised" data-dismiss="modal">Close</button>-->
+
+        <!-- Put curtom buttons here!!!  -->
+        <button type="button" class="btn btn-primary btn-raised">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- EndModal -->
+
+<!-- MODAL ACTIVITIES-->
+<div class="modal fade" id="ActivityModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <form class="form-horizontal">
+      <fieldset>
+        <legend>Atividade Proposta</legend>
+        <div class="form-group">
+          <label for="NameIn" class="col-md-2 control-label">Name:</label>
+          <div class="col-md-10">
+            <input type="text" id="NameIn" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="DescIn" class="col-md-2 control-label">Describe:</label>
+          <div class="col-md-10">
+            <textarea class="form-control" id="DescIn" rows="2"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="DateIn" class="col-md-2 control-label" >Opening: </label>
+          <div class="col-md-10">
+            <input type="text" id="DateIn" class="form-control date-picker" requerid="" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="DateIn" class="col-md-2 control-label" >Ending: </label>
+          <div class="col-md-10">
+            <input type="text" id="DateIn" class="form-control date-picker" requerid="">
+          </div>
+        </div>
+        <div class="form-group" style="margin-top: 0;">
+          <div class="col-md-offset-2 col-md-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Send Later
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-md-10 col-md-offset-2">
+            <button type="button" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+
+
+      </fieldset>
+    </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--EndModal-->
+
+<!-- MODAL FORUM -->
+<div class="modal fade" id="forumModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Forum</h4>
+      </div>
+      <div class="modal-body">
+        <!--Forum-->
+        <!--Main wrapper-->
+        <div class="comments-list">
+          <div class="section-heading">
+              <h1>Python</h1>
+              <h4><b>Description:</b>High-level Language</h4>
+              <h4><b>Opened in:</b> September 1st</h4>
+          </div>
+          <!--First row-->
+          <div class="row">
+
+              <!--Content column-->
+              <div class="col-sm-10 col-xs-12">
+                  <h3 class="user-name">Gerson Jefferson</h3>
+
+                  <div class="card-data">
+                     <p class="comment-date"><i class="fa fa-clock-o"></i> 05/10/2015</p>
+                  </div>
+
+                  <p class="comment-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                      cupidatat non proident.</p>
+              </div>
+              <!--/.Content column-->
+          </div>
+          <a class="btn btn-sm" style="float: right;" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapseExample">Reply</a>
+          <div class="collapse" id="collapse1">
+            <div class="md-form">
+                <input type="text" id="form1" class="form-control" placeholder="comment on the cometary"><span class="input-group-btn">
+                    <button type="button" class="btn btn-sm">
+                      <i class="fa fa-paper-plane"> Send</i>
+                    </button>
+                  </span>
+            </div>
+          </div>
+        </div>
+
+            <!--/.First row-->
+
+            <!--Second row-->
+            <div class="row">
+
+                <!--Content column-->
+                <div class="col-sm-10 col-xs-12">
+                    <h3 class="user-name">Cherielly</h3>
+
+                    <div class="card-data">
+                      <p class="comment-date"><i class="fa fa-clock-o"></i> 08/10/2015</p>
+                    </div>
+
+                    <p class="comment-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                        voluptatem quia voluptas sit aspernatur.</p>
+                </div>
+                <!--/.Content column-->
+            </div>
+                  <a class="btn btn-sm" style="float: right;" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapseExample">Reply</a>
+                  <div class="collapse" id="collapse2">
+                    <div class="md-form">
+                        <input type="text" id="form1" class="form-control" placeholder="comment on the cometary"><span class="input-group-btn">
+                            <button type="button" class="btn btn-sm">
+                              <i class="fa fa-paper-plane"> Send</i>
+                            </button>
+                          </span>
+                    </div>
+                  </div>
+
+
+            <!--/.Second row-->
+
+            <!--Third row-->
+            <div class="row">
+
+
+               <!--Content column-->
+                <div class="col-sm-10 col-xs-12">
+                    <h3 class="user-name">Gemozecleia</h3>
+
+                    <div class="card-data">
+                      <p class="comment-date"><i class="fa fa-clock-o"></i> 17/10/2015</>
+                    </div>
+
+                    <p class="comment-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+                        qui officia.
+                    </p>
+                </div>
+                <!--/.Content column-->
+
+            </div>
+            <a class="btn btn-sm" style="float: right;" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapseExample">Reply</a>
+                  <div class="collapse" id="collapse3">
+                    <div class="md-form">
+                        <input type="text" id="form1" class="form-control" placeholder="comment on the cometary"><span class="input-group-btn">
+                            <button type="button" class="btn btn-sm">
+                              <i class="fa fa-paper-plane"> Send</i>
+                            </button>
+                          </span>
+                    </div>
+                  </div>
+
+            <!--/.Third row-->
+            <div class="row">
+              <div class="form-group">
+              <div class="col-sm-10 col-xs-12">
+                <input type="text" id="addon3a" class="form-control" placeholder="Add Comment">
+
+                  <span class="input-group-btn">
+                    <button type="button" class="btn btn-fab btn-fab-mini">
+                      <i class="material-icons">send</i>
+                    </button>
+                  </span>
+              </div>
+            </div>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--EndForumModal-->
