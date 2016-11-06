@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <!-- Amadeus script (NECESSARY!!!) [change src if needed!!!] -->
+    <script type="text/javascript" src="../../../../assets/js/amadeus.js"></script>
+  </head>
+  <body id="body">
+    <!-- Application header -->
+    <div w3-include-html="{{componentPath}}/base/navbar.html"></div>
+
+
+    <!-- Main -->
+ <div class="container-fluid" id="main">
+      <div class="row">
+
+        <!-- Lateral menus (left) -->
+        <div class="col-md-2" >
+            <div w3-include-html="{{componentPath}}/menus/student_base_menu.html"></div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <div class="col-md-10">
+          <div w3-include-html="{{componentPath}}/base/breadcrumb.html"></div>
+       
+
+        </div>
+
+        <!-- Content -->
+        <div class="col-md-10">
+          <!-- Put your content here! -->
+          <div w3-include-html="{{componentPath}}/cards/card_list_material.html"></div>
+        </div>
+      </div>
+
+      <!-- Custom scripts goes here -->
+
+      <!-- Script to include html components, so don't remove it -->
+      <script>
+        // set up all (import templates, set up navbar and set environment variables)
+        Amadeus.load(function() {
+          // set data to breadcrumb
+          Amadeus.setBreadcrumb(null,'Home');
+        });
+      </script>
+    </div>
+  </body>
+</html>
